@@ -1,2 +1,3 @@
-# bbta3_ui
+# Prototip BBTA3
+
 repository untuk prototip tampilan
