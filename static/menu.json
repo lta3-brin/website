@@ -1,0 +1,156 @@
+[
+  {
+    "id": "keahlian",
+    "nama": "Keahlian",
+    "subs": [
+      {
+        "id": "aerodinamika",
+        "nama": "Aerodinamika",
+        "subs": []
+      },
+      {
+        "id": "aeroelastika",
+        "nama": "Aeroelastika",
+        "subs": []
+      },
+      {
+        "id": "aeroakustika",
+        "nama": "Aeroakustika",
+        "subs": []
+      },
+      {
+        "id": "aeromekanika",
+        "nama": "Aeromekanika",
+        "subs": []
+      },
+      {
+        "id": "aerotronika",
+        "nama": "Aerotronika",
+        "subs": []
+      }
+    ]
+  },
+  {
+    "id": "tentang",
+    "nama": "Tentang Kami",
+    "subs":  [
+      {
+        "id": "fasilitas",
+        "nama": "Fasilitas",
+        "subs": []
+      },
+      {
+        "id": "pp_tarif",
+        "nama": "PP Tarif",
+        "subs":  []
+      },
+      {
+        "id": "hubungi_kami",
+        "nama": "Hubungi Kami",
+        "subs":  []
+      },
+      {
+        "id": "kepuasan_pelanggan",
+        "nama": "Kepuasan Pelanggan",
+        "subs":  []
+      },
+      {
+        "id": "keluhan",
+        "nama": "Keluhan/Umpan Balik",
+        "subs":  []
+      },
+      {
+        "id": "profil",
+        "nama": "Profil BBTA3",
+        "subs": [
+          {
+            "id": "tugas_pokok",
+            "nama": "Tugas Pokok & Fungsi",
+            "subs": []
+          },
+          {
+            "id": "struktur_organisasi",
+            "nama": "Struktur Organisasi",
+            "subs": []
+          },
+          {
+            "id": "pejabat_struktural",
+            "nama": "Pejabat Struktural",
+            "subs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "internal",
+    "nama": "Internal",
+    "subs":  [
+      {
+        "id": "bppt",
+        "nama": "BPPT",
+        "subs": []
+      },
+      {
+        "id": "jdih",
+        "nama": "JDIH",
+        "subs":  []
+      },
+      {
+        "id": "ptipk",
+        "nama": "PTIPK",
+        "subs":  []
+      },
+      {
+        "id": "ptrim",
+        "nama": "PTRIM",
+        "subs":  []
+      },
+      {
+        "id": "ptip",
+        "nama": "PTIP",
+        "subs":  []
+      },
+      {
+        "id": "ptspt",
+        "nama": "PTSPT",
+        "subs":  []
+      },
+      {
+        "id": "btipdp",
+        "nama": "BTIPDP",
+        "subs":  []
+      },
+      {
+        "id": "b2tks",
+        "nama": "B2TKS",
+        "subs":  []
+      },
+      {
+        "id": "bth",
+        "nama": "BTH",
+        "subs":  []
+      },
+      {
+        "id": "bt2mp",
+        "nama": "BT2MP",
+        "subs":  []
+      },
+      {
+        "id": "meppo",
+        "nama": "MEPPO",
+        "subs":  []
+      }
+    ]
+  },
+  {
+    "id": "produk",
+    "nama": "Produk Hukum",
+    "subs":  []
+  },
+  {
+    "id": "papers",
+    "nama": "Call for Papers",
+    "subs":  []
+  }
+]
