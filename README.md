@@ -1,8 +1,8 @@
-# bbta3
+# Prototip UI BBTA3
 
-> pengembangan prototip ui bbta3
+pengembangan prototip ui bbta3 yang dilakukan menggunakan [Nuxt JS](https://nuxtjs.org).
 
-## Build Setup
+## Cara Memulai
 
 ```bash
 # install dependencies
@@ -19,4 +19,6 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Informasi Lanjut
+
+Apabila ada informasi lebih lanjut, hubungi melalui chat berikut [INI](https://discord.gg/7dTG9sg).
