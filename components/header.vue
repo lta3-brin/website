@@ -13,7 +13,7 @@
         class="d-none d-md-flex"
         small
         text
-        @click.stop="showSideMenu(item)"
+        @click.stop="showSideMenu(item.id)"
       >
         {{ item.nama }}
       </v-btn>
@@ -28,7 +28,7 @@
     </v-app-bar>
 
     <v-navigation-drawer v-model="sideMenu" width="320" temporary fixed>
-      <HeaderDrawer />
+      <HeaderDrawer :data-header="header_dipilih" />
     </v-navigation-drawer>
   </div>
 </template>
@@ -47,12 +47,19 @@ export default {
       title: 'BBTA3 BPPT',
       sideMenu: false,
       item_utama: menuItem,
-      item_tambahan: []
+      header_dipilih: []
     }
   },
   methods: {
     showSideMenu(payload) {
       this.sideMenu = !this.sideMenu
+      if (payload !== 'mini') {
+        this.header_dipilih = this.item_utama.filter(
+          (item) => item.id === payload
+        )
+      } else {
+        this.header_dipilih = this.item_utama
+      }
     }
   }
 }
