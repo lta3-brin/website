@@ -25,12 +25,51 @@
               Kawasan PUSPIPTEK, Gd. 240, Setu, Tangerang Selatan – Banten
               (15314)
             </p>
+
+            <a
+              title="gratifikasi"
+              href="http://inspektorat.bppt.go.id/bursa-pengaduan-costum/lapor-bppt"
+              target="_blank"
+            >
+              <v-img src="/gratifikasi.jpg" class="mt-4" alt="gratifikasi" />
+            </a>
           </v-card-text>
         </v-col>
 
         <v-col cols="12" sm="12" md="4" lg="4">
           <v-card-text>
-            Custom Card
+            <v-card
+              v-for="video in videos"
+              :key="video.id.videoId"
+              outlined
+              color="white"
+            >
+              <v-img
+                height="250"
+                :src="video.snippet.thumbnails.high.url"
+                :alt="video.snippet.title"
+              >
+              </v-img>
+
+              <v-card-subtitle class="grey--text text-darken-1 pb-0">
+                {{ video.snippet.publishedAt }}
+              </v-card-subtitle>
+
+              <v-card-title class="black--text">
+                {{ video.snippet.title }}
+              </v-card-title>
+
+              <v-card-actions>
+                <v-btn
+                  color="orange"
+                  text
+                  :href="'https://www.youtube.com/watch?v=' + video.id.videoId"
+                  target="_blank"
+                >
+                  Simak
+                </v-btn>
+              </v-card-actions>
+            </v-card>
           </v-card-text>
         </v-col>
 
@@ -75,6 +114,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'Footer',
   data: () => ({
@@ -103,7 +144,22 @@ export default {
         nama: 'fab fa-discord',
         url: 'http://bit.ly/DiscordBBTA3'
       }
-    ]
-  })
+    ],
+    videos: []
+  }),
+  created() {
+    this.fetchYoutubeVideo()
+  },
+  methods: {
+    async fetchYoutubeVideo() {
+      const URL =
+        'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCa0_hm_SiHxps1Llk_q6I1Q&order=date&type=video&maxResults=1&key=AIzaSyCmLTjKXydvWjb-LOrIoCeqk2z3TOfPFHY'
+      const RES = await axios.get(URL)
+
+      RES.data.items.forEach((video) => {
+        this.videos.push(video)
+      })
+    }
+  }
 }
 </script>
