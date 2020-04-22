@@ -30,14 +30,7 @@
 
         <v-col cols="12" sm="12" md="4" lg="4">
           <v-card-text>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube-nocookie.com/embed/videoseries?list=UUa0_hm_SiHxps1Llk_q6I1Q"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            Custom Card
           </v-card-text>
         </v-col>
 
@@ -66,7 +59,7 @@
 
       <v-card-text class="text-center white--text d-flex justify-space-between">
         <div>
-          {{ new Date().getFullYear() }}
+          ©️ {{ new Date().getFullYear() }}
           <span class="red--text">❤</span>
           <strong>TRIE</strong>
         </div>
