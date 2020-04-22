@@ -44,6 +44,9 @@
               outlined
               color="white"
             >
+              <v-subheader class="red--text font-weight-black title">
+                Video BBTA3
+              </v-subheader>
               <v-img
                 height="250"
                 :src="video.snippet.thumbnails.high.url"
@@ -152,13 +155,17 @@ export default {
   },
   methods: {
     async fetchYoutubeVideo() {
-      const URL =
-        'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCa0_hm_SiHxps1Llk_q6I1Q&order=date&type=video&maxResults=1&key=AIzaSyCmLTjKXydvWjb-LOrIoCeqk2z3TOfPFHY'
-      const RES = await axios.get(URL)
+      try {
+        const key = process.env.VIDEO_API
+        const URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCa0_hm_SiHxps1Llk_q6I1Q&order=date&type=video&maxResults=1&key=${key}`
+        const RES = await axios.get(URL)
 
-      RES.data.items.forEach((video) => {
-        this.videos.push(video)
-      })
+        RES.data.items.forEach((video) => {
+          this.videos.push(video)
+        })
+      } catch (e) {
+        this.videos = []
+      }
     }
   }
 }
