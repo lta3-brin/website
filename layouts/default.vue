@@ -8,18 +8,18 @@
       </v-container>
     </v-content>
 
-    <v-footer app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+    <Footer />
   </v-app>
 </template>
 
 <script>
 import Header from '~/components/header'
+import Footer from '~/components/footer'
 
 export default {
   components: {
-    Header
+    Header,
+    Footer
   },
   data() {
     return {}
