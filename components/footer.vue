@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="px-0 pb-0">
-    <v-card flat tile class="indigo lighten-1 white--text pt-4">
-      <v-row>
+    <v-card flat tile class="light-blue darken-4 white--text pt-4">
+      <v-row no-gutters>
         <v-col cols="12" sm="12" md="4" lg="4">
           <v-card-text>
             <v-btn
@@ -44,7 +44,9 @@
               outlined
               color="white"
             >
-              <v-subheader class="red--text font-weight-black title">
+              <v-subheader
+                class="red--text text--darken-4 font-weight-black title"
+              >
                 Video BBTA3
               </v-subheader>
               <v-img
@@ -64,7 +66,7 @@
 
               <v-card-actions>
                 <v-btn
-                  color="blue darken-2"
+                  color="primary"
                   text
                   :href="'https://www.youtube.com/watch?v=' + video.id.videoId"
                   target="_blank"
@@ -99,19 +101,20 @@
 
       <v-divider></v-divider>
 
-      <v-card-text class="text-center white--text d-flex justify-space-between">
-        <div>
-          ©️ {{ new Date().getFullYear() }}
-          <span class="red--text">❤</span>
-          <strong>TRIE</strong>
-        </div>
-
-        <div>
-          <span>📞 +62 21 756 090 2</span>
-          <span class="ml-4">📠 +62 21 756 090 1</span>
-          <span class="ml-4">✉️ sekr-bbta3@bppt.go.id</span>
-        </div>
-      </v-card-text>
+      <v-container fluid class="text-center white--text">
+        <v-row align="center" justify="center" justify-md="space-between">
+          <v-col cols="auto">
+            ©️ {{ new Date().getFullYear() }}
+            <span class="red--text">❤</span>
+            <strong>TRIE</strong>
+          </v-col>
+          <v-col cols="auto">
+            <span>📞 +62 21 756 090 2</span>
+            <span class="ml-4">📠 +62 21 756 090 1</span>
+            <span class="ml-4">✉️ sekr-bbta3@bppt.go.id</span>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-card>
   </v-container>
 </template>
