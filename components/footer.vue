@@ -80,21 +80,29 @@
 
         <v-col cols="12" sm="12" md="4" lg="4">
           <v-card-text>
-            <a
-              class="twitter-timeline"
-              data-dnt="true"
-              data-theme="light"
-              data-tweet-limit="1"
-              data-aria-polite="assertive"
-              data-chrome="noheader nofooter noborders"
-              href="https://twitter.com/BBTA3_BPPT?ref_src=twsrc%5Etfw"
-              >Berita dari BBTA3_BPPT</a
-            >
-            <script
-              async
-              src="https://platform.twitter.com/widgets.js"
-              charset="utf-8"
-            ></script>
+            <v-card outlined color="white">
+              <v-subheader
+                class="red--text text--darken-4 font-weight-black title"
+              >
+                Berita BBTA3
+              </v-subheader>
+
+              <a
+                class="twitter-timeline"
+                data-dnt="true"
+                data-theme="light"
+                data-tweet-limit="1"
+                data-aria-polite="assertive"
+                data-chrome="noheader nofooter noborders transparent"
+                href="https://twitter.com/BBTA3_BPPT?ref_src=twsrc%5Etfw"
+                >Berita dari BBTA3_BPPT</a
+              >
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </v-card>
           </v-card-text>
         </v-col>
       </v-row>
