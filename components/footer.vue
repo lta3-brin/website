@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="px-0 pb-0">
     <v-card flat tile class="indigo lighten-1 white--text pt-4">
-      <v-row no-gutters>
+      <v-row>
         <v-col cols="12" sm="12" md="4" lg="4">
           <v-card-text>
             <v-btn
