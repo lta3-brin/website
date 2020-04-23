@@ -55,7 +55,7 @@
               </v-img>
 
               <v-card-subtitle class="grey--text text-darken-1 pb-0">
-                {{ video.snippet.publishedAt }}
+                {{ video.snippet.publishedAt | parseDate }}
               </v-card-subtitle>
 
               <v-card-title class="black--text">
@@ -64,7 +64,7 @@
 
               <v-card-actions>
                 <v-btn
-                  color="orange"
+                  color="blue darken-2"
                   text
                   :href="'https://www.youtube.com/watch?v=' + video.id.videoId"
                   target="_blank"
@@ -84,7 +84,7 @@
               data-theme="light"
               data-tweet-limit="1"
               data-aria-polite="assertive"
-              data-chrome="nofooter noborders"
+              data-chrome="noheader nofooter noborders"
               href="https://twitter.com/BBTA3_BPPT?ref_src=twsrc%5Etfw"
               >Berita dari BBTA3_BPPT</a
             >
