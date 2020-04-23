@@ -1,6 +1,7 @@
 <template>
   <v-parallax
     dark
+    height="600"
     src="https://i.pinimg.com/originals/92/58/f0/9258f03b22fbf1c96b0b8519d4bf90d4.png"
   >
     <v-row align="center" justify="center">
