@@ -1,9 +1,9 @@
 <template>
   <div>
-    <v-app-bar fixed app>
+    <v-app-bar fixed app elevate-on-scroll>
       <img alt="logo bbta3" class="logo" height="45" src="/icon.png" />
 
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title @click.stop="goHome" v-text="title" />
 
       <v-spacer />
 
@@ -13,7 +13,7 @@
         class="d-none d-md-flex"
         small
         text
-        @click.stop="showSideMenu(item.id)"
+        @click.stop="showSideMenu(item)"
       >
         {{ item.nama }}
       </v-btn>
@@ -51,14 +51,27 @@ export default {
     }
   },
   methods: {
+    goHome() {
+      this.$router.push({
+        path: '/'
+      })
+    },
     showSideMenu(payload) {
-      this.sideMenu = !this.sideMenu
       if (payload !== 'mini') {
         this.header_dipilih = this.item_utama.filter(
-          (item) => item.id === payload
+          (item) => item.id === payload.id
         )
+
+        if (this.header_dipilih[0].subs.length > 0) {
+          this.sideMenu = !this.sideMenu
+        } else {
+          this.$router.push({
+            path: '/inspire'
+          })
+        }
       } else {
         this.header_dipilih = this.item_utama
+        this.sideMenu = !this.sideMenu
       }
     }
   }
