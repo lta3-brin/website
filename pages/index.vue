@@ -48,82 +48,23 @@
       </h1>
 
       <v-row align="center" justify="center">
-        <v-col cols="12" md="4">
-          <v-card hover class="growing">
+        <v-col
+          v-for="keahlian in dataKeahlian.subs"
+          :key="keahlian.slug"
+          cols="12"
+          md="4"
+        >
+          <v-card hover class="growing" :to="keahlian.to">
             <v-img
               class="white--text align-end"
               height="350px"
-              src="https://i.pinimg.com/originals/fb/01/7a/fb017af2e927556a8d35b6537218ae92.jpg"
+              :src="keahlian.rincian.thumbnail"
             >
-              <v-card-title>Keahlian Aerodinamika</v-card-title>
+              <v-card-title>Keahlian {{ keahlian.nama }}</v-card-title>
             </v-img>
 
             <v-card-subtitle>
-              Pengukuran pada pengujian aerodinamika dalam terowongan angin
-            </v-card-subtitle>
-          </v-card>
-        </v-col>
-        <v-col cols="12" md="4">
-          <v-card hover class="growing">
-            <v-img
-              class="white--text align-end"
-              height="350px"
-              src="https://i.pinimg.com/originals/10/77/73/1077735953c1aa8b4e867147f01fa15d.jpg"
-            >
-              <v-card-title>Keahlian Aeroelastika</v-card-title>
-            </v-img>
-
-            <v-card-subtitle>
-              Pengukuran pada pengujian aeroelastika benda uji dalam terowongan
-              angin
-            </v-card-subtitle>
-          </v-card>
-        </v-col>
-        <v-col cols="12" md="4">
-          <v-card hover class="growing">
-            <v-img
-              class="white--text align-end"
-              height="350px"
-              src="https://i.pinimg.com/originals/0d/b1/58/0db1580a24d754b4f270140d0052ac98.jpg"
-            >
-              <v-card-title>Keahlian Aeroakustika</v-card-title>
-            </v-img>
-
-            <v-card-subtitle>
-              Pengukuran pada pengujian aeroakustika benda uji dalam anechoic
-              chamber
-            </v-card-subtitle>
-          </v-card>
-        </v-col>
-        <v-col cols="12" md="4">
-          <v-card hover class="growing">
-            <v-img
-              class="white--text align-end"
-              height="350px"
-              src="https://i.pinimg.com/originals/9c/14/ff/9c14ffc14d49e6e44a7fab614980f58b.jpg"
-            >
-              <v-card-title>Keahlian Aeromekanika</v-card-title>
-            </v-img>
-
-            <v-card-subtitle>
-              Pemodelan dan manufaktur benda uji serta fabrikasi peralatan
-              pendukung pengujian
-            </v-card-subtitle>
-          </v-card>
-        </v-col>
-        <v-col cols="12" md="4">
-          <v-card hover class="growing">
-            <v-img
-              class="white--text align-end"
-              height="350px"
-              src="https://i.pinimg.com/originals/71/56/1f/71561fa121bd42fc6817ca80fa9cf608.jpg"
-            >
-              <v-card-title>Keahlian Aerotronika</v-card-title>
-            </v-img>
-
-            <v-card-subtitle>
-              Menerapkan metode dan analisis serta pengembangan dalam layanan
-              pengujian
+              {{ keahlian.subtitle }}
             </v-card-subtitle>
           </v-card>
         </v-col>
@@ -133,7 +74,20 @@
 </template>
 
 <script>
+import Keahlian from '~/static/menu.json'
+
 export default {
+  name: 'LandingPage',
+  data() {
+    return {
+      dataKeahlian: []
+    }
+  },
+  created() {
+    this.dataKeahlian = Keahlian.filter((keahlian) => {
+      return keahlian.slug === 'keahlian'
+    })[0]
+  },
   head() {
     return {
       title: 'Selamat Datang',
