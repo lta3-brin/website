@@ -1,11 +1,21 @@
 <template>
   <v-list>
-    <v-list-group v-for="item of dataHeader" :key="item.id">
+    <v-list-group v-for="item of dataHeader" :key="item.slug">
       <template v-slot:activator>
-        <v-list-item>
+        <v-list-item v-if="'href' in item" :href="item.href" target="_blank">
           <v-list-item-title>
             {{ item.nama }}
           </v-list-item-title>
+        </v-list-item>
+
+        <v-list-item v-else-if="'to' in item" :to="item.to" exact>
+          <v-list-item-title>
+            {{ item.nama }}
+          </v-list-item-title>
+        </v-list-item>
+
+        <v-list-item v-else>
+          <v-list-item-title>{{ item.nama }}</v-list-item-title>
         </v-list-item>
       </template>
       <template v-slot:appendIcon>
@@ -15,7 +25,7 @@
 
       <v-list-group
         v-for="sub of item.subs"
-        :key="sub.id"
+        :key="sub.slug"
         no-action
         sub-group
         value="true"
@@ -42,7 +52,7 @@
           <v-icon v-else size="12">fa-link</v-icon>
         </template>
 
-        <v-list-item v-for="itm in sub.subs" :key="itm.id" link>
+        <v-list-item v-for="itm in sub.subs" :key="itm.slug" link>
           <v-list-item v-if="'href' in itm" :href="itm.href" target="_blank">
             <v-list-item-title>
               {{ itm.nama }}
