@@ -9,10 +9,11 @@
 
       <v-btn
         v-for="item of item_utama"
-        :key="item.id"
+        :key="item.slug"
         class="d-none d-md-flex"
         small
         text
+        exact
         @click.stop="showSideMenu(item)"
       >
         {{ item.nama }}
@@ -59,7 +60,7 @@ export default {
     showSideMenu(payload) {
       if (payload !== 'mini') {
         this.header_dipilih = this.item_utama.filter(
-          (item) => item.id === payload.id
+          (item) => item.slug === payload.slug
         )
 
         if (this.header_dipilih[0].subs.length > 0) {
