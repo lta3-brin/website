@@ -1,1 +1,9 @@
+.growing .v-image__image--cover {
+  transition: all .2s ease-in-out;
+  clip-path: inset(0 0 0 0);
+}
 
+.growing:hover .v-image__image--cover {
+  transform: scale(1.1);
+  clip-path: inset(4.5% 4.5% 4.5% 4.5%);
+}
