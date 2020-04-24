@@ -6,26 +6,31 @@
       {
         "id": "aerodinamika",
         "nama": "Aerodinamika",
+        "to": "/inspire",
         "subs": []
       },
       {
         "id": "aeroelastika",
         "nama": "Aeroelastika",
+        "to": "/inspire",
         "subs": []
       },
       {
         "id": "aeroakustika",
         "nama": "Aeroakustika",
+        "to": "/inspire",
         "subs": []
       },
       {
         "id": "aeromekanika",
         "nama": "Aeromekanika",
+        "to": "/inspire",
         "subs": []
       },
       {
         "id": "aerotronika",
         "nama": "Aerotronika",
+        "to": "/inspire",
         "subs": []
       }
     ]
@@ -37,26 +42,31 @@
       {
         "id": "fasilitas",
         "nama": "Fasilitas",
+        "to": "/inspire",
         "subs": []
       },
       {
         "id": "pp_tarif",
         "nama": "PP Tarif",
+        "to": "/inspire",
         "subs":  []
       },
       {
         "id": "hubungi_kami",
         "nama": "Hubungi Kami",
+        "to": "/inspire",
         "subs":  []
       },
       {
         "id": "kepuasan_pelanggan",
         "nama": "Kepuasan Pelanggan",
+        "to": "/inspire",
         "subs":  []
       },
       {
         "id": "keluhan",
         "nama": "Keluhan/Umpan Balik",
+        "to": "/inspire",
         "subs":  []
       },
       {
@@ -66,16 +76,19 @@
           {
             "id": "tugas_pokok",
             "nama": "Tugas Pokok & Fungsi",
+            "to": "/inspire",
             "subs": []
           },
           {
             "id": "struktur_organisasi",
             "nama": "Struktur Organisasi",
+            "to": "/inspire",
             "subs": []
           },
           {
             "id": "pejabat_struktural",
             "nama": "Pejabat Struktural",
+            "to": "/inspire",
             "subs": []
           }
         ]
@@ -89,56 +102,67 @@
       {
         "id": "bppt",
         "nama": "BPPT",
+        "href": "bppt.go.id",
         "subs": []
       },
       {
         "id": "jdih",
         "nama": "JDIH",
+        "href": "jdih.bppt.go.id",
         "subs":  []
       },
       {
         "id": "ptipk",
         "nama": "PTIPK",
+        "href": "ptipk.bppt.go.id",
         "subs":  []
       },
       {
         "id": "ptrim",
         "nama": "PTRIM",
+        "href": "ptrim.bppt.go.id",
         "subs":  []
       },
       {
         "id": "ptip",
         "nama": "PTIP",
+        "href": "ptip.bppt.go.id",
         "subs":  []
       },
       {
         "id": "ptspt",
         "nama": "PTSPT",
+        "href": "ptspt.bppt.go.id",
         "subs":  []
       },
       {
         "id": "btipdp",
         "nama": "BTIPDP",
+        "href": "btipdp.bppt.go.id",
         "subs":  []
       },
       {
         "id": "b2tks",
         "nama": "B2TKS",
+        "href": "b2tks.bppt.go.id",
         "subs":  []
       },
       {
         "id": "bth",
         "nama": "BTH",
+        "href": "bth.bppt.go.id",
         "subs":  []
       },
       {
         "id": "bt2mp",
         "nama": "BT2MP",
+        "href": "bt2mp.bppt.go.id",
         "subs":  []
       },
       {
         "id": "meppo",
         "nama": "MEPPO",
+        "href": "meppo.bppt.go.id",
         "subs":  []
       }
     ]
@@ -150,11 +174,13 @@
       {
         "id": "sk_bppt",
         "nama": "SK Ka. BPPT",
+        "href": "http://aerobox.bbta3.bppt.go.id/index.php/s/0EbGx0FpaUMth2v",
         "subs": []
       },
       {
         "id": "sk_bta3",
         "nama": "SK Ka BBTA3",
+        "href": "http://aerobox.bbta3.bppt.go.id/index.php/s/KpO0LhswD2gtpRY",
         "subs": []
       }
     ]
@@ -162,6 +188,7 @@
   {
     "id": "papers",
     "nama": "Call for Papers",
+    "to": "/inspire",
     "subs":  []
   }
 ]

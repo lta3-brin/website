@@ -2,9 +2,11 @@
   <v-list>
     <v-list-group v-for="item of dataHeader" :key="item.id">
       <template v-slot:activator>
-        <v-list-item-title>
-          {{ item.nama }}
-        </v-list-item-title>
+        <v-list-item>
+          <v-list-item-title>
+            {{ item.nama }}
+          </v-list-item-title>
+        </v-list-item>
       </template>
       <template v-slot:appendIcon>
         <v-icon v-if="item.subs.length > 0">fa-angle-down</v-icon>
@@ -19,7 +21,19 @@
         value="true"
       >
         <template v-slot:activator>
-          <v-list-item>
+          <v-list-item v-if="'href' in sub" :href="sub.href" target="_blank">
+            <v-list-item-title>
+              {{ sub.nama }}
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item v-else-if="'to' in sub" :to="sub.to" exact>
+            <v-list-item-title>
+              {{ sub.nama }}
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item v-else>
             <v-list-item-title>{{ sub.nama }}</v-list-item-title>
           </v-list-item>
         </template>
@@ -29,7 +43,23 @@
         </template>
 
         <v-list-item v-for="itm in sub.subs" :key="itm.id" link>
-          <v-list-item-title v-text="itm.nama"></v-list-item-title>
+          <v-list-item v-if="'href' in itm" :href="itm.href" target="_blank">
+            <v-list-item-title>
+              {{ itm.nama }}
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item v-else-if="'to' in itm" :to="itm.to" exact>
+            <v-list-item-title>
+              {{ itm.nama }}
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item v-else>
+            <v-list-item-title>
+              {{ itm.nama }}
+            </v-list-item-title>
+          </v-list-item>
         </v-list-item>
       </v-list-group>
     </v-list-group>
