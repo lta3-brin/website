@@ -102,67 +102,67 @@
       {
         "id": "bppt",
         "nama": "BPPT",
-        "href": "bppt.go.id",
+        "href": "http://bppt.go.id",
         "subs": []
       },
       {
         "id": "jdih",
         "nama": "JDIH",
-        "href": "jdih.bppt.go.id",
+        "href": "http://jdih.bppt.go.id",
         "subs":  []
       },
       {
         "id": "ptipk",
         "nama": "PTIPK",
-        "href": "ptipk.bppt.go.id",
+        "href": "http://ptipk.bppt.go.id",
         "subs":  []
       },
       {
         "id": "ptrim",
         "nama": "PTRIM",
-        "href": "ptrim.bppt.go.id",
+        "href": "http://ptrim.bppt.go.id",
         "subs":  []
       },
       {
         "id": "ptip",
         "nama": "PTIP",
-        "href": "ptip.bppt.go.id",
+        "href": "http://ptip.bppt.go.id",
         "subs":  []
       },
       {
         "id": "ptspt",
         "nama": "PTSPT",
-        "href": "ptspt.bppt.go.id",
+        "href": "http://ptspt.bppt.go.id",
         "subs":  []
       },
       {
         "id": "btipdp",
         "nama": "BTIPDP",
-        "href": "btipdp.bppt.go.id",
+        "href": "http://btipdp.bppt.go.id",
         "subs":  []
       },
       {
         "id": "b2tks",
         "nama": "B2TKS",
-        "href": "b2tks.bppt.go.id",
+        "href": "http://b2tks.bppt.go.id",
         "subs":  []
       },
       {
         "id": "bth",
         "nama": "BTH",
-        "href": "bth.bppt.go.id",
+        "href": "http://bth.bppt.go.id",
         "subs":  []
       },
       {
         "id": "bt2mp",
         "nama": "BT2MP",
-        "href": "bt2mp.bppt.go.id",
+        "href": "http://bt2mp.bppt.go.id",
         "subs":  []
       },
       {
         "id": "meppo",
         "nama": "MEPPO",
-        "href": "meppo.bppt.go.id",
+        "href": "http://meppo.bppt.go.id",
         "subs":  []
       }
     ]
