@@ -9,7 +9,7 @@
         <v-col class="text-center" cols="12">
           <h1 class="display-3 font-weight-thin mb-4">Selamat Datang</h1>
           <h4 class="subheading">
-            Balai Besar Aerodinamika, Aeroelastika dan Aeroakustika
+            Balai Besar Teknologi Aerodinamika, Aeroelastika dan Aeroakustika
           </h4>
         </v-col>
       </v-row>
@@ -133,5 +133,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: 'Selamat Datang',
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'index_description',
+          name: 'description',
+          content:
+            'website resmi BBTA3 BPPT - Balai Besar Teknologi Aerodinamika, Aeroelastika, dan Aeroakustika'
+        }
+      ]
+    }
+  }
+}
 </script>
