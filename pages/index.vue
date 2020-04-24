@@ -49,7 +49,7 @@
 
       <v-row align="center" justify="center">
         <v-col cols="12" md="4">
-          <v-card hover>
+          <v-card hover class="growing">
             <v-img
               class="white--text align-end"
               height="350px"
@@ -64,7 +64,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="4">
-          <v-card hover>
+          <v-card hover class="growing">
             <v-img
               class="white--text align-end"
               height="350px"
@@ -80,7 +80,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="4">
-          <v-card hover>
+          <v-card hover class="growing">
             <v-img
               class="white--text align-end"
               height="350px"
@@ -96,7 +96,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="4">
-          <v-card hover>
+          <v-card hover class="growing">
             <v-img
               class="white--text align-end"
               height="350px"
@@ -112,7 +112,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="4">
-          <v-card hover>
+          <v-card hover class="growing">
             <v-img
               class="white--text align-end"
               height="350px"
