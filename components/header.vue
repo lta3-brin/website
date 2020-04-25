@@ -36,6 +36,7 @@
 
 <script>
 import menuItem from '~/static/menu.json'
+import keahlianItem from '~/static/keahlian.json'
 import HeaderDrawer from '~/components/header_drawer'
 
 export default {
@@ -47,9 +48,14 @@ export default {
     return {
       title: 'BBTA3 BPPT',
       sideMenu: false,
-      item_utama: menuItem,
+      item_utama: [],
       header_dipilih: []
     }
+  },
+  created() {
+    menuItem.unshift(keahlianItem)
+
+    this.item_utama = menuItem
   },
   methods: {
     goHome() {
@@ -67,7 +73,7 @@ export default {
           this.sideMenu = !this.sideMenu
         } else {
           this.$router.push({
-            path: '/inspire'
+            path: this.header_dipilih[0].to || '/'
           })
         }
       } else {
