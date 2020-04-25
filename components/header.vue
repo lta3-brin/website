@@ -3,7 +3,7 @@
     <v-app-bar fixed app elevate-on-scroll>
       <img alt="logo bbta3" class="logo" height="45" src="/icon.png" />
 
-      <v-toolbar-title @click.stop="goHome" v-text="title" />
+      <v-toolbar-title class="pointing" @click.stop="goHome" v-text="title" />
 
       <v-spacer />
 
