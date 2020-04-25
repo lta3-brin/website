@@ -35,7 +35,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#E53935' },
   /*
    ** Global CSS
    */
@@ -43,7 +43,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/filters.client.js'],
+  plugins: ['~/plugins/filters.client.js', '~/plugins/markdown.client.js'],
   /*
    ** Nuxt.js dev-modules
    */
