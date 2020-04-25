@@ -47,12 +47,13 @@
         Bidang Keahlian
       </h1>
 
-      <v-row align="center" justify="center">
+      <v-row align="center" justify-lg="space-around" justify-md="center">
         <v-col
           v-for="keahlian in dataKeahlian"
           :key="keahlian.slug"
           cols="12"
           md="4"
+          lg="2"
         >
           <v-card hover class="growing" :to="keahlian.to">
             <v-img
@@ -60,7 +61,9 @@
               height="350px"
               :src="keahlian.rincian.thumbnail"
             >
-              <v-card-title>Keahlian {{ keahlian.nama }}</v-card-title>
+              <v-card-title class="heading">
+                {{ keahlian.nama }}
+              </v-card-title>
             </v-img>
 
             <v-card-subtitle>
