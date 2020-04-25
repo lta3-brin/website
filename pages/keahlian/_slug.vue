@@ -11,13 +11,41 @@
     </v-parallax>
 
     <v-container class="fill-height">
-      <v-row align="center" justify="center">
-        <v-col cols="12">
-          <v-alert text border="top" colored-border color="red darken-4">
-            <h3 class="headline mb-7">Cakupan Kegiatan</h3>
+      <v-row align="start" justify="center">
+        <v-col cols="12" md="6">
+          <v-card outlined>
+            <v-list-item>
+              <v-list-item-content>
+                <div class="overline mb-4">Kepala Kelompok</div>
+                <v-list-item-title class="headline">
+                  {{ keahlian.rincian.ketua.nama }}
+                </v-list-item-title>
 
-            <vue-markdown html :source="keahlian.rincian.deskripsi" />
-          </v-alert>
+                <v-list-item-subtitle>
+                  📧 {{ keahlian.rincian.ketua.email }}
+                </v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+
+            <v-img
+              :src="keahlian.rincian.ketua.avatar"
+              aspect-ratio="1"
+              contain
+            />
+
+            <v-card-text>
+              {{ keahlian.rincian.ketua.kelompok }}
+            </v-card-text>
+
+            <v-card-text>
+              {{ keahlian.rincian.ketua.instansi }}
+            </v-card-text>
+          </v-card>
+        </v-col>
+        <v-col cols="12" md="6">
+          <h3 class="headline mb-7">Cakupan Kegiatan</h3>
+
+          <vue-markdown html :source="keahlian.rincian.deskripsi" />
         </v-col>
       </v-row>
     </v-container>
@@ -35,6 +63,7 @@ export default {
   },
   data() {
     return {
+      showInfo: false,
       keahlian: []
     }
   },
