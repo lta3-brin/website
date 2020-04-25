@@ -49,7 +49,7 @@
 
       <v-row align="center" justify="center">
         <v-col
-          v-for="keahlian in dataKeahlian.subs"
+          v-for="keahlian in dataKeahlian"
           :key="keahlian.slug"
           cols="12"
           md="4"
@@ -74,7 +74,7 @@
 </template>
 
 <script>
-import Keahlian from '~/static/menu.json'
+import Keahlian from '~/static/keahlian.json'
 
 export default {
   name: 'LandingPage',
@@ -84,9 +84,7 @@ export default {
     }
   },
   created() {
-    this.dataKeahlian = Keahlian.filter((keahlian) => {
-      return keahlian.slug === 'keahlian'
-    })[0]
+    this.dataKeahlian = Keahlian.subs
   },
   head() {
     return {
