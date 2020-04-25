@@ -29,6 +29,7 @@
         no-action
         sub-group
         value="true"
+        class="nomargin"
       >
         <template v-slot:activator>
           <v-list-item v-if="'href' in sub" :href="sub.href" target="_blank">
@@ -49,10 +50,15 @@
         </template>
         <template v-slot:prependIcon>
           <v-icon v-if="sub.subs.length > 0" size="18">fa-caret-down</v-icon>
-          <v-icon v-else size="12">fa-link</v-icon>
+          <v-icon v-else></v-icon>
         </template>
 
-        <v-list-item v-for="itm in sub.subs" :key="itm.slug" link>
+        <v-list-item
+          v-for="itm in sub.subs"
+          :key="itm.slug"
+          link
+          class="nomargin"
+        >
           <v-list-item v-if="'href' in itm" :href="itm.href" target="_blank">
             <v-list-item-title>
               {{ itm.nama }}
