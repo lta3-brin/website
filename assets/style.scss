@@ -1,9 +1,28 @@
-.growing .v-image__image--cover {
-  transition: all .2s ease-in-out;
-  clip-path: inset(0 0 0 0);
+.v-toolbar__title.pointing:hover {
+  cursor: pointer;
 }
 
-.growing:hover .v-image__image--cover {
-  transform: scale(1.1);
-  clip-path: inset(4.5% 4.5% 4.5% 4.5%);
+.v-list-group.nomargin {
+  .v-list-item__icon:first-child {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  a.v-list-item, a.v-list-item--link {
+    padding-left: 0;
+  }
+}
+
+.growing {
+  .v-image__image--cover {
+    transition: all .2s ease-in-out;
+    clip-path: inset(0 0 0 0);
+  }
+
+  &:hover {
+    .v-image__image--cover {
+      transform: scale(1.1);
+      clip-path: inset(4.5% 4.5% 4.5% 4.5%);
+    }
+  }
 }
