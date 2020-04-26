@@ -4,6 +4,7 @@
       v-for="item of dataHeader"
       :key="item.slug"
       class="nomarginroot"
+      value="true"
     >
       <template v-slot:activator>
         <v-list-item v-if="'href' in item" :href="item.href" target="_blank">
