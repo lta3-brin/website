@@ -2,6 +2,15 @@
   cursor: pointer;
 }
 
+.nomarginroot .v-list-item--active {
+  color: #1976d2 !important;
+
+  &::before {
+    opacity: 1;
+    background-color: transparent;
+  }
+}
+
 .v-list-group.nomargin {
   .v-list-item__icon:first-child {
     margin-right: 0 !important;
@@ -20,6 +29,20 @@
 
   .v-list-group__header.v-list-item {
     padding-right: 0;
+  }
+}
+
+.v-list-item.nomargin {
+  padding-right: 0;
+
+  a {
+    padding-left: 0 !important;
+
+    &.v-list-item--active::before {
+      opacity: 1;
+      background-color: transparent;
+      border-right: 5px solid #1976d2;
+    }
   }
 }
 
