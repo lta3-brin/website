@@ -17,7 +17,7 @@
     <v-container class="fill-height">
       <v-row align="start" justify="center">
         <v-col cols="12" md="5">
-          <v-card outlined>
+          <v-card outlined class="growing">
             <v-list-item>
               <v-list-item-content>
                 <div class="overline mb-4">Kepala Kelompok</div>
@@ -31,7 +31,7 @@
               </v-list-item-content>
             </v-list-item>
 
-            <v-img :src="keahlian.rincian.ketua.avatar" contain />
+            <v-img :src="keahlian.rincian.ketua.avatar" />
 
             <v-card-text>
               {{ keahlian.rincian.ketua.kelompok }}
