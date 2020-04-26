@@ -11,6 +11,16 @@
   a.v-list-item, a.v-list-item--link {
     padding-left: 0;
   }
+
+  a.v-list-item--link.v-list-item--active::before {
+    opacity: 1;
+    background-color: transparent;
+    border-right: 5px solid #1976d2;
+  }
+
+  .v-list-group__header.v-list-item {
+    padding-right: 0;
+  }
 }
 
 .growing {
