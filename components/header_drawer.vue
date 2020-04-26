@@ -1,6 +1,10 @@
 <template>
   <v-list>
-    <v-list-group v-for="item of dataHeader" :key="item.slug">
+    <v-list-group
+      v-for="item of dataHeader"
+      :key="item.slug"
+      class="nomarginroot"
+    >
       <template v-slot:activator>
         <v-list-item v-if="'href' in item" :href="item.href" target="_blank">
           <v-list-item-title>
