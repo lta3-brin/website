@@ -3,7 +3,11 @@
     <v-parallax dark height="500" :src="keahlian.rincian.thumbnail">
       <v-row align="center" justify="center">
         <v-col class="text-center" cols="12">
-          <h1 class="display-3 font-weight-thin mb-4 text-uppercase">
+          <h1
+            v-resize="onResize"
+            class="font-weight-thin mb-4 text-uppercase"
+            :class="'display-' + x"
+          >
             Keahlian {{ keahlian.nama }}
           </h1>
         </v-col>
@@ -12,7 +16,7 @@
 
     <v-container class="fill-height">
       <v-row align="start" justify="center">
-        <v-col cols="12" md="6">
+        <v-col cols="12" md="5">
           <v-card outlined>
             <v-list-item>
               <v-list-item-content>
@@ -27,11 +31,7 @@
               </v-list-item-content>
             </v-list-item>
 
-            <v-img
-              :src="keahlian.rincian.ketua.avatar"
-              aspect-ratio="1"
-              contain
-            />
+            <v-img :src="keahlian.rincian.ketua.avatar" contain />
 
             <v-card-text>
               {{ keahlian.rincian.ketua.kelompok }}
@@ -42,6 +42,7 @@
             </v-card-text>
           </v-card>
         </v-col>
+
         <v-col cols="12" md="6">
           <h3 class="headline mb-7">Cakupan Kegiatan</h3>
 
@@ -63,6 +64,7 @@ export default {
   },
   data() {
     return {
+      x: 3,
       showInfo: false,
       keahlian: []
     }
@@ -71,6 +73,12 @@ export default {
     this.keahlian = dataKeahlian.subs.filter((keahlian) => {
       return keahlian.slug === this.$route.params.slug
     })[0]
+  },
+  methods: {
+    onResize() {
+      if (window.innerWidth < 960) this.x = 1
+      else this.x = 3
+    }
   },
   head() {
     return {
