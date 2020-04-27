@@ -1,16 +1,36 @@
 <template>
   <div>
-    <v-parallax
-      dark
-      height="500"
-      src="https://i.pinimg.com/originals/92/58/f0/9258f03b22fbf1c96b0b8519d4bf90d4.png"
-    >
+    <v-parallax dark height="500" :src="informasi.thumbnail">
       <v-row align="center" justify="center">
         <v-col class="text-center" cols="12">
-          <h1 class="display-3 font-weight-thin mb-4">Selamat Datang</h1>
+          <h1 class="display-3 font-weight-thin mb-4">
+            {{ informasi.judul }}
+          </h1>
           <h4 class="subheading">
-            Balai Besar Teknologi Aerodinamika, Aeroelastika dan Aeroakustika
+            {{ informasi.subjudul }}
           </h4>
+
+          <v-btn
+            v-if="informasi.tautan && externalLink"
+            outlined
+            color="white"
+            large
+            class="mt-7"
+            :href="informasi.tautan"
+            target="_blank"
+          >
+            pelajari
+          </v-btn>
+          <v-btn
+            v-else-if="informasi.tautan && !externalLink"
+            outlined
+            color="white"
+            large
+            class="mt-7"
+            :to="informasi.tautan"
+          >
+            pelajari
+          </v-btn>
         </v-col>
       </v-row>
     </v-parallax>
@@ -77,17 +97,27 @@
 </template>
 
 <script>
+import Informasi from '~/static/informasi.json'
 import Keahlian from '~/static/keahlian.json'
 
 export default {
   name: 'LandingPage',
   data() {
     return {
-      dataKeahlian: []
+      dataKeahlian: [],
+      informasi: null,
+      externalLink: false
     }
   },
   created() {
     this.dataKeahlian = Keahlian.subs
+    this.informasi = Informasi
+
+    if (this.informasi.tautan) {
+      const partsUrl = this.informasi.tautan.split('/')
+
+      this.externalLink = partsUrl[0] === 'http:' || partsUrl[0] === 'https:'
+    }
   },
   head() {
     return {
