@@ -44,17 +44,7 @@
             </h1>
           </v-col>
           <v-col cols="auto" class="text-center">
-            <v-btn
-              class="ma-2"
-              color="primary"
-              x-large
-              rounded
-              elevation="7"
-              target="_blank"
-              href="http://bit.ly/DiscordBBTA3"
-            >
-              BERGABUNG
-            </v-btn>
+            <Chat />
           </v-col>
         </v-row>
       </v-container>
@@ -97,11 +87,15 @@
 </template>
 
 <script>
+import Chat from '~/components/submenu/chat'
 import Informasi from '~/static/informasi.json'
 import Keahlian from '~/static/keahlian.json'
 
 export default {
   name: 'LandingPage',
+  components: {
+    Chat
+  },
   data() {
     return {
       dataKeahlian: [],
