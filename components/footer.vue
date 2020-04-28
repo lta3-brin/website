@@ -2,7 +2,7 @@
   <v-container fluid class="px-0 pb-0">
     <v-card flat tile class="light-blue darken-4 white--text pt-4">
       <v-container fluid>
-        <v-row justify="space-around">
+        <v-row justify="space-between">
           <v-col cols="12" md="4">
             <v-card-text>
               <v-btn
@@ -39,6 +39,17 @@
 
           <v-col cols="12" md="4">
             <v-card-text>
+              <div v-if="videoLoading">
+                <v-skeleton-loader
+                  v-for="vid in 3"
+                  :key="vid"
+                  type="table-heading, list-item-three-line, actions"
+                  tile
+                  dark
+                  class="mb-2"
+                ></v-skeleton-loader>
+              </div>
+
               <v-card
                 v-for="video in videos"
                 :key="video.id.videoId"
@@ -51,9 +62,6 @@
                     <div class="overline mb-4">
                       {{ video.snippet.publishedAt | parseDate }}
                     </div>
-                    <v-list-item-title class="headline mb-1">
-                      {{ video.snippet.title }}
-                    </v-list-item-title>
                     <v-list-item-subtitle>
                       {{ video.snippet.description }}
                     </v-list-item-subtitle>
@@ -79,7 +87,7 @@
                     "
                     target="_blank"
                   >
-                    Simak
+                    Kunjungi
                   </v-btn>
 
                   <v-spacer></v-spacer>
@@ -92,21 +100,68 @@
 
           <v-col cols="12" md="4">
             <v-card-text>
-              <a
-                class="twitter-timeline"
-                data-dnt="true"
-                data-theme="dark"
-                data-tweet-limit="1"
-                data-aria-polite="assertive"
-                data-chrome="noborders"
-                href="https://twitter.com/BBTA3_BPPT?ref_src=twsrc%5Etfw"
-                >Berita dari BBTA3_BPPT</a
+              <div v-if="mediaLoading">
+                <v-skeleton-loader
+                  v-for="vid in 3"
+                  :key="vid"
+                  type="table-heading, list-item-three-line, actions"
+                  tile
+                  dark
+                  class="mb-2"
+                ></v-skeleton-loader>
+              </div>
+
+              <v-card
+                v-for="md in media"
+                :key="md.id"
+                outlined
+                class="mb-2"
+                color="grey darken-4"
               >
-              <script
-                async
-                src="https://platform.twitter.com/widgets.js"
-                charset="utf-8"
-              ></script>
+                <v-list-item three-line>
+                  <v-list-item-content>
+                    <div class="overline mb-4">
+                      {{ md.timestamp | parseDate }}
+                    </div>
+
+                    <v-list-item-title class="headline mb-1">
+                    </v-list-item-title>
+
+                    <v-list-item-subtitle>
+                      {{ md.caption }}
+                    </v-list-item-subtitle>
+                  </v-list-item-content>
+
+                  <v-list-item-avatar tile size="80" color="grey">
+                    <v-img
+                      height="250"
+                      :src="
+                        md.media_type === 'CAROUSEL_ALBUM'
+                          ? md.media_url
+                          : md.thumbnail_url
+                      "
+                      :alt="md.username"
+                    >
+                    </v-img>
+                  </v-list-item-avatar>
+                </v-list-item>
+
+                <v-card-actions>
+                  <v-btn
+                    color="red darken-4"
+                    text
+                    class="font-weight-black"
+                    :href="md.permalink"
+                    target="_blank"
+                  >
+                    kunjungi
+                  </v-btn>
+
+                  <v-spacer></v-spacer>
+
+                  <v-icon size="19" class="mr-3">fab fa-instagram</v-icon>
+                </v-card-actions>
+              </v-card>
             </v-card-text>
           </v-col>
         </v-row>
@@ -144,13 +199,19 @@ export default {
   name: 'Footer',
   data: () => ({
     sosmed: sosMed,
-    videos: []
+    videos: [],
+    videoLoading: false,
+    media: [],
+    mediaLoading: false
   }),
   created() {
     this.fetchYoutubeVideo()
+    this.fetchInstagramMedia()
   },
   methods: {
     async fetchYoutubeVideo() {
+      this.videoLoading = true
+
       try {
         const key = process.env.VIDEO_API
         const URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCa0_hm_SiHxps1Llk_q6I1Q&order=date&type=video&maxResults=3&key=${key}`
@@ -159,9 +220,28 @@ export default {
         RES.data.items.forEach((video) => {
           this.videos.push(video)
         })
-      } catch (e) {
+      } catch (_) {
         this.videos = []
       }
+
+      this.videoLoading = false
+    },
+    async fetchInstagramMedia() {
+      this.mediaLoading = true
+
+      try {
+        const key = process.env.MEDIA_API
+        const fields =
+          'id,username,caption,media_type,thumbnail_url,media_url,permalink,timestamp'
+        const URL = `https://graph.instagram.com/me/media?fields=${fields}&access_token=${key}`
+        const RES = await axios.get(URL)
+
+        this.media = RES.data.data.slice(0, 3)
+      } catch (_) {
+        this.media = []
+      }
+
+      this.mediaLoading = false
     }
   }
 }
