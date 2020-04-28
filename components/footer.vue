@@ -138,36 +138,12 @@
 
 <script>
 import axios from 'axios'
+import sosMed from '~/static/sosmed.json'
 
 export default {
   name: 'Footer',
   data: () => ({
-    sosmed: [
-      {
-        nama: 'fab fa-twitter',
-        url: 'http://bit.ly/TwitterBBTA3'
-      },
-      {
-        nama: 'fab fa-instagram',
-        url: 'http://bit.ly/InstagramBBTA3'
-      },
-      {
-        nama: 'fab fa-facebook',
-        url: 'http://bit.ly/FacebookBBTA3'
-      },
-      {
-        nama: 'fab fa-youtube-square',
-        url: 'http://bit.ly/YoutubeBBTA3'
-      },
-      {
-        nama: 'fab fa-google-play',
-        url: 'http://bit.ly/BetaTesterBBTA3'
-      },
-      {
-        nama: 'fab fa-discord',
-        url: 'http://bit.ly/DiscordBBTA3'
-      }
-    ],
+    sosmed: sosMed,
     videos: []
   }),
   created() {
