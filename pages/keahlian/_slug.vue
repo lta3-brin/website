@@ -15,8 +15,8 @@
     </v-parallax>
 
     <v-container class="fill-height">
-      <v-row align="start" justify="center">
-        <v-col cols="12" md="5">
+      <v-row align="start" justify="space-around">
+        <v-col cols="12" md="3">
           <v-card outlined class="growing">
             <v-list-item>
               <v-list-item-content>
@@ -48,6 +48,12 @@
 
           <vue-markdown html :source="keahlian.rincian.deskripsi" />
         </v-col>
+
+        <v-col cols="12" md="2">
+          <menu-obrolan />
+          <div class="py-2"></div>
+          <menu-keahlian />
+        </v-col>
       </v-row>
     </v-container>
   </v-app>
@@ -55,12 +61,16 @@
 
 <script>
 import VueMarkdown from 'vue-markdown'
+import MenuKeahlian from '~/components/submenu/keahlian'
+import MenuObrolan from '~/components/submenu/chat'
 import dataKeahlian from '~/static/keahlian.json'
 
 export default {
   name: 'IndexKeahlian',
   components: {
-    VueMarkdown
+    VueMarkdown,
+    MenuKeahlian,
+    MenuObrolan
   },
   data() {
     return {
