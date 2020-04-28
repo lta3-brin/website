@@ -10,8 +10,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate:
-      '%s - ' + 'website resmi ' + process.env.npm_package_name + ' bppt',
+    titleTemplate: '%s - ' + 'Website Resmi BBTA3 BPPT',
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
