@@ -73,6 +73,7 @@
                   <v-btn
                     color="red darken-4"
                     text
+                    class="font-weight-black"
                     :href="
                       'https://www.youtube.com/watch?v=' + video.id.videoId
                     "
@@ -80,6 +81,10 @@
                   >
                     Simak
                   </v-btn>
+
+                  <v-spacer></v-spacer>
+
+                  <v-icon size="19" class="mr-3">fab fa-youtube</v-icon>
                 </v-card-actions>
               </v-card>
             </v-card-text>
