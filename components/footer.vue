@@ -3,7 +3,7 @@
     <v-card flat tile class="light-blue darken-4 white--text pt-4">
       <v-container fluid>
         <v-row justify="space-between">
-          <v-col cols="12" md="4">
+          <v-col cols="12" md="3">
             <v-card-text>
               <v-btn
                 v-for="smd in sosmed"
@@ -37,8 +37,14 @@
             </v-card-text>
           </v-col>
 
-          <v-col cols="12" md="4">
+          <v-col cols="12" md="3">
             <v-card-text>
+              <v-subheader
+                class="mb-2 px-0 display-1 font-weight-light text-uppercase"
+              >
+                Video BBTA3
+              </v-subheader>
+
               <div v-if="videoLoading">
                 <v-skeleton-loader
                   v-for="vid in 3"
@@ -55,14 +61,14 @@
                 :key="video.id.videoId"
                 outlined
                 class="mb-2"
-                color="grey darken-4"
+                color="#272727"
               >
                 <v-list-item three-line>
                   <v-list-item-content>
                     <div class="overline mb-4">
                       {{ video.snippet.publishedAt | parseDate }}
                     </div>
-                    <v-list-item-title>
+                    <v-list-item-title class="mb-2">
                       {{ video.snippet.title }}
                     </v-list-item-title>
                     <v-list-item-subtitle>
@@ -101,9 +107,15 @@
             </v-card-text>
           </v-col>
 
-          <v-col cols="12" md="4">
+          <v-col cols="12" md="3">
             <v-card-text>
-              <div v-if="mediaLoading">
+              <v-subheader
+                class="mb-2 px-0 display-1 font-weight-light text-uppercase"
+              >
+                Kabar BBTA3
+              </v-subheader>
+
+              <div v-if="videoLoading">
                 <v-skeleton-loader
                   v-for="vid in 3"
                   :key="vid"
@@ -115,35 +127,30 @@
               </div>
 
               <v-card
-                v-for="md in media"
-                :key="md.id"
+                v-for="video in videos"
+                :key="video.id.videoId"
                 outlined
                 class="mb-2"
-                color="grey darken-4"
+                color="#272727"
               >
                 <v-list-item three-line>
                   <v-list-item-content>
                     <div class="overline mb-4">
-                      {{ md.timestamp | parseDate }}
+                      {{ video.snippet.publishedAt | parseDate }}
                     </div>
-
-                    <v-list-item-title class="headline mb-1">
+                    <v-list-item-title class="mb-2">
+                      Kabar BBTA3
                     </v-list-item-title>
-
                     <v-list-item-subtitle>
-                      {{ md.caption }}
+                      {{ video.snippet.description }}
                     </v-list-item-subtitle>
                   </v-list-item-content>
 
                   <v-list-item-avatar tile size="80" color="grey">
                     <v-img
                       height="250"
-                      :src="
-                        md.media_type === 'CAROUSEL_ALBUM'
-                          ? md.media_url
-                          : md.thumbnail_url
-                      "
-                      :alt="md.username"
+                      :src="video.snippet.thumbnails.high.url"
+                      :alt="video.snippet.title"
                     >
                     </v-img>
                   </v-list-item-avatar>
@@ -154,15 +161,87 @@
                     color="red darken-4"
                     text
                     class="font-weight-black"
-                    :href="md.permalink"
+                    :href="
+                      'https://www.youtube.com/watch?v=' + video.id.videoId
+                    "
                     target="_blank"
                   >
-                    kunjungi
+                    Kunjungi
                   </v-btn>
 
                   <v-spacer></v-spacer>
 
-                  <v-icon size="19" class="mr-3">fab fa-instagram</v-icon>
+                  <v-icon size="19" class="mr-3">fab fa-twitter</v-icon>
+                </v-card-actions>
+              </v-card>
+            </v-card-text>
+          </v-col>
+
+          <v-col cols="12" md="3">
+            <v-card-text>
+              <v-subheader
+                class="mb-2 px-0 display-1 font-weight-light text-uppercase"
+              >
+                Kabar BPPT
+              </v-subheader>
+
+              <div v-if="videoLoading">
+                <v-skeleton-loader
+                  v-for="vid in 3"
+                  :key="vid"
+                  type="table-heading, list-item-three-line, actions"
+                  tile
+                  dark
+                  class="mb-2"
+                ></v-skeleton-loader>
+              </div>
+
+              <v-card
+                v-for="video in videos"
+                :key="video.id.videoId"
+                outlined
+                class="mb-2"
+                color="#272727"
+              >
+                <v-list-item three-line>
+                  <v-list-item-content>
+                    <div class="overline mb-4">
+                      {{ video.snippet.publishedAt | parseDate }}
+                    </div>
+                    <v-list-item-title class="mb-2">
+                      Kabar BPPT
+                    </v-list-item-title>
+                    <v-list-item-subtitle>
+                      {{ video.snippet.description }}
+                    </v-list-item-subtitle>
+                  </v-list-item-content>
+
+                  <v-list-item-avatar tile size="80" color="grey">
+                    <v-img
+                      height="250"
+                      :src="video.snippet.thumbnails.high.url"
+                      :alt="video.snippet.title"
+                    >
+                    </v-img>
+                  </v-list-item-avatar>
+                </v-list-item>
+
+                <v-card-actions>
+                  <v-btn
+                    color="red darken-4"
+                    text
+                    class="font-weight-black"
+                    :href="
+                      'https://www.youtube.com/watch?v=' + video.id.videoId
+                    "
+                    target="_blank"
+                  >
+                    Kunjungi
+                  </v-btn>
+
+                  <v-spacer></v-spacer>
+
+                  <v-icon size="19" class="mr-3">fab fa-twitter</v-icon>
                 </v-card-actions>
               </v-card>
             </v-card-text>
@@ -209,7 +288,6 @@ export default {
   }),
   created() {
     this.fetchYoutubeVideo()
-    this.fetchInstagramMedia()
   },
   methods: {
     async fetchYoutubeVideo() {
@@ -228,23 +306,6 @@ export default {
       }
 
       this.videoLoading = false
-    },
-    async fetchInstagramMedia() {
-      this.mediaLoading = true
-
-      try {
-        const key = process.env.MEDIA_API
-        const fields =
-          'id,username,caption,media_type,thumbnail_url,media_url,permalink,timestamp'
-        const URL = `https://graph.instagram.com/me/media?fields=${fields}&access_token=${key}`
-        const RES = await axios.get(URL)
-
-        this.media = RES.data.data.slice(0, 3)
-      } catch (_) {
-        this.media = []
-      }
-
-      this.mediaLoading = false
     }
   }
 }
