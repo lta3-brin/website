@@ -15,8 +15,8 @@
     </v-parallax>
 
     <v-container class="fill-height">
-      <v-row align="start" justify="space-around">
-        <v-col cols="12" md="3">
+      <v-row align="start" justify="space-around" justify-md="space-between">
+        <v-col cols="12" md="auto" lg="3">
           <v-card outlined class="growing">
             <v-list-item>
               <v-list-item-content>
@@ -43,13 +43,13 @@
           </v-card>
         </v-col>
 
-        <v-col cols="12" md="6">
+        <v-col cols="12" md="8" lg="6">
           <h3 class="headline mb-7">Cakupan Kegiatan</h3>
 
           <vue-markdown html :source="keahlian.rincian.deskripsi" />
         </v-col>
 
-        <v-col cols="12" md="2">
+        <v-col cols="12" md="auto" lg="2">
           <menu-obrolan />
           <div class="py-2"></div>
           <menu-keahlian />
