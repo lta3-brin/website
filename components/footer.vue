@@ -45,20 +45,9 @@
                 Video BBTA3
               </v-subheader>
 
-              <div v-if="videoLoading">
-                <v-skeleton-loader
-                  v-for="vid in 3"
-                  :key="vid"
-                  type="table-heading, list-item-three-line, actions"
-                  tile
-                  dark
-                  class="mb-2"
-                ></v-skeleton-loader>
-              </div>
-
               <v-card
-                v-for="video in videos"
-                :key="video.id.videoId"
+                v-for="video in videoBBTA3"
+                :key="video.id"
                 outlined
                 class="mb-2"
                 color="#272727"
@@ -66,23 +55,18 @@
                 <v-list-item three-line>
                   <v-list-item-content>
                     <div class="overline mb-4">
-                      {{ video.snippet.publishedAt | parseDate }}
+                      {{ video.createdAt | parseDate }}
                     </div>
                     <v-list-item-title class="mb-2">
-                      {{ video.snippet.title }}
+                      {{ video.title }}
                     </v-list-item-title>
                     <v-list-item-subtitle>
-                      {{ video.snippet.description }}
+                      {{ video.description }}
                     </v-list-item-subtitle>
                   </v-list-item-content>
 
                   <v-list-item-avatar tile size="80" color="grey">
-                    <v-img
-                      height="250"
-                      :src="video.snippet.thumbnails.high.url"
-                      :alt="video.snippet.title"
-                    >
-                    </v-img>
+                    <v-img :src="video.thumbnail" :alt="video.id" />
                   </v-list-item-avatar>
                 </v-list-item>
 
@@ -91,9 +75,7 @@
                     color="red darken-4"
                     text
                     class="font-weight-black"
-                    :href="
-                      'https://www.youtube.com/watch?v=' + video.id.videoId
-                    "
+                    :href="'https://www.youtube.com/watch?v=' + video.id"
                     target="_blank"
                   >
                     Kunjungi
@@ -188,7 +170,7 @@
                       {{ brt.createdAt | parseDate }}
                     </div>
                     <v-list-item-title class="mb-2">
-                      Kabar BBTA3
+                      Kabar BPPT
                     </v-list-item-title>
                     <v-list-item-subtitle>
                       {{ brt.description }}
@@ -254,7 +236,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 import sosMed from '~/static/sosmed.json'
 
 export default {
@@ -274,43 +255,9 @@ export default {
       return this.$store.state.berita.koleksi.filter((item) => {
         return item.screen_name === 'BPPT_RI'
       })
-    }
-  },
-  mounted() {
-    // this.fetchYoutubeVideo()
-  },
-  methods: {
-    async fetchYoutubeVideo() {
-      this.videoLoading = true
-
-      try {
-        const key = process.env.VIDEO_API
-        const URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCa0_hm_SiHxps1Llk_q6I1Q&order=date&type=video&maxResults=3&key=${key}`
-        const RES = await axios.get(URL)
-
-        RES.data.items.forEach((video) => {
-          this.videos.push(video)
-        })
-      } catch (_) {
-        this.videos = []
-      }
-
-      this.videoLoading = false
     },
-    async fetchTwitetrTimelines() {
-      this.videoLoading = true
-
-      const key = process.env.NEWS_API
-      const URL = `https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=bbta3_bppt&count=4&exclude_replies=true&tweet_mode=extended`
-      try {
-        await axios.get(URL, {
-          headers: {
-            Authorization: `Bearer ${key}`
-          }
-        })
-      } catch (_) {}
-
-      this.videoLoading = false
+    videoBBTA3() {
+      return this.$store.state.video.koleksi.slice(0, 3)
     }
   }
 }
