@@ -282,11 +282,9 @@ export default {
   data: () => ({
     sosmed: sosMed,
     videos: [],
-    videoLoading: false,
-    media: [],
-    mediaLoading: false
+    videoLoading: false
   }),
-  created() {
+  mounted() {
     this.fetchYoutubeVideo()
   },
   methods: {
