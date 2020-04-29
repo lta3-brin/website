@@ -62,6 +62,9 @@
                     <div class="overline mb-4">
                       {{ video.snippet.publishedAt | parseDate }}
                     </div>
+                    <v-list-item-title>
+                      {{ video.snippet.title }}
+                    </v-list-item-title>
                     <v-list-item-subtitle>
                       {{ video.snippet.description }}
                     </v-list-item-subtitle>
