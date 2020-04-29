@@ -3,7 +3,7 @@
     <v-card flat tile class="light-blue darken-4 white--text pt-4">
       <v-container fluid>
         <v-row justify="space-between">
-          <v-col cols="12" md="3">
+          <v-col cols="12" md="auto" lg="3">
             <v-card-text>
               <v-btn
                 v-for="smd in sosmed"
@@ -37,7 +37,7 @@
             </v-card-text>
           </v-col>
 
-          <v-col cols="12" md="3">
+          <v-col cols="12" md="4" lg="3">
             <v-card-text>
               <v-subheader
                 class="mb-2 px-0 display-1 font-weight-light text-uppercase"
@@ -107,7 +107,7 @@
             </v-card-text>
           </v-col>
 
-          <v-col cols="12" md="3">
+          <v-col cols="12" md="4" lg="3">
             <v-card-text>
               <v-subheader
                 class="mb-2 px-0 display-1 font-weight-light text-uppercase"
@@ -177,7 +177,7 @@
             </v-card-text>
           </v-col>
 
-          <v-col cols="12" md="3">
+          <v-col cols="12" md="4" lg="3">
             <v-card-text>
               <v-subheader
                 class="mb-2 px-0 display-1 font-weight-light text-uppercase"
@@ -285,7 +285,7 @@ export default {
     videoLoading: false
   }),
   mounted() {
-    this.fetchYoutubeVideo()
+    // this.fetchYoutubeVideo()
   },
   methods: {
     async fetchYoutubeVideo() {
@@ -302,6 +302,21 @@ export default {
       } catch (_) {
         this.videos = []
       }
+
+      this.videoLoading = false
+    },
+    async fetchTwitetrTimelines() {
+      this.videoLoading = true
+
+      const key = process.env.NEWS_API
+      const URL = `https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=bbta3_bppt&count=4&exclude_replies=true&tweet_mode=extended`
+      try {
+        await axios.get(URL, {
+          headers: {
+            Authorization: `Bearer ${key}`
+          }
+        })
+      } catch (_) {}
 
       this.videoLoading = false
     }
