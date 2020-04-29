@@ -115,20 +115,9 @@
                 Kabar BBTA3
               </v-subheader>
 
-              <div v-if="videoLoading">
-                <v-skeleton-loader
-                  v-for="vid in 3"
-                  :key="vid"
-                  type="table-heading, list-item-three-line, actions"
-                  tile
-                  dark
-                  class="mb-2"
-                ></v-skeleton-loader>
-              </div>
-
               <v-card
-                v-for="video in videos"
-                :key="video.id.videoId"
+                v-for="brt in beritaBBTA3"
+                :key="brt.id"
                 outlined
                 class="mb-2"
                 color="#272727"
@@ -136,21 +125,22 @@
                 <v-list-item three-line>
                   <v-list-item-content>
                     <div class="overline mb-4">
-                      {{ video.snippet.publishedAt | parseDate }}
+                      {{ brt.createdAt | parseDate }}
                     </div>
                     <v-list-item-title class="mb-2">
                       Kabar BBTA3
                     </v-list-item-title>
                     <v-list-item-subtitle>
-                      {{ video.snippet.description }}
+                      {{ brt.description }}
                     </v-list-item-subtitle>
                   </v-list-item-content>
 
                   <v-list-item-avatar tile size="80" color="grey">
                     <v-img
+                      contain
                       height="250"
-                      :src="video.snippet.thumbnails.high.url"
-                      :alt="video.snippet.title"
+                      :src="brt.thumbnail"
+                      :alt="brt.id_str"
                     >
                     </v-img>
                   </v-list-item-avatar>
@@ -162,7 +152,7 @@
                     text
                     class="font-weight-black"
                     :href="
-                      'https://www.youtube.com/watch?v=' + video.id.videoId
+                      `https://twitter.com/${brt.screen_name}/status/${brt.id}`
                     "
                     target="_blank"
                   >
@@ -185,20 +175,9 @@
                 Kabar BPPT
               </v-subheader>
 
-              <div v-if="videoLoading">
-                <v-skeleton-loader
-                  v-for="vid in 3"
-                  :key="vid"
-                  type="table-heading, list-item-three-line, actions"
-                  tile
-                  dark
-                  class="mb-2"
-                ></v-skeleton-loader>
-              </div>
-
               <v-card
-                v-for="video in videos"
-                :key="video.id.videoId"
+                v-for="brt in beritaBPPT"
+                :key="brt.id"
                 outlined
                 class="mb-2"
                 color="#272727"
@@ -206,21 +185,22 @@
                 <v-list-item three-line>
                   <v-list-item-content>
                     <div class="overline mb-4">
-                      {{ video.snippet.publishedAt | parseDate }}
+                      {{ brt.createdAt | parseDate }}
                     </div>
                     <v-list-item-title class="mb-2">
-                      Kabar BPPT
+                      Kabar BBTA3
                     </v-list-item-title>
                     <v-list-item-subtitle>
-                      {{ video.snippet.description }}
+                      {{ brt.description }}
                     </v-list-item-subtitle>
                   </v-list-item-content>
 
                   <v-list-item-avatar tile size="80" color="grey">
                     <v-img
+                      contain
                       height="250"
-                      :src="video.snippet.thumbnails.high.url"
-                      :alt="video.snippet.title"
+                      :src="brt.thumbnail"
+                      :alt="brt.id_str"
                     >
                     </v-img>
                   </v-list-item-avatar>
@@ -232,7 +212,7 @@
                     text
                     class="font-weight-black"
                     :href="
-                      'https://www.youtube.com/watch?v=' + video.id.videoId
+                      `https://twitter.com/${brt.screen_name}/status/${brt.id}`
                     "
                     target="_blank"
                   >
@@ -284,6 +264,18 @@ export default {
     videos: [],
     videoLoading: false
   }),
+  computed: {
+    beritaBBTA3() {
+      return this.$store.state.berita.koleksi.filter((item) => {
+        return item.screen_name === 'BBTA3_BPPT'
+      })
+    },
+    beritaBPPT() {
+      return this.$store.state.berita.koleksi.filter((item) => {
+        return item.screen_name === 'BPPT_RI'
+      })
+    }
+  },
   mounted() {
     // this.fetchYoutubeVideo()
   },
