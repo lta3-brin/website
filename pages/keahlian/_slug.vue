@@ -14,9 +14,17 @@
       </v-row>
     </v-parallax>
 
-    <v-container class="fill-height">
-      <v-row align="start" justify="space-around" justify-md="space-between">
-        <v-col cols="12" md="auto" lg="3">
+    <v-container class="fill-height" style="max-width: 1200px">
+      <v-row align="start" justify="space-between" justify-lg="space-around">
+        <v-col cols="12" md="8" lg="8">
+          <h3 class="headline mb-7">Cakupan Kegiatan</h3>
+
+          <vue-markdown html :source="keahlian.rincian.deskripsi" />
+        </v-col>
+
+        <v-col cols="12" md="auto" lg="4">
+          <menu-obrolan />
+          <div class="py-2"></div>
           <v-card outlined class="growing">
             <v-list-item>
               <v-list-item-content>
@@ -41,18 +49,10 @@
               {{ keahlian.rincian.ketua.instansi }}
             </v-card-text>
           </v-card>
-        </v-col>
-
-        <v-col cols="12" md="8" lg="6">
-          <h3 class="headline mb-7">Cakupan Kegiatan</h3>
-
-          <vue-markdown html :source="keahlian.rincian.deskripsi" />
-        </v-col>
-
-        <v-col cols="12" md="auto" lg="2">
-          <menu-obrolan />
           <div class="py-2"></div>
           <menu-keahlian />
+          <div class="py-2"></div>
+          <menu-cahnnel />
         </v-col>
       </v-row>
     </v-container>
@@ -62,6 +62,7 @@
 <script>
 import VueMarkdown from 'vue-markdown'
 import MenuKeahlian from '~/components/submenu/keahlian'
+import MenuCahnnel from '~/components/submenu/channel'
 import MenuObrolan from '~/components/submenu/chat'
 import dataKeahlian from '~/static/keahlian.json'
 
@@ -70,6 +71,7 @@ export default {
   components: {
     VueMarkdown,
     MenuKeahlian,
+    MenuCahnnel,
     MenuObrolan
   },
   data() {
