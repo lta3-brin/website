@@ -1,0 +1,60 @@
+{
+  "slug": "tentang",
+  "nama": "Tentang Kami",
+  "subs":  [
+    {
+      "slug": "fasilitas",
+      "nama": "Fasilitas",
+      "to": "/inspire",
+      "subs": []
+    },
+    {
+      "slug": "pp_tarif",
+      "nama": "PP Tarif",
+      "to": "/inspire",
+      "subs":  []
+    },
+    {
+      "slug": "hubungi_kami",
+      "nama": "Hubungi Kami",
+      "to": "/inspire",
+      "subs":  []
+    },
+    {
+      "slug": "kepuasan_pelanggan",
+      "nama": "Kepuasan Pelanggan",
+      "to": "/inspire",
+      "subs":  []
+    },
+    {
+      "slug": "keluhan",
+      "nama": "Keluhan/Umpan Balik",
+      "to": "/inspire",
+      "subs":  []
+    },
+    {
+      "slug": "profil",
+      "nama": "Profil BBTA3",
+      "subs": [
+        {
+          "slug": "tugas_pokok",
+          "nama": "Tugas Pokok & Fungsi",
+          "to": "/inspire",
+          "subs": []
+        },
+        {
+          "slug": "struktur_organisasi",
+          "nama": "Struktur Organisasi",
+          "to": "/inspire",
+          "subs": []
+        },
+        {
+          "slug": "pejabat_struktural",
+          "nama": "Pejabat Struktural",
+          "to": "/inspire",
+          "subs": []
+        }
+      ]
+    }
+  ]
+}

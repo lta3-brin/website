@@ -1,0 +1,18 @@
+{
+  "slug": "produk",
+  "nama": "Produk Hukum",
+  "subs":  [
+    {
+      "slug": "sk_bppt",
+      "nama": "SK Ka. BPPT",
+      "href": "http://aerobox.bbta3.bppt.go.id/index.php/s/0EbGx0FpaUMth2v",
+      "subs": []
+    },
+    {
+      "slug": "sk_bta3",
+      "nama": "SK Ka BBTA3",
+      "href": "http://aerobox.bbta3.bppt.go.id/index.php/s/KpO0LhswD2gtpRY",
+      "subs": []
+    }
+  ]
+}
