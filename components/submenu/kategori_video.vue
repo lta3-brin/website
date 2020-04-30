@@ -1,5 +1,5 @@
 <template>
-  <v-card tile>
+  <v-card>
     <v-list rounded>
       <v-subheader>KATEGORI VIDEO</v-subheader>
       <v-list-item-group color="primary">
