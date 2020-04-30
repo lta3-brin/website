@@ -45,6 +45,18 @@
                 Video BBTA3
               </v-subheader>
 
+              <v-alert
+                v-if="videoBBTA3.length === 0"
+                colored-border
+                color="red darken-4"
+                border="top"
+                type="info"
+                elevation="2"
+              >
+                Informasi berita saat ini <strong>belum</strong> cukup. Mohon
+                maaf atas ketidaknyamanan ini.
+              </v-alert>
+
               <v-card
                 v-for="video in videoBBTA3"
                 :key="video.id"
@@ -97,6 +109,18 @@
                 Kabar BBTA3
               </v-subheader>
 
+              <v-alert
+                v-if="beritaBBTA3.length === 0"
+                colored-border
+                color="red darken-4"
+                border="top"
+                type="info"
+                elevation="2"
+              >
+                Informasi berita saat ini <strong>belum</strong> cukup. Mohon
+                maaf atas ketidaknyamanan ini.
+              </v-alert>
+
               <v-card
                 v-for="brt in beritaBBTA3"
                 :key="brt.id"
@@ -117,7 +141,12 @@
                     </v-list-item-subtitle>
                   </v-list-item-content>
 
-                  <v-list-item-avatar tile size="80" color="grey">
+                  <v-list-item-avatar
+                    v-if="brt.thumbnail !== ''"
+                    tile
+                    size="80"
+                    color="grey"
+                  >
                     <v-img
                       contain
                       height="250"
@@ -157,6 +186,18 @@
                 Kabar BPPT
               </v-subheader>
 
+              <v-alert
+                v-if="beritaBPPT.length === 0"
+                colored-border
+                color="red darken-4"
+                border="top"
+                type="info"
+                elevation="2"
+              >
+                Informasi berita saat ini <strong>belum</strong> cukup. Mohon
+                maaf atas ketidaknyamanan ini.
+              </v-alert>
+
               <v-card
                 v-for="brt in beritaBPPT"
                 :key="brt.id"
@@ -177,7 +218,12 @@
                     </v-list-item-subtitle>
                   </v-list-item-content>
 
-                  <v-list-item-avatar tile size="80" color="grey darken-4">
+                  <v-list-item-avatar
+                    v-if="brt.thumbnail !== ''"
+                    tile
+                    size="80"
+                    color="grey darken-4"
+                  >
                     <v-img
                       contain
                       height="250"
@@ -247,14 +293,18 @@ export default {
   }),
   computed: {
     beritaBBTA3() {
-      return this.$store.state.berita.koleksi.filter((item) => {
-        return item.screen_name === 'BBTA3_BPPT'
-      })
+      return this.$store.state.berita.koleksi
+        .filter((item) => {
+          return item.screen_name === 'BBTA3_BPPT'
+        })
+        .slice(0, 3)
     },
     beritaBPPT() {
-      return this.$store.state.berita.koleksi.filter((item) => {
-        return item.screen_name === 'BPPT_RI'
-      })
+      return this.$store.state.berita.koleksi
+        .filter((item) => {
+          return item.screen_name === 'BPPT_RI'
+        })
+        .slice(0, 3)
     },
     videoBBTA3() {
       return this.$store.state.video.koleksi.slice(0, 3)
