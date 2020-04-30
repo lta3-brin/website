@@ -11,7 +11,7 @@ export const mutations = {
         id: brt.id_str,
         createdAt: brt.created_at,
         description: brt.full_text,
-        thumbnail: brt.entities.media[0].media_url,
+        thumbnail: brt.entities.media ? brt.entities.media[0].media_url : '',
         screen_name: brt.user.screen_name
       })
     })
@@ -21,8 +21,8 @@ export const mutations = {
 export const actions = {
   async fetchTwitter() {
     const key = process.env.NEWS_API
-    const URL_BBTA3 = `https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=bbta3_bppt&count=4&exclude_replies=true&tweet_mode=extended`
-    const URL_BPPT = `https://api.twitter.com/1.1/search/tweets.json?q=from:bppt_ri&result_type=recent&count=3&tweet_mode=extended`
+    const URL_BBTA3 = `https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=bbta3_bppt&count=11&exclude_replies=true&tweet_mode=extended`
+    const URL_BPPT = `https://api.twitter.com/1.1/search/tweets.json?q=from:bppt_ri&result_type=recent&count=10&tweet_mode=extended`
 
     try {
       const resBBTA3 = await axios.get(URL_BBTA3, {
