@@ -134,7 +134,15 @@
                       {{ brt.createdAt | parseDate }}
                     </div>
                     <v-list-item-title class="mb-2">
-                      Kabar BBTA3
+                      <a
+                        v-for="tag in brt.hashtags"
+                        :key="tag.text"
+                        :href="`https://twitter.com/hashtag/${tag.text}`"
+                        class="mr-2 blue--text font-italic font-weight-thin caption"
+                        style="text-decoration: none"
+                        target="_blank"
+                        >#{{ tag.text }}</a
+                      >
                     </v-list-item-title>
                     <v-list-item-subtitle>
                       {{ brt.description }}
@@ -211,7 +219,15 @@
                       {{ brt.createdAt | parseDate }}
                     </div>
                     <v-list-item-title class="mb-2">
-                      Kabar BPPT
+                      <a
+                        v-for="tag in brt.hashtags"
+                        :key="tag.text"
+                        :href="`https://twitter.com/hashtag/${tag.text}`"
+                        class="mr-2 blue--text font-italic font-weight-thin caption"
+                        style="text-decoration: none"
+                        target="_blank"
+                        >#{{ tag.text }}</a
+                      >
                     </v-list-item-title>
                     <v-list-item-subtitle>
                       {{ brt.description }}
