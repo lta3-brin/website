@@ -55,6 +55,8 @@
           <menu-cahnnel />
           <div class="py-2"></div>
           <menu-kategori />
+          <div class="py-2"></div>
+          <menu-tags />
         </v-col>
       </v-row>
     </v-container>
@@ -67,6 +69,7 @@ import MenuKeahlian from '~/components/submenu/keahlian'
 import MenuCahnnel from '~/components/submenu/channel'
 import MenuKategori from '~/components/submenu/kategori_video'
 import MenuObrolan from '~/components/submenu/chat'
+import MenuTags from '~/components/submenu/hashtags_berita'
 import dataKeahlian from '~/static/keahlian.json'
 
 export default {
@@ -76,7 +79,8 @@ export default {
     MenuKeahlian,
     MenuCahnnel,
     MenuKategori,
-    MenuObrolan
+    MenuObrolan,
+    MenuTags
   },
   data() {
     return {
