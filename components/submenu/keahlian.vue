@@ -1,9 +1,13 @@
 <template>
   <v-card tile>
-    <v-list shaped>
-      <v-subheader>KEAHLIAN</v-subheader>
+    <v-list rounded>
+      <v-subheader>KEAHLIAN BBTA3</v-subheader>
       <v-list-item-group color="primary">
-        <v-list-item v-for="ahli in keahlian.subs" :key="ahli.slug">
+        <v-list-item
+          v-for="ahli in keahlian.subs"
+          :key="ahli.slug"
+          :to="ahli.to"
+        >
           <v-list-item-content>
             <v-list-item-title>
               {{ ahli.nama }}
