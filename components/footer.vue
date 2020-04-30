@@ -78,7 +78,7 @@
                   </v-list-item-content>
 
                   <v-list-item-avatar tile size="80" color="grey darken-4">
-                    <v-img contain :src="video.thumbnail" :alt="video.id" />
+                    <v-img :src="video.thumbnail" :alt="video.id" />
                   </v-list-item-avatar>
                 </v-list-item>
 
