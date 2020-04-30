@@ -4,6 +4,7 @@ export const actions = {
     const video = await dispatch('video/fetchYoutube')
     const playlist = await dispatch('video/fetchYoutubePlaylist')
 
+    commit('berita/addHashtag', berita.bbta3)
     commit('berita/addBerita', berita.bbta3)
     commit('berita/addBerita', berita.bppt)
     commit('video/addVideo', video)
