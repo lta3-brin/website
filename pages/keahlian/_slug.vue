@@ -20,6 +20,8 @@
           <h3 class="headline mb-7">Cakupan Kegiatan</h3>
 
           <vue-markdown html :source="keahlian.rincian.deskripsi" />
+
+          <feature-information />
         </v-col>
 
         <v-col cols="12" md="auto" lg="4">
@@ -70,6 +72,7 @@ import MenuCahnnel from '~/components/submenu/channel'
 import MenuKategori from '~/components/submenu/kategori_video'
 import MenuObrolan from '~/components/submenu/chat'
 import MenuTags from '~/components/submenu/hashtags_berita'
+import FeatureInformation from '~/components/feature_information'
 import dataKeahlian from '~/static/keahlian.json'
 
 export default {
@@ -80,7 +83,8 @@ export default {
     MenuCahnnel,
     MenuKategori,
     MenuObrolan,
-    MenuTags
+    MenuTags,
+    FeatureInformation
   },
   data() {
     return {
