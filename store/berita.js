@@ -13,7 +13,11 @@ export const mutations = {
         createdAt: brt.created_at,
         description: brt.full_text,
         thumbnail: brt.entities.media ? brt.entities.media[0].media_url : '',
-        screen_name: brt.user.screen_name
+        screen_name: brt.user.screen_name,
+        hashtags:
+          brt.entities.hashtags.length > 0
+            ? brt.entities.hashtags
+            : [{ text: 'no-hashtags' }]
       })
     })
   },
