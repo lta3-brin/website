@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 export const state = () => ({
-  koleksi: []
+  koleksi: [],
+  hashtags: []
 })
 
 export const mutations = {
@@ -14,6 +15,15 @@ export const mutations = {
         thumbnail: brt.entities.media ? brt.entities.media[0].media_url : '',
         screen_name: brt.user.screen_name
       })
+    })
+  },
+  addHashtag(state, payload) {
+    payload.forEach((brt) => {
+      if (brt.entities.hashtags.length > 0) {
+        brt.entities.hashtags.forEach((tags) => {
+          state.hashtags.push(tags.text)
+        })
+      }
     })
   }
 }
