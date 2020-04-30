@@ -53,6 +53,8 @@
           <menu-keahlian />
           <div class="py-2"></div>
           <menu-cahnnel />
+          <div class="py-2"></div>
+          <menu-kategori />
         </v-col>
       </v-row>
     </v-container>
@@ -63,6 +65,7 @@
 import VueMarkdown from 'vue-markdown'
 import MenuKeahlian from '~/components/submenu/keahlian'
 import MenuCahnnel from '~/components/submenu/channel'
+import MenuKategori from '~/components/submenu/kategori_video'
 import MenuObrolan from '~/components/submenu/chat'
 import dataKeahlian from '~/static/keahlian.json'
 
@@ -72,6 +75,7 @@ export default {
     VueMarkdown,
     MenuKeahlian,
     MenuCahnnel,
+    MenuKategori,
     MenuObrolan
   },
   data() {
