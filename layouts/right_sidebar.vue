@@ -8,6 +8,8 @@
           <v-row align="start" justify="space-between">
             <v-col cols="12" md="8">
               <nuxt />
+
+              <feature-information />
             </v-col>
             <v-col cols="12" md="4">
               <menu-obrolan />
@@ -37,6 +39,7 @@ import MenuCahnnel from '~/components/submenu/channel'
 import MenuKategori from '~/components/submenu/kategori_video'
 import MenuObrolan from '~/components/submenu/chat'
 import MenuTags from '~/components/submenu/hashtags_berita'
+import FeatureInformation from '~/components/feature_information'
 
 export default {
   components: {
@@ -46,7 +49,8 @@ export default {
     MenuCahnnel,
     MenuKategori,
     MenuObrolan,
-    MenuTags
+    MenuTags,
+    FeatureInformation
   },
   data() {
     return {}
