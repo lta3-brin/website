@@ -19,7 +19,9 @@
         <v-col cols="12" md="8">
           <h3 class="headline mb-7">Cakupan Kegiatan</h3>
 
-          <vue-markdown html :source="keahlian.rincian.deskripsi" />
+          <article class="artikel">
+            <vue-markdown html :source="keahlian.rincian.deskripsi" />
+          </article>
 
           <feature-information />
         </v-col>
