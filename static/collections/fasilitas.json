@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "ilst",
+    "nama": "Indonesian Low Speed Tunnel",
+    "deskripsi": "<p>Terowongan angin ini mempunyai 4 buah seksi uji (External balance, Sting support, Industrial dan Empty box) yang bisa saling dipertukarkan, berpenampang 3×4 m2. Kecepatan maksimum pada seksi uji dalam keadaan kosong adalah 110 m/s. Hal ini dapat dicapai dengan adanya motor DC 3 Mega Watt, yang memutar kipas 8 sudu berdiameter 6 m.</p><p>Terowongan angin ini dilengkapi suplai udara bertekanan 60 bar yang dipakai untuk pengujian power-on. Selain itu terdapat cooling system untuk menjaga kestabilan suhu angin di dalam terowongan.</p><p>Fasilitas tambahan yang ada adalah ground board untuk simulasi take-off dan landing.</p><img alt=\"terowongan angin bbta3\" src=\"http://bbta3.bppt.go.id/wp-content/uploads/2019/05/aero_closeloop.png\" />"
+  },
+  {
+    "slug": "liwet",
+    "nama": "Low Industrial Wind Engineering Tunnel",
+    "deskripsi": "<p>Terowongan ini sesuai namanya dipakai untuk pengujian non-pesawat. Spesifikasinya adalah:</p><ul><li>Seksi uji 1.5 x 2 m</li><li>Kecepatan 2 ~ 20 m/s</li></ul>"
+  },
+  {
+    "slug": "eswt",
+    "nama": "Educational Small Wind Tunnel",
+    "deskripsi": "<p>BBTA3 memiliki fasilitas terowongan angin ukuran kecil. LSWT adalah terowongan angin jenis hisap, sirkuit terbuka dengan bagian seksi uji berukuran 0,5 m x 0,5 m. Kecepatan operasional maksimum adalah 30 m/s. Fasilitas ini digunakan untuk mengkalibrasi anemometer, tabung pitot dan penelitian lain.</p><img alt=\"terowongan angin bbta3\" src=\"http://bbta3.bppt.go.id/wp-content/uploads/2020/02/20200226_081000_0000.png\" />"
+  },
+  {
+    "slug": "anechoic",
+    "nama": "Hemi Anechoic Chamber",
+    "deskripsi": "<p>Fasilitas ini berdiri pada tahun 2013 dengan dimensi 5.2 m x 5 m x 3 m dan memiliki kebisingan latar sebesar 18dB(A). Fasilitas ini dilengkapi dengan peralatan sebagai berikut:</p><ul><li>LAN XI</li><li>Mikrofon</li><li>Handheld sound level meter</li></ul><img alt=\"terowongan angin bbta3\" src=\"http://bbta3.bppt.go.id/wp-content/uploads/2019/05/anechoic.jpg\" />"
+  },
+  {
+    "slug": "vienta",
+    "nama": "Vibration and Environmental Test",
+    "deskripsi": "<p><b>Vibration Testing Chamber</b>, ruang chamber dilengkapi dengan perlatan uji sehingga dimungkin untuk memperoleh suhu dan kelembapan yang ditentukan (atau hanya suhu saja untuk kebutuhan thermostatic). Pengujian dapat dilakukan bersamaan dengan berbagai macam alat <i>shakers</i>.</p><p><b>Shaker</b>, <i>exciters</i> dapat digunakan dalam bermacam rentang frekuensi dan dirancang sehingga getaran lingkungan dapat dikendalikan sehingga memenuhi kebutuhan pengujian dan perakitan komponen.</p><img alt=\"fasilitas uji getaran bbta3\" src=\"http://bbta3.bppt.go.id/wp-content/uploads/2019/05/DSC01116-1024x577.jpg\" />"
+  }
+]
