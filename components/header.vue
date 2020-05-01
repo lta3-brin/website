@@ -35,10 +35,7 @@
 </template>
 
 <script>
-import keahlianItem from '~/static/keahlian.json'
-import tentangItem from '~/static/tentang.json'
-import internalItem from '~/static/internal.json'
-import produkItem from '~/static/produk.json'
+import MenuUtama from '~/static/collections/menu.json'
 import HeaderDrawer from '~/components/header_drawer'
 
 export default {
@@ -50,15 +47,9 @@ export default {
     return {
       title: 'BBTA3 BPPT',
       sideMenu: false,
-      item_utama: [],
+      item_utama: MenuUtama,
       header_dipilih: []
     }
-  },
-  created() {
-    this.item_utama.push(keahlianItem)
-    this.item_utama.push(tentangItem)
-    this.item_utama.push(internalItem)
-    this.item_utama.push(produkItem)
   },
   methods: {
     goHome() {
