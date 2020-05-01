@@ -1,16 +1,17 @@
 <template>
   <v-container fluid class="px-0">
     <v-row align="center" justify="space-between">
-      <v-col cols="12" md="6">
-        <v-card dark>
+      <v-col cols="12" sm="6">
+        <v-card
+          dark
+          hover
+          :href="`https://www.youtube.com/watch?v=${selectedVideo.id}`"
+          target="_blank"
+        >
           <div class="d-flex flex-no-wrap justify-space-between">
             <div>
-              <v-card-title class="headline">
-                {{ selectedVideo.title }}
-              </v-card-title>
-
               <v-card-subtitle>
-                {{ selectedVideo.description }}
+                {{ selectedVideo.description | truncating }}
               </v-card-subtitle>
             </div>
 
@@ -21,12 +22,19 @@
         </v-card>
       </v-col>
 
-      <v-col cols="12" md="6">
-        <v-card dark>
+      <v-col cols="12" sm="6">
+        <v-card
+          dark
+          hover
+          :href="
+            `https://twitter.com/${selectedBerita.screen_name}/status/${selectedBerita.id}`
+          "
+          target="_blank"
+        >
           <div class="d-flex flex-no-wrap justify-space-between">
             <div>
               <v-card-subtitle>
-                {{ selectedBerita.description }}
+                {{ selectedBerita.description | truncating }}
               </v-card-subtitle>
             </div>
 
@@ -44,6 +52,11 @@
 <script>
 export default {
   name: 'FeatureInformation',
+  filters: {
+    truncating(val) {
+      return `${val.substring(0, 65)}...`
+    }
+  },
   computed: {
     selectedVideo() {
       const items = this.$store.state.video.koleksi
@@ -60,7 +73,7 @@ export default {
     selectedItem(collections) {
       const filteredItems = collections.slice(2, collections.length)
 
-      return filteredItems[Math.random() * filteredItems.length]
+      return filteredItems[Math.floor(Math.random() * filteredItems.length)]
     }
   }
 }
