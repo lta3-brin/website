@@ -4,7 +4,7 @@
       <v-subheader>KEAHLIAN BBTA3</v-subheader>
       <v-list-item-group color="primary">
         <v-list-item
-          v-for="ahli in keahlian.subs"
+          v-for="ahli in keahlian"
           :key="ahli.slug"
           :to="ahli.to + ahli.slug"
         >
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import dataKeahlian from '~/static/keahlian.json'
+import dataKeahlian from '~/static/collections/keahlian.json'
 
 export default {
   name: 'SubMenuKeahlian',
