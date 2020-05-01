@@ -1,0 +1,188 @@
+[
+  {
+    "slug": "keahlian",
+    "nama": "Keahlian",
+    "subs": [
+      {
+        "slug": "aerodinamika",
+        "nama": "Aerodinamika",
+        "to": "/keahlian/",
+        "subs": []
+      },
+      {
+        "slug": "aeroelastika",
+        "nama": "Aeroelastika",
+        "to": "/keahlian/",
+        "subs": []
+      },
+      {
+        "slug": "aeroakustika",
+        "nama": "Aeroakustika",
+        "to": "/keahlian/",
+        "subs": []
+      },
+      {
+        "slug": "aeromekanika",
+        "nama": "Aeromekanika",
+        "to": "/keahlian/",
+        "subs": []
+      },
+      {
+        "slug": "aerotronika",
+        "nama": "Aerotronika",
+        "to": "/keahlian/",
+        "subs": []
+      }
+    ]
+  },
+  {
+    "slug": "tentang",
+    "nama": "Tentang Kami",
+    "subs":  [
+      {
+        "slug": "fasilitas",
+        "nama": "Fasilitas",
+        "subs": [
+          {
+            "slug": "ilst",
+            "nama": "ILST",
+            "to": "/tentang/fasilitas/",
+            "subs": []
+          },
+          {
+            "slug": "liwet",
+            "nama": "LIWET",
+            "to": "/tentang/fasilitas/",
+            "subs": []
+          },
+          {
+            "slug": "eswt",
+            "nama": "ESWT",
+            "to": "/tentang/fasilitas/",
+            "subs": []
+          },
+          {
+            "slug": "anechoic",
+            "nama": "Anechoic Chamber",
+            "to": "/tentang/fasilitas/",
+            "subs": []
+          },
+          {
+            "slug": "vienta",
+            "nama": "VIENTA",
+            "to": "/tentang/fasilitas/",
+            "subs": []
+          }
+        ]
+      },
+      {
+        "slug": "pp_tarif",
+        "nama": "PP Tarif",
+        "to": "/tentang/",
+        "subs":  []
+      },
+      {
+        "slug": "hubungi_kami",
+        "nama": "Hubungi Kami",
+        "to": "/tentang/",
+        "subs":  []
+      },
+      {
+        "slug": "kepuasan_pelanggan",
+        "nama": "Kepuasan Pelanggan",
+        "to": "/tentang/",
+        "subs":  []
+      },
+      {
+        "slug": "keluhan",
+        "nama": "Keluhan/Umpan Balik",
+        "to": "/tentang/",
+        "subs":  []
+      },
+      {
+        "slug": "profil",
+        "nama": "Profil BBTA3",
+        "to": "/tentang/",
+        "subs":  []
+      }
+    ]
+  },
+  {
+    "slug": "internal",
+    "nama": "Internal",
+    "subs":  [
+      {
+        "slug": "bppt",
+        "nama": "BPPT",
+        "href": "http://bppt.go.id",
+        "subs": []
+      },
+      {
+        "slug": "jdih",
+        "nama": "JDIH",
+        "href": "http://jdih.bppt.go.id",
+        "subs":  []
+      },
+      {
+        "slug": "ptipk",
+        "nama": "PTIPK",
+        "href": "http://ptipk.bppt.go.id",
+        "subs":  []
+      },
+      {
+        "slug": "ptrim",
+        "nama": "PTRIM",
+        "href": "http://ptrim.bppt.go.id",
+        "subs":  []
+      },
+      {
+        "slug": "ptip",
+        "nama": "PTIP",
+        "href": "http://ptip.bppt.go.id",
+        "subs":  []
+      },
+      {
+        "slug": "ptspt",
+        "nama": "PTSPT",
+        "href": "http://ptspt.bppt.go.id",
+        "subs":  []
+      },
+      {
+        "slug": "btipdp",
+        "nama": "BTIPDP",
+        "href": "http://btipdp.bppt.go.id",
+        "subs":  []
+      },
+      {
+        "slug": "b2tks",
+        "nama": "B2TKS",
+        "href": "http://b2tks.bppt.go.id",
+        "subs":  []
+      },
+      {
+        "slug": "bth",
+        "nama": "BTH",
+        "href": "http://bth.bppt.go.id",
+        "subs":  []
+      },
+      {
+        "slug": "bt2mp",
+        "nama": "BT2MP",
+        "href": "http://bt2mp.bppt.go.id",
+        "subs":  []
+      },
+      {
+        "slug": "meppo",
+        "nama": "MEPPO",
+        "href": "http://meppo.bppt.go.id",
+        "subs":  []
+      }
+    ]
+  },
+  {
+    "slug": "papers",
+    "nama": "Call for Papers",
+    "to": "/inspire",
+    "subs":  []
+  }
+]
