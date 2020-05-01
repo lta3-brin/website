@@ -6,7 +6,7 @@
         <v-list-item
           v-for="ahli in keahlian.subs"
           :key="ahli.slug"
-          :to="ahli.to"
+          :to="ahli.to + ahli.slug"
         >
           <v-list-item-content>
             <v-list-item-title>
