@@ -5,7 +5,7 @@
     {
       "slug": "aerodinamika",
       "nama": "Aerodinamika",
-      "to": "/keahlian/aerodinamika",
+      "to": "/keahlian/",
       "subtitle": "Pengukuran pada pengujian aerodinamika pesawat dalam terowongan angin",
       "rincian": {
         "thumbnail": "https://i.pinimg.com/originals/fb/01/7a/fb017af2e927556a8d35b6537218ae92.jpg",
@@ -23,7 +23,7 @@
     {
       "slug": "aeroelastika",
       "nama": "Aeroelastika",
-      "to": "/keahlian/aeroelastika",
+      "to": "/keahlian/",
       "subtitle": "Pengukuran pada pengujian aeroelastika benda uji dalam terowongan angin",
       "rincian": {
         "thumbnail": "https://i.pinimg.com/originals/10/77/73/1077735953c1aa8b4e867147f01fa15d.jpg",
@@ -41,7 +41,7 @@
     {
       "slug": "aeroakustika",
       "nama": "Aeroakustika",
-      "to": "/keahlian/aeroakustika",
+      "to": "/keahlian/",
       "subtitle": "Pengukuran pada pengujian aeroakustika benda uji dalam anechoic chamber",
       "rincian": {
         "thumbnail": "https://i.pinimg.com/originals/0d/b1/58/0db1580a24d754b4f270140d0052ac98.jpg",
@@ -59,7 +59,7 @@
     {
       "slug": "aeromekanika",
       "nama": "Aeromekanika",
-      "to": "/keahlian/aeromekanika",
+      "to": "/keahlian/",
       "subtitle": "Pemodelan dan manufaktur benda uji serta fabrikasi peralatan pendukung pengujian",
       "rincian": {
         "thumbnail": "https://i.pinimg.com/originals/9c/14/ff/9c14ffc14d49e6e44a7fab614980f58b.jpg",
@@ -77,7 +77,7 @@
     {
       "slug": "aerotronika",
       "nama": "Aerotronika",
-      "to": "/keahlian/aerotronika",
+      "to": "/keahlian/",
       "subtitle": "Menerapkan metode dan analisis serta pengembangan dalam layanan pengujian",
       "rincian": {
         "thumbnail": "https://i.pinimg.com/originals/71/56/1f/71561fa121bd42fc6817ca80fa9cf608.jpg",
