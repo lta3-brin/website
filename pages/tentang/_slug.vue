@@ -1,12 +1,11 @@
 <template>
   <article class="artikel">
-    <vue-markdown :source="tentang.rincian.deskripsi" />
+    <vue-markdown :source="slug" />
   </article>
 </template>
 
 <script>
 import VueMarkdown from 'vue-markdown'
-import Tentang from '~/static/tentang.json'
 
 export default {
   name: 'SlugTentang',
@@ -23,11 +22,6 @@ export default {
     slug() {
       return this.$route.params.slug
     }
-  },
-  created() {
-    this.tentang = Tentang.subs.filter((sub) => {
-      return sub.slug === this.slug
-    })[0]
   }
 }
 </script>
