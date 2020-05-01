@@ -17,7 +17,9 @@
     <v-container class="fill-height" style="max-width: 1200px">
       <v-row align="start" justify="space-between" justify-lg="space-around">
         <v-col cols="12" md="8">
-          <h3 class="headline mb-7">Cakupan Kegiatan</h3>
+          <v-subheader class="pl-0 mb-9 font-weight-black display-1 red--text"
+            >Cakupan Kegiatan</v-subheader
+          >
 
           <article class="artikel">
             <vue-markdown html :source="keahlian.rincian.deskripsi" />
@@ -75,7 +77,7 @@ import MenuKategori from '~/components/submenu/kategori_video'
 import MenuObrolan from '~/components/submenu/chat'
 import MenuTags from '~/components/submenu/hashtags_berita'
 import FeatureInformation from '~/components/feature_information'
-import dataKeahlian from '~/static/keahlian.json'
+import dataKeahlian from '~/static/collections/keahlian.json'
 
 export default {
   name: 'IndexKeahlian',
@@ -96,7 +98,7 @@ export default {
     }
   },
   created() {
-    this.keahlian = dataKeahlian.subs.filter((keahlian) => {
+    this.keahlian = dataKeahlian.filter((keahlian) => {
       return keahlian.slug === this.$route.params.slug
     })[0]
   },
