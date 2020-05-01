@@ -65,7 +65,7 @@
           md="4"
           lg="2"
         >
-          <v-card hover class="growing" :to="keahlian.to">
+          <v-card hover class="growing" :to="keahlian.to + keahlian.slug">
             <v-img
               class="white--text align-end"
               height="350px"
@@ -77,7 +77,7 @@
             </v-img>
 
             <v-card-subtitle>
-              {{ keahlian.subtitle }}
+              {{ keahlian.rincian.title }}
             </v-card-subtitle>
           </v-card>
         </v-col>
@@ -89,7 +89,7 @@
 <script>
 import Chat from '~/components/submenu/chat'
 import Informasi from '~/static/informasi.json'
-import Keahlian from '~/static/keahlian.json'
+import Keahlian from '~/static/collections/keahlian.json'
 
 export default {
   name: 'LandingPage',
@@ -98,19 +98,16 @@ export default {
   },
   data() {
     return {
-      dataKeahlian: [],
-      informasi: null,
+      dataKeahlian: Keahlian,
+      informasi: Informasi,
       externalLink: false
     }
   },
-  created() {
-    this.dataKeahlian = Keahlian.subs
-    this.informasi = Informasi
-
+  mounted() {
     if (this.informasi.tautan) {
       const partsUrl = this.informasi.tautan.split('/')
 
-      this.externalLink = partsUrl[0] === 'http:' || partsUrl[0] === 'https:'
+      this.externalLink = partsUrl[0].includes('http')
     }
   },
   head() {
