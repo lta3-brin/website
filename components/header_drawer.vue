@@ -37,16 +37,16 @@
         class="nomargin"
       >
         <template v-slot:activator>
-          <v-list-item v-if="'href' in sub" :href="sub.href" target="_blank">
-            <v-list-item-title>
-              {{ sub.nama }}
-            </v-list-item-title>
+          <v-list-item
+            v-if="'href' in sub"
+            :href="sub.href + sub.slug"
+            target="_blank"
+          >
+            <v-list-item-title> {{ sub.nama }} </v-list-item-title>
           </v-list-item>
 
-          <v-list-item v-else-if="'to' in sub" :to="sub.to" exact>
-            <v-list-item-title>
-              {{ sub.nama }}
-            </v-list-item-title>
+          <v-list-item v-else-if="'to' in sub" :to="sub.to + sub.slug" exact>
+            <v-list-item-title> {{ sub.nama }} </v-list-item-title>
           </v-list-item>
 
           <v-list-item v-else>
@@ -64,13 +64,17 @@
           link
           class="nomargin"
         >
-          <v-list-item v-if="'href' in itm" :href="itm.href" target="_blank">
+          <v-list-item
+            v-if="'href' in itm"
+            :href="itm.href + itm.slug"
+            target="_blank"
+          >
             <v-list-item-title>
               {{ itm.nama }}
             </v-list-item-title>
           </v-list-item>
 
-          <v-list-item v-else-if="'to' in itm" :to="itm.to" exact>
+          <v-list-item v-else-if="'to' in itm" :to="itm.to + itm.slug" exact>
             <v-list-item-title>
               {{ itm.nama }}
             </v-list-item-title>
