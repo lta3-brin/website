@@ -16,7 +16,7 @@
 
     <v-container class="fill-height" style="max-width: 1200px">
       <v-row align="start" justify="space-between" justify-lg="space-around">
-        <v-col cols="12" md="8" lg="8">
+        <v-col cols="12" md="8">
           <h3 class="headline mb-7">Cakupan Kegiatan</h3>
 
           <vue-markdown html :source="keahlian.rincian.deskripsi" />
@@ -24,7 +24,7 @@
           <feature-information />
         </v-col>
 
-        <v-col cols="12" md="auto" lg="4">
+        <v-col cols="12" md="4">
           <menu-obrolan />
           <div class="py-2"></div>
           <v-card outlined class="growing">
