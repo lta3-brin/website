@@ -54,8 +54,7 @@
           </v-list-item>
         </template>
         <template v-slot:prependIcon>
-          <v-icon v-if="sub.subs.length > 0" size="18">fa-caret-down</v-icon>
-          <v-icon v-else></v-icon>
+          <v-icon></v-icon>
         </template>
 
         <v-list-item
