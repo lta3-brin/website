@@ -40,6 +40,12 @@
     "nama": "Tentang Kami",
     "subs":  [
       {
+        "slug": "profil",
+        "nama": "Profil BBTA3",
+        "to": "/tentang/",
+        "subs":  []
+      },
+      {
         "slug": "fasilitas",
         "nama": "Fasilitas",
         "subs": [
@@ -82,12 +88,6 @@
         "subs":  []
       },
       {
-        "slug": "hubungi_kami",
-        "nama": "Hubungi Kami",
-        "to": "/tentang/",
-        "subs":  []
-      },
-      {
         "slug": "kepuasan_pelanggan",
         "nama": "Kepuasan Pelanggan",
         "to": "/tentang/",
@@ -96,12 +96,6 @@
       {
         "slug": "keluhan",
         "nama": "Keluhan/Umpan Balik",
-        "to": "/tentang/",
-        "subs":  []
-      },
-      {
-        "slug": "profil",
-        "nama": "Profil BBTA3",
         "to": "/tentang/",
         "subs":  []
       }
@@ -176,6 +170,24 @@
         "nama": "MEPPO",
         "href": "http://meppo.bppt.go.id",
         "subs":  []
+      }
+    ]
+  },
+  {
+    "slug": "produk",
+    "nama": "Produk Hukum",
+    "subs":  [
+      {
+        "slug": "sk_bppt",
+        "nama": "SK Ka. BPPT",
+        "href": "http://aerobox.bbta3.bppt.go.id/index.php/s/0EbGx0FpaUMth2v",
+        "subs": []
+      },
+      {
+        "slug": "sk_bta3",
+        "nama": "SK Ka BBTA3",
+        "href": "http://aerobox.bbta3.bppt.go.id/index.php/s/KpO0LhswD2gtpRY",
+        "subs": []
       }
     ]
   },
