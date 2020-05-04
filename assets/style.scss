@@ -24,6 +24,17 @@
 
   a.v-list-item, a.v-list-item--link {
     padding-left: 0;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 1;
+      padding-left: 10px;
+      background-color: transparent;
+    }
+
+    &.v-list-item:focus::before {
+      opacity: 0;
+    }
   }
 
   a.v-list-item--link.v-list-item--active::before {
@@ -40,13 +51,27 @@
 .v-list-item.nomargin {
   padding-right: 0;
 
+  &:hover::before {
+    opacity: 0;
+  }
+
   a {
     padding-left: 0 !important;
+
+    &.v-list-item:focus::before {
+      opacity: 0;
+    }
 
     &.v-list-item--active::before {
       opacity: 1;
       background-color: transparent;
       border-right: 5px solid #1976d2;
+    }
+
+    &.v-list-item.v-list-item--link:hover {
+      opacity: 1;
+      padding-left: 10px !important;
+      background-color: transparent;
     }
   }
 }
