@@ -2,7 +2,7 @@
   <v-app dark>
     <Header />
 
-    <v-content>
+    <v-content class="mt-12">
       <v-app dark>
         <v-container style="max-width: 1200px">
           <v-row align="start" justify="space-between">
