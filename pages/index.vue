@@ -88,7 +88,7 @@
 
 <script>
 import Chat from '~/components/submenu/chat'
-import Informasi from '~/static/informasi.json'
+import Informasi from '~/static/collections/informasi.json'
 import Keahlian from '~/static/collections/keahlian.json'
 
 export default {
