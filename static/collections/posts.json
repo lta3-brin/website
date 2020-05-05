@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "pp_tarif",
+    "kategori": "tentang",
+    "nama": "PP Tarif",
+    "deskripsi": "<p>Semua biaya jasa pelayanan teknologi yang dilakukan oleh BBTA3 – BPPT mengacu kepada peraturan pemerintah RI nomor 6 Tahun 2015 tentang jenis tarif atas jenis penerimaan negara bukan pajak yang berlaku pada BPPT.</p>"
+  },
+  {
+    "slug": "kepuasan_pelanggan",
+    "kategori": "tentang",
+    "nama": "Hasil Survei Kepuasan Pelanggan",
+    "deskripsi": "<p>Persentase hasil survei kepuasan masyarakat/pelanggan bisa diunduh dibawah ini.</p><p><a href=\"http://aerobox.bbta3.bppt.go.id/index.php/s/mQOoodgdAuSpHgR\" target=\"_blank\" class=\"v-btn theme--dark elevation-7 v-size--x-large primary\">HASIL SURVEI<a/></p>"
+  },
+  {
+    "slug": "keluhan",
+    "kategori": "tentang",
+    "nama": "Keluhan/Umpan Balik",
+    "deskripsi": "<p>Apabila menemukan keluhan atau umpan balik untuk kemajuan BBTA3 BPPT, silahkan Chat melalui tautan Discord BBTA3 BPPT.</p><p><a href=\"https://discord.gg/7ff36MV\" target=\"_blank\" class=\"v-btn theme--dark elevation-7 v-size--x-large primary\">SAMPAIKAN KELUHAN<a/></p>"
+  }
+]
