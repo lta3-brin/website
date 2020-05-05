@@ -1,7 +1,7 @@
 <template>
   <v-card>
+    <v-subheader>KEAHLIAN BBTA3</v-subheader>
     <v-list rounded>
-      <v-subheader>KEAHLIAN BBTA3</v-subheader>
       <v-list-item-group color="primary">
         <v-list-item
           v-for="ahli in keahlian"
