@@ -1,6 +1,11 @@
 <template>
   <v-app dark>
-    <v-parallax dark height="500" :src="keahlian.rincian.thumbnail">
+    <v-parallax
+      v-if="!('kosong' in keahlian)"
+      dark
+      height="500"
+      :src="keahlian.rincian.thumbnail"
+    >
       <v-row align="center" justify="center">
         <v-col class="text-center" cols="12">
           <h1
@@ -17,13 +22,23 @@
     <v-container class="fill-height" style="max-width: 1200px">
       <v-row align="start" justify="space-between" justify-lg="space-around">
         <v-col cols="12" md="8">
-          <v-subheader class="pl-0 mb-9 font-weight-black display-1 red--text"
-            >Cakupan Kegiatan</v-subheader
-          >
+          <v-alert v-if="'kosong' in keahlian" type="info">
+            Informasi ini belum ada.
+          </v-alert>
 
-          <article class="artikel">
-            <vue-markdown html :source="keahlian.rincian.deskripsi" />
-          </article>
+          <div v-else>
+            <v-subheader
+              class="pl-0 mb-9 font-weight-black display-1 red--text"
+            >
+              Cakupan Kegiatan
+            </v-subheader>
+
+            <article class="artikel">
+              <vue-markdown html :source="keahlian.rincian.deskripsi" />
+            </article>
+          </div>
+
+          <v-divider />
 
           <feature-information />
         </v-col>
@@ -31,7 +46,7 @@
         <v-col cols="12" md="4">
           <menu-obrolan />
           <div class="py-2"></div>
-          <v-card outlined class="growing">
+          <v-card v-if="!('kosong' in keahlian)" outlined class="growing">
             <v-list-item>
               <v-list-item-content>
                 <div class="overline mb-4">Kepala Kelompok</div>
@@ -98,9 +113,17 @@ export default {
     }
   },
   created() {
-    this.keahlian = dataKeahlian.filter((keahlian) => {
+    const ahli = dataKeahlian.filter((keahlian) => {
       return keahlian.slug === this.$route.params.slug
-    })[0]
+    })
+
+    if (ahli.length > 0) {
+      this.keahlian = ahli[0]
+    } else {
+      this.keahlian = {
+        kosong: true
+      }
+    }
   },
   methods: {
     onResize() {
