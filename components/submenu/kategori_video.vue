@@ -1,7 +1,7 @@
 <template>
   <v-card>
+    <v-subheader>KATEGORI VIDEO</v-subheader>
     <v-list rounded>
-      <v-subheader>KATEGORI VIDEO</v-subheader>
       <v-list-item-group color="primary">
         <v-list-item
           v-for="kategori in kategoriVideo"
