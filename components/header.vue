@@ -65,6 +65,8 @@ export default {
 
         if (this.header_dipilih[0].subs.length > 0) {
           this.sideMenu = !this.sideMenu
+        } else if ('href' in this.header_dipilih[0]) {
+          window.open(this.header_dipilih[0].href)
         } else {
           this.$router.push({
             path: this.header_dipilih[0].to || '/'
