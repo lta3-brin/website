@@ -31,6 +31,18 @@ export default {
     this.selectedFacility = fasilitas.filter((fas) => {
       return fas.slug === this.slug
     })[0]
+  },
+  head() {
+    return {
+      title: `Informasi fasilitas ${this.$route.params.slug}`,
+      meta: [
+        {
+          hid: 'slug_keahlian',
+          name: 'description',
+          content: `Halaman berkaitan informasi fasilitas ${this.$route.params.slug}`
+        }
+      ]
+    }
   }
 }
 </script>
