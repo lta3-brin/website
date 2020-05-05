@@ -9,6 +9,8 @@
             <v-col cols="12" md="8">
               <nuxt />
 
+              <v-divider />
+
               <feature-information />
             </v-col>
             <v-col cols="12" md="4">
