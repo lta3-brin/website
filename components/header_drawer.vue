@@ -37,11 +37,7 @@
         class="nomargin"
       >
         <template v-slot:activator>
-          <v-list-item
-            v-if="'href' in sub"
-            :href="sub.href + sub.slug"
-            target="_blank"
-          >
+          <v-list-item v-if="'href' in sub" :href="sub.href" target="_blank">
             <v-list-item-title> {{ sub.nama }} </v-list-item-title>
           </v-list-item>
 
@@ -63,11 +59,7 @@
           link
           class="nomargin"
         >
-          <v-list-item
-            v-if="'href' in itm"
-            :href="itm.href + itm.slug"
-            target="_blank"
-          >
+          <v-list-item v-if="'href' in itm" :href="itm.href" target="_blank">
             <v-list-item-title>
               {{ itm.nama }}
             </v-list-item-title>
