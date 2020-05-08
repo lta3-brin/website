@@ -46,7 +46,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/filters.js', '~/plugins/markdown.client.js'],
+  plugins: [
+    '~/plugins/filters.js',
+    '~/plugins/markdown.client.js',
+    '~/plugins/firebase.client.js'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
