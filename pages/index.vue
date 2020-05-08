@@ -1,6 +1,11 @@
 <template>
   <div>
-    <v-parallax dark height="500" :src="informasi.thumbnail">
+    <v-parallax
+      v-if="informasi !== null"
+      dark
+      height="500"
+      :src="informasi.thumbnail"
+    >
       <v-row align="center" justify="center">
         <v-col class="text-center" cols="12">
           <h1 class="display-3 font-weight-thin mb-4">
@@ -88,7 +93,6 @@
 
 <script>
 import Chat from '~/components/submenu/chat'
-import Informasi from '~/static/collections/informasi.json'
 import Keahlian from '~/static/collections/keahlian.json'
 
 export default {
@@ -99,15 +103,40 @@ export default {
   data() {
     return {
       dataKeahlian: Keahlian,
-      informasi: Informasi,
+      informasi: null,
       externalLink: false
     }
   },
   mounted() {
-    if (this.informasi.tautan) {
-      const partsUrl = this.informasi.tautan.split('/')
+    this.fetchInformasi()
+  },
+  methods: {
+    async fetchInformasi() {
+      try {
+        const infoSnapshot = await this.$firebase
+          .firestore()
+          .collection('informasi')
+          .doc('utama')
 
-      this.externalLink = partsUrl[0].includes('http')
+        infoSnapshot.onSnapshot((doc) => {
+          this.informasi = doc.data()
+        })
+
+        if (this.informasi.tautan) {
+          const partsUrl = this.informasi.tautan.split('/')
+
+          this.externalLink = partsUrl[0].includes('http')
+        }
+      } catch (_) {
+        this.informasi = {
+          judul: 'Selamat Datang',
+          subjudul:
+            'Balai Besar Teknologi Aerodinamika, Aeroelastika dan Aeroakustika',
+          thumbnail:
+            'https://i.pinimg.com/originals/92/58/f0/9258f03b22fbf1c96b0b8519d4bf90d4.png',
+          tautan: ''
+        }
+      }
     }
   },
   head() {
