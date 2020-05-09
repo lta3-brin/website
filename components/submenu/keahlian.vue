@@ -20,13 +20,31 @@
 </template>
 
 <script>
-import dataKeahlian from '~/static/collections/keahlian.json'
-
 export default {
   name: 'SubMenuKeahlian',
   data() {
     return {
-      keahlian: dataKeahlian
+      keahlian: []
+    }
+  },
+  mounted() {
+    this.fetchKeahlian()
+  },
+  methods: {
+    async fetchKeahlian() {
+      try {
+        const keahlianSnapshot = await this.$firebase
+          .firestore()
+          .collection('keahlian')
+          .orderBy('urutan', 'asc')
+          .get()
+
+        keahlianSnapshot.forEach((keahlian) => {
+          this.keahlian.push(keahlian.data())
+        })
+      } catch (_) {
+        this.keahlian = []
+      }
     }
   }
 }
