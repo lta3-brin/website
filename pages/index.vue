@@ -93,7 +93,6 @@
 
 <script>
 import Chat from '~/components/submenu/chat'
-import Keahlian from '~/static/collections/keahlian.json'
 
 export default {
   name: 'LandingPage',
@@ -102,13 +101,14 @@ export default {
   },
   data() {
     return {
-      dataKeahlian: Keahlian,
+      dataKeahlian: [],
       informasi: null,
       externalLink: false
     }
   },
   mounted() {
     this.fetchInformasi()
+    this.fetchKeahlian()
   },
   methods: {
     async fetchInformasi() {
@@ -136,6 +136,21 @@ export default {
             'https://i.pinimg.com/originals/92/58/f0/9258f03b22fbf1c96b0b8519d4bf90d4.png',
           tautan: ''
         }
+      }
+    },
+    async fetchKeahlian() {
+      try {
+        const keahlianSnapshot = await this.$firebase
+          .firestore()
+          .collection('keahlian')
+          .orderBy('urutan', 'asc')
+          .get()
+
+        keahlianSnapshot.forEach((keahlian) => {
+          this.dataKeahlian.push(keahlian.data())
+        })
+      } catch (_) {
+        this.dataKeahlian = []
       }
     }
   },
