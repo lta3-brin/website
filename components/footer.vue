@@ -337,9 +337,6 @@ export default {
         dataSosMed.forEach((doc) => {
           this.sosmed.push(doc.data())
         })
-
-        // eslint-disable-next-line no-console
-        console.log(this.sosmed)
       } catch (_) {
         this.sosmed = []
       }
