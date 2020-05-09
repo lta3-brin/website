@@ -298,14 +298,11 @@
 </template>
 
 <script>
-import sosMed from '~/static/sosmed.json'
-
 export default {
   name: 'Footer',
   data: () => ({
-    sosmed: sosMed,
-    videos: [],
-    videoLoading: false
+    sosmed: [],
+    videos: []
   }),
   computed: {
     beritaBBTA3() {
@@ -324,6 +321,28 @@ export default {
     },
     videoBBTA3() {
       return this.$store.state.video.koleksi.slice(0, 3)
+    }
+  },
+  mounted() {
+    this.fetchSosMed()
+  },
+  methods: {
+    async fetchSosMed() {
+      try {
+        const dataSosMed = await this.$firebase
+          .firestore()
+          .collection('sosmed')
+          .get()
+
+        dataSosMed.forEach((doc) => {
+          this.sosmed.push(doc.data())
+        })
+
+        // eslint-disable-next-line no-console
+        console.log(this.sosmed)
+      } catch (_) {
+        this.sosmed = []
+      }
     }
   }
 }
