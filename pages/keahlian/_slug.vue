@@ -1,7 +1,7 @@
 <template>
   <v-app dark>
     <v-parallax
-      v-if="!('kosong' in keahlian)"
+      v-if="keahlian !== null"
       dark
       height="500"
       :src="keahlian.rincian.thumbnail"
@@ -22,8 +22,8 @@
     <v-container class="fill-height" style="max-width: 1200px">
       <v-row align="start" justify="space-between" justify-lg="space-around">
         <v-col cols="12" md="8">
-          <v-alert v-if="'kosong' in keahlian" type="info">
-            Informasi ini belum ada.
+          <v-alert v-if="keahlian === null" type="info">
+            Sedang memuat data...
           </v-alert>
 
           <div v-else>
@@ -46,7 +46,7 @@
         <v-col cols="12" md="4">
           <menu-obrolan />
           <div class="py-2"></div>
-          <v-card v-if="!('kosong' in keahlian)" outlined class="growing">
+          <v-card v-if="keahlian !== null" outlined class="growing">
             <v-list-item>
               <v-list-item-content>
                 <div class="overline mb-4">Kepala Kelompok</div>
@@ -92,7 +92,6 @@ import MenuKategori from '~/components/submenu/kategori_video'
 import MenuObrolan from '~/components/submenu/chat'
 import MenuTags from '~/components/submenu/hashtags_berita'
 import FeatureInformation from '~/components/feature_information'
-import dataKeahlian from '~/static/collections/keahlian.json'
 
 export default {
   name: 'IndexKeahlian',
@@ -109,26 +108,33 @@ export default {
     return {
       x: 3,
       showInfo: false,
-      keahlian: []
+      keahlian: null
     }
   },
-  created() {
-    const ahli = dataKeahlian.filter((keahlian) => {
-      return keahlian.slug === this.$route.params.slug
-    })
-
-    if (ahli.length > 0) {
-      this.keahlian = ahli[0]
-    } else {
-      this.keahlian = {
-        kosong: true
-      }
-    }
+  mounted() {
+    this.fetchSelectedKeahlian()
   },
   methods: {
     onResize() {
       if (window.innerWidth < 960) this.x = 1
       else this.x = 3
+    },
+    async fetchSelectedKeahlian() {
+      try {
+        const keahlianTertentu = await this.$firebase
+          .firestore()
+          .collection('keahlian')
+          .where('slug', '==', this.$route.params.slug)
+          .get()
+
+        keahlianTertentu.forEach((ahli) => {
+          this.keahlian = ahli.data()
+        })
+      } catch (_) {
+        this.keahlian = {
+          kosong: true
+        }
+      }
     }
   },
   head() {
