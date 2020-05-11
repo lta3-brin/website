@@ -29,7 +29,7 @@
     </v-app-bar>
 
     <v-navigation-drawer v-model="sideMenu" width="320" temporary fixed>
-      <HeaderDrawer :data-header="header_dipilih" />
+      <HeaderDrawer :data-header="item_pilihan" />
     </v-navigation-drawer>
   </div>
 </template>
@@ -47,7 +47,17 @@ export default {
       title: 'BBTA3 BPPT',
       sideMenu: false,
       item_utama: [],
-      header_dipilih: []
+      pilihan: []
+    }
+  },
+  computed: {
+    item_pilihan: {
+      get() {
+        return this.pilihan
+      },
+      set(value) {
+        this.pilihan = value
+      }
     }
   },
   mounted() {
@@ -78,21 +88,21 @@ export default {
     },
     showSideMenu(payload) {
       if (payload !== 'mini') {
-        this.header_dipilih = this.item_utama.filter(
+        this.item_pilihan = this.item_utama.filter(
           (item) => item.slug === payload.slug
         )
 
-        if (this.header_dipilih[0].subs.length > 0) {
+        if (this.item_pilihan[0].subs.length > 0) {
           this.sideMenu = !this.sideMenu
-        } else if ('href' in this.header_dipilih[0]) {
-          window.open(this.header_dipilih[0].href)
+        } else if (this.item_pilihan[0].tautan.includes('http')) {
+          window.open(this.item_pilihan[0].tautan)
         } else {
           this.$router.push({
-            path: this.header_dipilih[0].to || '/'
+            path: this.item_pilihan[0].to || '/'
           })
         }
       } else {
-        this.header_dipilih = this.item_utama
+        this.item_pilihan = this.item_utama
         this.sideMenu = !this.sideMenu
       }
     }
