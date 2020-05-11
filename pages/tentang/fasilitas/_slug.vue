@@ -1,5 +1,8 @@
 <template>
-  <article class="artikel">
+  <v-alert v-if="selectedFacility === null" type="info">
+    Informasi sedang dicari, mohon menunggu.
+  </v-alert>
+  <article v-else class="artikel">
     <v-subheader class="pl-0 mb-9 font-weight-black display-1 red--text">
       {{ selectedFacility.nama }}
     </v-subheader>
@@ -9,7 +12,6 @@
 
 <script>
 import VueMarkdown from 'vue-markdown'
-import fasilitas from '~/static/collections/fasilitas.json'
 
 export default {
   name: 'SlugTentang',
@@ -27,10 +29,25 @@ export default {
       return this.$route.params.slug
     }
   },
-  created() {
-    this.selectedFacility = fasilitas.filter((fas) => {
-      return fas.slug === this.slug
-    })[0]
+  mounted() {
+    this.fetchFasilitasDipilih()
+  },
+  methods: {
+    async fetchFasilitasDipilih() {
+      try {
+        const fasilitasSnapshot = await this.$firebase
+          .firestore()
+          .collection('fasilitas')
+          .where('slug', '==', this.slug)
+          .get()
+
+        fasilitasSnapshot.forEach((fasilitas) => {
+          this.selectedFacility = fasilitas.data()
+        })
+      } catch (e) {
+        this.selectedFacility = null
+      }
+    }
   },
   head() {
     return {
