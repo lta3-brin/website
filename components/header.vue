@@ -35,7 +35,6 @@
 </template>
 
 <script>
-import MenuUtama from '~/static/collections/menu.json'
 import HeaderDrawer from '~/components/header_drawer'
 
 export default {
@@ -47,15 +46,35 @@ export default {
     return {
       title: 'BBTA3 BPPT',
       sideMenu: false,
-      item_utama: MenuUtama,
+      item_utama: [],
       header_dipilih: []
     }
+  },
+  mounted() {
+    this.fetchMenu()
   },
   methods: {
     goHome() {
       this.$router.push({
         path: '/'
       })
+    },
+    async fetchMenu() {
+      this.item_utama = []
+
+      try {
+        const menuSnapshot = await this.$firebase
+          .firestore()
+          .collection('menu')
+          .orderBy('urutan', 'asc')
+          .get()
+
+        menuSnapshot.forEach((pilihan) => {
+          this.item_utama.push(pilihan.data())
+        })
+      } catch (_) {
+        this.item_utama = []
+      }
     },
     showSideMenu(payload) {
       if (payload !== 'mini') {
