@@ -7,13 +7,21 @@
       value="true"
     >
       <template v-slot:activator>
-        <v-list-item v-if="'href' in item" :href="item.href" target="_blank">
+        <v-list-item
+          v-if="item.tautan && item.tautan.includes('http')"
+          :href="item.tautan"
+          target="_blank"
+        >
           <v-list-item-title>
             {{ item.nama }}
           </v-list-item-title>
         </v-list-item>
 
-        <v-list-item v-else-if="'to' in item" :to="item.to" exact>
+        <v-list-item
+          v-else-if="item.tautan && !item.tautan.includes('http')"
+          :to="item.tautan"
+          exact
+        >
           <v-list-item-title>
             {{ item.nama }}
           </v-list-item-title>
@@ -37,11 +45,19 @@
         class="nomargin"
       >
         <template v-slot:activator>
-          <v-list-item v-if="'href' in sub" :href="sub.href" target="_blank">
+          <v-list-item
+            v-if="sub.tautan && sub.tautan.includes('http')"
+            :href="sub.tautan"
+            target="_blank"
+          >
             <v-list-item-title> {{ sub.nama }} </v-list-item-title>
           </v-list-item>
 
-          <v-list-item v-else-if="'to' in sub" :to="sub.to + sub.slug" exact>
+          <v-list-item
+            v-else-if="sub.tautan && !sub.tautan.includes('http')"
+            :to="sub.tautan + sub.slug"
+            exact
+          >
             <v-list-item-title> {{ sub.nama }} </v-list-item-title>
           </v-list-item>
 
@@ -59,13 +75,21 @@
           link
           class="nomargin"
         >
-          <v-list-item v-if="'href' in itm" :href="itm.href" target="_blank">
+          <v-list-item
+            v-if="itm.tautan && itm.tautan.includes('http')"
+            :href="itm.tautan"
+            target="_blank"
+          >
             <v-list-item-title>
               {{ itm.nama }}
             </v-list-item-title>
           </v-list-item>
 
-          <v-list-item v-else-if="'to' in itm" :to="itm.to + itm.slug" exact>
+          <v-list-item
+            v-else-if="itm.tautan && !itm.tautan.includes('http')"
+            :to="itm.tautan + itm.slug"
+            exact
+          >
             <v-list-item-title>
               {{ itm.nama }}
             </v-list-item-title>
@@ -90,14 +114,6 @@ export default {
       type: Array,
       default: () => [],
       required: true
-    }
-  },
-  data() {
-    return {}
-  },
-  watch: {
-    selectHeader: (val, oldVal) => {
-      return val
     }
   }
 }
