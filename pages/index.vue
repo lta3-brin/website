@@ -113,8 +113,7 @@ export default {
   methods: {
     async fetchInformasi() {
       try {
-        const infoSnapshot = await this.$firebase
-          .firestore()
+        const infoSnapshot = await this.$fireStore
           .collection('informasi')
           .doc('utama')
 
@@ -140,8 +139,7 @@ export default {
     },
     async fetchKeahlian() {
       try {
-        const keahlianSnapshot = await this.$firebase
-          .firestore()
+        const keahlianSnapshot = await this.$fireStore
           .collection('keahlian')
           .orderBy('urutan', 'asc')
           .get()

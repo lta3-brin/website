@@ -35,8 +35,7 @@ export default {
   methods: {
     async fetchFasilitasDipilih() {
       try {
-        const fasilitasSnapshot = await this.$firebase
-          .firestore()
+        const fasilitasSnapshot = await this.$fireStore
           .collection('fasilitas')
           .where('slug', '==', this.slug)
           .get()

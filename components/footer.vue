@@ -329,10 +329,7 @@ export default {
   methods: {
     async fetchSosMed() {
       try {
-        const dataSosMed = await this.$firebase
-          .firestore()
-          .collection('sosmed')
-          .get()
+        const dataSosMed = await this.$fireStore.collection('sosmed').get()
 
         dataSosMed.forEach((doc) => {
           this.sosmed.push(doc.data())

@@ -33,8 +33,7 @@ export default {
   methods: {
     async fetchKeahlian() {
       try {
-        const keahlianSnapshot = await this.$firebase
-          .firestore()
+        const keahlianSnapshot = await this.$fireStore
           .collection('keahlian')
           .orderBy('urutan', 'asc')
           .get()

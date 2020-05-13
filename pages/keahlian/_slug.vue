@@ -121,8 +121,7 @@ export default {
     },
     async fetchSelectedKeahlian() {
       try {
-        const keahlianTertentu = await this.$firebase
-          .firestore()
+        const keahlianTertentu = await this.$fireStore
           .collection('keahlian')
           .where('slug', '==', this.$route.params.slug)
           .get()
@@ -131,9 +130,7 @@ export default {
           this.keahlian = ahli.data()
         })
       } catch (_) {
-        this.keahlian = {
-          kosong: true
-        }
+        this.keahlian = null
       }
     }
   },

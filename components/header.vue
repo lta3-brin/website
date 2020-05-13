@@ -62,6 +62,7 @@ export default {
   },
   mounted() {
     this.fetchMenu()
+    this.simakNotifikasi()
   },
   methods: {
     goHome() {
@@ -73,8 +74,7 @@ export default {
       this.item_utama = []
 
       try {
-        const menuSnapshot = await this.$firebase
-          .firestore()
+        const menuSnapshot = await this.$fireStore
           .collection('menu')
           .orderBy('urutan', 'asc')
           .get()
@@ -105,6 +105,12 @@ export default {
         this.item_pilihan = this.item_utama
         this.sideMenu = !this.sideMenu
       }
+    },
+    simakNotifikasi() {
+      this.$fireMess.onMessage((payload) => {
+        // eslint-disable-next-line no-console
+        console.log(payload)
+      })
     }
   }
 }

@@ -39,8 +39,7 @@ export default {
   methods: {
     async fetchPost() {
       try {
-        const postsSnapshot = await this.$firebase
-          .firestore()
+        const postsSnapshot = await this.$fireStore
           .collection('posts')
           .where('slug', '==', this.slug)
           .get()

@@ -55,8 +55,7 @@ export default {
     async fetchProfil() {
       const prof = []
       try {
-        const profilSnapshot = await this.$firebase
-          .firestore()
+        const profilSnapshot = await this.$fireStore
           .collection('profil')
           .orderBy('urutan', 'asc')
           .get()
