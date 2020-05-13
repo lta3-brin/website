@@ -1,7 +1,7 @@
 <template>
   <article class="artikel">
-    <v-alert v-if="'kosong' in tentang" type="info">
-      Informasi ini belum ada.
+    <v-alert v-if="tentang === null" type="info">
+      Sedang memproses data...
     </v-alert>
 
     <div v-else>
@@ -16,7 +16,6 @@
 
 <script>
 import VueMarkdown from 'vue-markdown'
-import tentang from '~/static/collections/posts.json'
 
 export default {
   name: 'SlugTentang',
@@ -26,7 +25,7 @@ export default {
   },
   data() {
     return {
-      tentang
+      tentang: null
     }
   },
   computed: {
@@ -34,16 +33,23 @@ export default {
       return this.$route.params.slug
     }
   },
-  created() {
-    const ttg = this.tentang.filter((ttg) => {
-      return ttg.slug === this.$route.params.slug
-    })
+  mounted() {
+    this.fetchPost()
+  },
+  methods: {
+    async fetchPost() {
+      try {
+        const postsSnapshot = await this.$firebase
+          .firestore()
+          .collection('posts')
+          .where('slug', '==', this.slug)
+          .get()
 
-    if (ttg.length > 0) {
-      this.tentang = ttg[0]
-    } else {
-      this.tentang = {
-        kosong: true
+        postsSnapshot.forEach((post) => {
+          this.tentang = post.data()
+        })
+      } catch (_) {
+        this.tentang = null
       }
     }
   },
