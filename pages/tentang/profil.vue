@@ -1,5 +1,9 @@
 <template>
-  <article class="artikel">
+  <v-alert v-if="profil === null" type="info">
+    Sedang memproses data...
+  </v-alert>
+
+  <article v-else class="artikel">
     <div v-for="prof in profil" :key="prof.slug">
       <v-subheader class="pl-0 mb-9 font-weight-black display-1 red--text">
         {{ prof.nama }}
@@ -32,7 +36,6 @@
 
 <script>
 import VueMarkdown from 'vue-markdown'
-import profil from '~/static/collections/profil.json'
 
 export default {
   name: 'Profil',
@@ -42,7 +45,30 @@ export default {
   },
   data() {
     return {
-      profil
+      profil: null
+    }
+  },
+  mounted() {
+    this.fetchProfil()
+  },
+  methods: {
+    async fetchProfil() {
+      const prof = []
+      try {
+        const profilSnapshot = await this.$firebase
+          .firestore()
+          .collection('profil')
+          .orderBy('urutan', 'asc')
+          .get()
+
+        profilSnapshot.forEach((profil) => {
+          prof.push(profil.data())
+        })
+
+        this.profil = prof
+      } catch (_) {
+        this.profil = null
+      }
     }
   },
   head() {
@@ -52,7 +78,7 @@ export default {
         {
           hid: 'slug_profil',
           name: 'description',
-          content: `Halaman berkaitan informasi profil bbta3`
+          content: `Halaman berkaitan informasi profil bbta3 yang terdiri dari tugas dan fungsi, struktur organisasi serta daftar pejabat struktural di BBTA3`
         }
       ]
     }
