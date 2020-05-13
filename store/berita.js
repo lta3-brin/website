@@ -12,7 +12,9 @@ export const mutations = {
         id: brt.id_str,
         createdAt: brt.created_at,
         description: brt.full_text,
-        thumbnail: brt.entities.media ? brt.entities.media[0].media_url : '',
+        thumbnail: brt.entities.media
+          ? brt.entities.media[0].media_url_https
+          : '',
         screen_name: brt.user.screen_name,
         hashtags:
           brt.entities.hashtags.length > 0
