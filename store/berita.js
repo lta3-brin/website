@@ -40,6 +40,13 @@ export const actions = {
     const URL_BBTA3 = `https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=bbta3_bppt&count=11&exclude_replies=true&tweet_mode=extended`
     const URL_BPPT = `https://api.twitter.com/1.1/search/tweets.json?q=from:bppt_ri&result_type=recent&count=10&tweet_mode=extended`
 
+    if (process.env.DEV_MODE && process.env.DEV_MODE === 'true') {
+      return {
+        bbta3: [],
+        bppt: []
+      }
+    }
+
     try {
       const resBBTA3 = await axios.get(URL_BBTA3, {
         headers: {

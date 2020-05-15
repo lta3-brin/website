@@ -29,9 +29,14 @@ export const mutations = {
 
 export const actions = {
   async fetchYoutube() {
+    if (process.env.DEV_MODE && process.env.DEV_MODE === 'true') {
+      return []
+    }
+
     try {
       const key = process.env.VIDEO_API
       const URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCa0_hm_SiHxps1Llk_q6I1Q&order=date&type=video&maxResults=10&key=${key}`
+
       const RES = await axios.get(URL)
 
       return RES.data.items
@@ -40,9 +45,14 @@ export const actions = {
     }
   },
   async fetchYoutubePlaylist() {
+    if (process.env.DEV_MODE && process.env.DEV_MODE === 'true') {
+      return []
+    }
+
     try {
       const key = process.env.VIDEO_API
       const URL = `https://www.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&maxResults=25&channelId=UCa0_hm_SiHxps1Llk_q6I1Q&key=${key}`
+
       const RES = await axios.get(URL)
 
       return RES.data.items
