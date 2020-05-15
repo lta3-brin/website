@@ -61,12 +61,33 @@ export default {
     selectedVideo() {
       const items = this.$store.state.video.koleksi
 
-      return this.selectedItem(items)
+      if (items.length > 0) {
+        return this.selectedItem(items)
+      } else {
+        return {
+          id: 'halyHrNpLDU',
+          description:
+            'Video ini merupakan bagian dari laporan progress pengembangan website BBTA3 yang baru.',
+          thumbnail:
+            'https://i9.ytimg.com/vi/halyHrNpLDU/mqdefault.jpg?time=1589579937178&sqp=CLSf_PUF&rs=AOn4CLDlcXMKig_TxBpf1xm4l1NHu3xhaA'
+        }
+      }
     },
     selectedBerita() {
       const items = this.$store.state.berita.koleksi
 
-      return this.selectedItem(items)
+      if (items.length > 0) {
+        return this.selectedItem(items)
+      } else {
+        return {
+          id: '1257659702621560833',
+          screen_name: 'BBTA3_BPPT',
+          description:
+            'Berikut ini tahap ke-2 pengembangan website BBTA3, mengubah desain kedalam script yang dapat ditampilkan kedalam browser',
+          thumbnail:
+            'https://pbs.twimg.com/ext_tw_video_thumb/1257657774541910016/pu/img/aVTyprglT3QKCmsI.jpg'
+        }
+      }
     }
   },
   methods: {
