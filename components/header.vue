@@ -62,7 +62,6 @@ export default {
   },
   mounted() {
     this.fetchMenu()
-    this.simakNotifikasi()
   },
   methods: {
     goHome() {
@@ -105,12 +104,6 @@ export default {
         this.item_pilihan = this.item_utama
         this.sideMenu = !this.sideMenu
       }
-    },
-    simakNotifikasi() {
-      this.$fireMess.onMessage((payload) => {
-        // eslint-disable-next-line no-console
-        console.log(payload)
-      })
     }
   }
 }
