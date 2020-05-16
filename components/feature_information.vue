@@ -68,8 +68,7 @@ export default {
           id: 'halyHrNpLDU',
           description:
             'Video ini merupakan bagian dari laporan progress pengembangan website BBTA3 yang baru.',
-          thumbnail:
-            'https://i9.ytimg.com/vi/halyHrNpLDU/mqdefault.jpg?time=1589579937178&sqp=CLSf_PUF&rs=AOn4CLDlcXMKig_TxBpf1xm4l1NHu3xhaA'
+          thumbnail: '/work.jpg'
         }
       }
     },
