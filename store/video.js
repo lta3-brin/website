@@ -1,5 +1,3 @@
-import axios from 'axios'
-
 export const state = () => ({
   koleksi: [],
   playlist: []
@@ -7,57 +5,45 @@ export const state = () => ({
 
 export const mutations = {
   addVideo(state, payload) {
-    payload.forEach((video) => {
-      state.koleksi.push({
-        id: video.id.videoId,
-        createdAt: video.snippet.publishedAt,
-        description: video.snippet.description,
-        thumbnail: video.snippet.thumbnails.medium.url,
-        title: video.snippet.title
-      })
-    })
+    if (payload === null) {
+      state.koleksi = []
+    } else {
+      state.koleksi.push(payload)
+    }
   },
   addPlaylist(state, payload) {
-    payload.forEach((playlist) => {
-      state.playlist.push({
-        id: playlist.id,
-        title: playlist.snippet.title
-      })
-    })
+    if (payload === null) {
+      state.playlist = []
+    } else {
+      state.playlist.push(payload)
+    }
   }
 }
 
 export const actions = {
-  async fetchYoutube() {
-    if (process.env.DEV_MODE && process.env.DEV_MODE === 'true') {
-      return []
-    }
-
+  async readVideo(context) {
     try {
-      const key = process.env.VIDEO_API
-      const URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCa0_hm_SiHxps1Llk_q6I1Q&order=date&type=video&maxResults=10&key=${key}`
+      const video = await this.$fireStore
+        .collection('video')
+        .orderBy('createdAt', 'desc')
+        .get()
 
-      const RES = await axios.get(URL)
-
-      return RES.data.items
+      video.forEach((vid) => {
+        context.commit('addVideo', vid.data())
+      })
     } catch (_) {
-      return []
+      context.commit('addVideo', null)
     }
   },
-  async fetchYoutubePlaylist() {
-    if (process.env.DEV_MODE && process.env.DEV_MODE === 'true') {
-      return []
-    }
-
+  async readPlaylist(context) {
     try {
-      const key = process.env.VIDEO_API
-      const URL = `https://www.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&maxResults=25&channelId=UCa0_hm_SiHxps1Llk_q6I1Q&key=${key}`
+      const list = await this.$fireStore.collection('playlist').get()
 
-      const RES = await axios.get(URL)
-
-      return RES.data.items
+      list.forEach((ls) => {
+        context.commit('addPlaylist', ls.data())
+      })
     } catch (_) {
-      return []
+      context.commit('addPlaylist', null)
     }
   }
 }
