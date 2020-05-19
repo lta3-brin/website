@@ -1,7 +1,7 @@
 <template>
   <v-app dark>
     <v-container fluid class="fill-height">
-      <v-row justify="center" align="center">
+      <v-row v-resize="onResize" justify="center" align="center">
         <v-col cols="auto" class="text-center">
           <v-icon color="red darken-4" class="mb-12" size="120">
             fa-bug
@@ -9,7 +9,8 @@
 
           <h1
             v-if="error.statusCode === 404"
-            class="display-3 font-weight text-uppercase mb-8"
+            class="font-weight text-uppercase mb-8"
+            :class="textSize"
           >
             {{ pageNotFound }}
           </h1>
@@ -39,7 +40,17 @@ export default {
   data() {
     return {
       pageNotFound: '404; Tidak Ditemukan',
-      otherError: 'Oh tidak, Terjadi Kesalahan'
+      otherError: 'Oh tidak, Terjadi Kesalahan',
+      textSize: 'display-3'
+    }
+  },
+  methods: {
+    onResize() {
+      if (window.innerWidth < 600) {
+        this.textSize = 'headline'
+      } else {
+        this.textSize = 'display-3'
+      }
     }
   },
   head() {
