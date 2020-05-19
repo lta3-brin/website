@@ -6,9 +6,9 @@
       height="500"
       :src="informasi.thumbnail"
     >
-      <v-row align="center" justify="center">
+      <v-row v-resize="onResize" align="center" justify="center">
         <v-col class="text-center" cols="12">
-          <h1 class="display-3 font-weight-thin mb-4">
+          <h1 class="font-weight-thin mb-4" :class="textSize">
             {{ informasi.judul }}
           </h1>
           <h4 class="subheading">
@@ -103,7 +103,8 @@ export default {
     return {
       dataKeahlian: [],
       informasi: null,
-      externalLink: false
+      externalLink: false,
+      textSize: 'display-1'
     }
   },
   mounted() {
@@ -111,6 +112,15 @@ export default {
     this.fetchKeahlian()
   },
   methods: {
+    onResize() {
+      if (window.innerWidth > 600 && window.innerWidth < 1264) {
+        this.textSize = 'display-1'
+      } else if (window.innerWidth < 600) {
+        this.textSize = 'headline'
+      } else {
+        this.textSize = 'display-3'
+      }
+    },
     async fetchInformasi() {
       try {
         const infoSnapshot = await this.$fireStore
