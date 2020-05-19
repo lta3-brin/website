@@ -11,6 +11,11 @@
         v-for="item of item_utama"
         :key="item.slug"
         class="d-none d-md-flex"
+        :color="
+          $route.path.includes(item.nama.toLowerCase().split(' ')[0])
+            ? 'primary'
+            : ''
+        "
         small
         text
         exact
