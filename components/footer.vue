@@ -284,13 +284,6 @@
               <strong>TRIE {{ version ? '- ' + version : '' }}</strong>
             </v-card-text>
           </v-col>
-          <v-col cols="auto">
-            <v-card-text class="py-0">
-              <span>📞 +62 21 756 090 2</span>
-              <span class="ml-4">📠 +62 21 756 090 1</span>
-              <span class="ml-4">✉️ sekr-bbta3@bppt.go.id</span>
-            </v-card-text>
-          </v-col>
         </v-row>
       </v-container>
     </v-card>
