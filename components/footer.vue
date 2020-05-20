@@ -343,8 +343,6 @@ export default {
       }
     },
     getVersion() {
-      // eslint-disable-next-line no-console
-      console.log(version)
       this.version = version || null
     }
   }
