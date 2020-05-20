@@ -281,7 +281,7 @@
             <v-card-text class="py-0">
               ©️ {{ new Date().getFullYear() }}
               <span class="red--text">❤</span>
-              <strong>TRIE</strong>
+              <strong>TRIE {{ version ? '- ' + version : '' }}</strong>
             </v-card-text>
           </v-col>
           <v-col cols="auto">
@@ -298,11 +298,14 @@
 </template>
 
 <script>
+import pkg from '~/package.json'
+
 export default {
   name: 'Footer',
   data: () => ({
     sosmed: [],
-    videos: []
+    videos: [],
+    version: null
   }),
   computed: {
     beritaBBTA3() {
@@ -325,6 +328,7 @@ export default {
   },
   mounted() {
     this.fetchSosMed()
+    this.getVersion()
   },
   methods: {
     async fetchSosMed() {
@@ -337,6 +341,9 @@ export default {
       } catch (_) {
         this.sosmed = []
       }
+    },
+    getVersion() {
+      this.version = pkg.version || null
     }
   }
 }
