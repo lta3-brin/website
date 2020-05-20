@@ -7,29 +7,14 @@
 
       <v-spacer />
 
-      <v-btn
-        v-for="item of item_utama"
-        :key="item.slug"
-        class="d-none d-md-flex"
-        :color="
-          $route.path.includes(item.nama.toLowerCase().split(' ')[0])
-            ? 'primary'
-            : ''
-        "
-        small
-        text
-        exact
-        @click.stop="showSideMenu(item)"
-      >
-        {{ item.nama }}
-      </v-btn>
+      <div class="mr-2 d-none d-md-flex caption">
+        <span>📞 +62 21 756 090 2</span>
+        <span class="ml-4">📠 +62 21 756 090 1</span>
+        <span class="ml-4">✉️ sekr-bbta3@bppt.go.id</span>
+      </div>
 
-      <v-btn
-        icon
-        class="d-xs-flex d-md-none"
-        @click.stop="showSideMenu('mini')"
-      >
-        <v-icon>fa-bars</v-icon>
+      <v-btn icon @click.stop="showSideMenu('mini')">
+        <v-icon>fa-th</v-icon>
       </v-btn>
     </v-app-bar>
 
