@@ -298,7 +298,7 @@
 </template>
 
 <script>
-import pkg from '~/package.json'
+import { version } from '~/package.json'
 
 export default {
   name: 'Footer',
@@ -343,7 +343,9 @@ export default {
       }
     },
     getVersion() {
-      this.version = pkg.version || null
+      // eslint-disable-next-line no-console
+      console.log(version)
+      this.version = version || null
     }
   }
 }
