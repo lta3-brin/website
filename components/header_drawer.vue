@@ -1,10 +1,44 @@
 <template>
   <v-list>
+    <v-list-item class="d-flex d-sm-flex d-md-none">
+      <v-list-item-content>
+        <v-list-item-title>+62 21 756 090 2</v-list-item-title>
+        <v-list-item-subtitle>Telepon</v-list-item-subtitle>
+      </v-list-item-content>
+
+      <v-list-item-icon>
+        <v-icon color="white" size="16">fa-phone</v-icon>
+      </v-list-item-icon>
+    </v-list-item>
+
+    <v-list-item class="d-flex d-sm-flex d-md-none">
+      <v-list-item-content>
+        <v-list-item-title>+62 21 756 090 1</v-list-item-title>
+        <v-list-item-subtitle>Faks</v-list-item-subtitle>
+      </v-list-item-content>
+
+      <v-list-item-icon>
+        <v-icon color="white" size="16">fa-fax</v-icon>
+      </v-list-item-icon>
+    </v-list-item>
+
+    <v-list-item class="d-flex d-sm-flex d-md-none">
+      <v-list-item-content>
+        <v-list-item-title>sekr-bbta3@bppt.go.id</v-list-item-title>
+        <v-list-item-subtitle>Email</v-list-item-subtitle>
+      </v-list-item-content>
+
+      <v-list-item-icon>
+        <v-icon color="white" size="16">fa-envelope</v-icon>
+      </v-list-item-icon>
+    </v-list-item>
+
+    <v-divider class="d-flex d-sm-flex d-md-none"></v-divider>
+
     <v-list-group
       v-for="item of dataHeader"
       :key="item.slug"
       class="nomarginroot"
-      value="true"
     >
       <template v-slot:activator>
         <v-list-item
