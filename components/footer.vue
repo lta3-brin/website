@@ -4,7 +4,7 @@
       <v-container fluid>
         <v-row justify="space-between">
           <v-col cols="12" md="auto" lg="3">
-            <v-card-text>
+            <v-card-text class="px-0">
               <v-btn
                 v-for="smd in sosmed"
                 :key="smd.nama"
@@ -16,7 +16,7 @@
               </v-btn>
             </v-card-text>
 
-            <v-card-text class="white--text pt-0">
+            <v-card-text class="white--text pt-0 px-0">
               <p>
                 BBTA3 (Balai Besar Teknologi Aerodinamika, Aeroelastika dan
                 Aeroakustika) merupakan transformasi dari unit kerja lama UPT
@@ -38,7 +38,7 @@
           </v-col>
 
           <v-col cols="12" md="4" lg="3">
-            <v-card-text>
+            <v-card-text class="px-0">
               <v-subheader
                 class="mb-2 px-0 display-1 font-weight-light text-uppercase"
               >
@@ -102,7 +102,7 @@
           </v-col>
 
           <v-col cols="12" md="4" lg="3">
-            <v-card-text>
+            <v-card-text class="px-0">
               <v-subheader
                 class="mb-2 px-0 display-1 font-weight-light text-uppercase"
               >
@@ -187,7 +187,7 @@
           </v-col>
 
           <v-col cols="12" md="4" lg="3">
-            <v-card-text>
+            <v-card-text class="px-0">
               <v-subheader
                 class="mb-2 px-0 display-1 font-weight-light text-uppercase"
               >
