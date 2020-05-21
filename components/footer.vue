@@ -281,7 +281,9 @@
             <v-card-text class="py-0">
               ©️ {{ new Date().getFullYear() }}
               <span class="red--text">❤</span>
-              <strong>TRIE {{ version ? '- ' + version : '' }}</strong>
+              <strong>
+                TRIE {{ version ? '- ' + version + fromNode : '' }}
+              </strong>
             </v-card-text>
           </v-col>
         </v-row>
@@ -298,7 +300,8 @@ export default {
   data: () => ({
     sosmed: [],
     videos: [],
-    version: null
+    version: null,
+    fromNode: null
   }),
   computed: {
     beritaBBTA3() {
@@ -322,6 +325,7 @@ export default {
   mounted() {
     this.fetchSosMed()
     this.getVersion()
+    this.getNode()
   },
   methods: {
     async fetchSosMed() {
@@ -337,6 +341,9 @@ export default {
     },
     getVersion() {
       this.version = version || null
+    },
+    getNode() {
+      this.fromNode = this.$store.state.node.version || null
     }
   }
 }
