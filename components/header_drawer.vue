@@ -39,6 +39,7 @@
       v-for="item of dataHeader"
       :key="item.slug"
       class="nomarginroot"
+      :value="$route.path.includes(item.nama.toLowerCase().split(' ')[0])"
     >
       <template v-slot:activator>
         <v-list-item
