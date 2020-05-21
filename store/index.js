@@ -7,5 +7,6 @@ export const actions = {
     commit('berita/addHashtag', berita.bbta3)
     commit('berita/addBerita', berita.bbta3)
     commit('berita/addBerita', berita.bppt)
+    commit('node/checkVersion')
   }
 }
