@@ -1,0 +1,5 @@
+baseURL = "http://bbta3.bppt.go.id/"
+languageCode = "id-id"
+title = "Website resmi BBTA3 BPPT"
+enableRobotsTXT=true
+googleAnalytics="UA-139880417-1"
