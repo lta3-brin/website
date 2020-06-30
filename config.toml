@@ -3,3 +3,4 @@ languageCode = "id-id"
 title = "Website resmi BBTA3 BPPT"
 enableRobotsTXT=true
 googleAnalytics="UA-139880417-1"
+theme="bbta3"
