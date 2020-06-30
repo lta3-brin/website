@@ -1,24 +1,23 @@
-# Prototip UI BBTA3
+# Pengembangan Webite BBTA3 BPPT
 
-pengembangan prototip ui bbta3 yang dilakukan menggunakan [Nuxt JS](https://nuxtjs.org).
+repository ini merupakan tempat pengembangan website BBTA3 BPPT yang dilakukan menggunakan konsep sederhana yaitu *Static Site Generator* melalui teknologi yang ditawarkan dari [HUGO](https://gohugo.io/). Sehingga ini menyebabkan terjadinya perombakan pengembangan dari semula.
 
 ## Cara Memulai
 
 ```bash
-# install dependencies
-$ npm install
+# clone repositori ini dengan git di terminal
+$ git clone https://github.com/bbta3-bppt/website.git
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+# pindah lokasi ke lokasi hasil clone
+$ cd <DIREKTORI>
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+# yakinkan sebelumnya sudah memasang hugo cli
+$ hugo version
 
-# generate static project
-$ npm run generate
+# jalankan lokal server selama pengembangan
+$ hugo server -D
 ```
 
 ## Informasi Lanjut
 
-Apabila ada informasi lebih lanjut, hubungi melalui chat berikut [INI](https://discord.gg/7dTG9sg).
+Apabila ada informasi lebih lanjut, hubungi melalui layanan chat [BBTA3 BPPT](https://discord.gg/uwJ2NT3).
