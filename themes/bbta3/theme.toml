@@ -1,0 +1,21 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "BBTA3"
+license = "MIT"
+licenselink = "https://github.com/bbta3-bppt/website/blob/master/LICENSE"
+description = "theme untuk website BBTA3 BPPT menggunakan HUGO dengan Bootstrap"
+homepage = "http://bbta3.bppt.go.id/"
+tags = ["bootstrap", "simple"]
+features = ["responsive", "light", "SEO", "tracking ID"]
+min_version = "0.41.0"
+
+[author]
+  name = "Arizal Akbar Zikri"
+  homepage = "https://github.com/akbarpn136"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""
