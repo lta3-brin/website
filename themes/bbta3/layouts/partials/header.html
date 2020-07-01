@@ -13,8 +13,8 @@
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
-                <li class="nav-item">
-                    <a class="nav-link {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+                <li class="nav-item mr-1">
+                    <a class="text-uppercase nav-link {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
                 </li>
                 {{ end }}
             </ul>
