@@ -5,8 +5,6 @@ date: {{ .Date }}
 draft: false
 author: ""
 menu:
-  aerodinamika:
-    parent: 'keahlian'
-    weight: 10
+  main:
+    weight: 20
 ---
-
