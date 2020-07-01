@@ -5,8 +5,7 @@ date: 2020-07-01T12:58:55+07:00
 draft: false
 author: ""
 menu:
-  aerodinamika:
-    parent: 'keahlian'
+  keahlian:
+    parent: 'main'
     weight: 10
 ---
-
