@@ -26,20 +26,20 @@
     <meta name="twitter:url" content="{{ .Permalink }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
 
-    <link href="/favicon.ico" rel="icon"/>
-
     <!-- Image Meta Tags -->
     {{ with .Params.image }}
-        <meta itemprop="image" content="{{ . | absURL }}" />
-        <meta property="og:image" content="{{ . | absURL }}" />
-        <meta name="twitter:image" content="{{ . | absURL }}" />
-        <meta name="twitter:image:src" content="{{ . | absURL }}" />
+    <meta itemprop="image" content="{{ . | absURL }}" />
+    <meta property="og:image" content="{{ . | absURL }}" />
+    <meta name="twitter:image" content="{{ . | absURL }}" />
+    <meta name="twitter:image:src" content="{{ . | absURL }}" />
     {{ else }}
-        <meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
-        <meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
-        <meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
-        <meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" />
+    <meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
+    <meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
+    <meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
+    <meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" />
     {{ end }}
+
+    <link href="/favicon.ico" rel="icon" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
