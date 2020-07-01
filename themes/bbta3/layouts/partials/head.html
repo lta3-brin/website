@@ -2,33 +2,47 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="theme-color" content="#424242" />
 
-    <!-- Primary Meta Tags -->
-    <title>Selamat Datang — Website Resmi BBTA3 BPPT</title>
-    <meta name="title" content="Selamat Datang — Website Resmi BBTA3 BPPT">
-    <meta name="description" content="BBTA3 (Balai Besar Teknologi Aerodinamika, Aeroelastika dan Aeroakustika) merupakan satuan kerja dari BPPT yang melayani teknologi aero di Indonesia.">
+    <!-- Title Meta Tags -->
+    <title itemprop="name">{{ .Title }} - {{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}" />
+    <meta name="twitter:title" content="{{ .Title }} - {{ .Site.Title }}" />
+    <meta itemprop="name" content="{{ .Title }} - {{ .Site.Title }}" />
+    <meta name="application-name" content="{{ .Title }} - {{ .Site.Title }}" />
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://bbta3.bppt.go.id">
-    <meta property="og:title" content="Selamat Datang — Website Resmi BBTA3 BPPT">
-    <meta property="og:description" content="BBTA3 (Balai Besar Teknologi Aerodinamika, Aeroelastika dan Aeroakustika) merupakan satuan kerja dari BPPT yang melayani teknologi aero di Indonesia.">
-    <meta property="og:image" content="https://i.pinimg.com/originals/f0/0f/70/f00f70723493a7a47e913a90fdd317c4.png">
+    <!-- Description Meta Tags -->
+    <meta name="description" content="{{ .Params.description }}" />
+    <meta itemprop="description" content="{{ .Params.description }}" />
+    <meta property="og:description" content="{{ .Params.description }}" />
+    <meta name="twitter:description" content="{{ .Params.description }}" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="http://bbta3.bppt.go.id">
-    <meta property="twitter:title" content="Selamat Datang — Website Resmi BBTA3 BPPT">
-    <meta property="twitter:description" content="BBTA3 (Balai Besar Teknologi Aerodinamika, Aeroelastika dan Aeroakustika) merupakan satuan kerja dari BPPT yang melayani teknologi aero di Indonesia.">
-    <meta property="twitter:image" content="https://i.pinimg.com/originals/f0/0f/70/f00f70723493a7a47e913a90fdd317c4.png">
+    <!-- Link Meta Tags -->
+    <base href="{{ .Permalink }}">
+    <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
+    <meta name="url" content="{{ .Permalink }}" />
+    <meta name="twitter:url" content="{{ .Permalink }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
 
     <link href="/favicon.ico" rel="icon"/>
+
+    <!-- Image Meta Tags -->
+    {{ with .Params.image }}
+        <meta itemprop="image" content="{{ . | absURL }}" />
+        <meta property="og:image" content="{{ . | absURL }}" />
+        <meta name="twitter:image" content="{{ . | absURL }}" />
+        <meta name="twitter:image:src" content="{{ . | absURL }}" />
+    {{ else }}
+        <meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
+        <meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
+        <meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
+        <meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" />
+    {{ end }}
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link href="/css/main.css" rel="stylesheet" />
-
-    <title>Website Resmi BBTA3 BPPT</title>
 </head>
