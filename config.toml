@@ -4,3 +4,16 @@ title = "Website Resmi BBTA3 BPPT"
 enableRobotsTXT=true
 googleAnalytics="UA-139880417-1"
 theme="bbta3"
+
+[menu]
+  [[menu.main]]
+    identifier = "ejurnal"
+    name = "e-Jurnal"
+    url = "http://ejurnal.bppt.go.id/index.php/JAERO"
+    weight = 50
+
+  [[menu.main]]
+    identifier = "eppid"
+    name = "e-PPID"
+    url = "https://e-ppid.bppt.go.id/"
+    weight = 60
