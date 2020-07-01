@@ -1,9 +1,10 @@
 ---
 title: "Keahlian"
 description: ""
-date: 2020-07-01T12:58:39+07:00
+date: 2020-07-01T14:13:59+07:00
 draft: false
 author: ""
-menu: "keahlian"
+menu:
+  main:
+    weight: 10
 ---
-
