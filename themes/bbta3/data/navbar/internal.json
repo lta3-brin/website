@@ -1,0 +1,57 @@
+[
+  {
+    "name": "BPPT RI",
+    "description": "Badan Pengkajian dan Penerapan Teknologi",
+    "link": "http://bppt.go.id/"
+  },
+  {
+    "name": "JDIH BPPT",
+    "description": "Jaringan Dokumentasi dan Informasi Hukum",
+    "link": "http://jdih.bppt.go.id/"
+  },
+  {
+    "name": "PTIPK BPPT",
+    "description": "Pusat Teknologi Industri Pertahanan dan Keamanan",
+    "link": "http://ptipk.bppt.go.id/"
+  },
+  {
+    "name": "PTRIM BPPT",
+    "description": "Pusat Teknologi Rekayasa Industri Maritim",
+    "link": "http://ptrim.bppt.go.id/"
+  },
+  {
+    "name": "PTIP BPPT",
+    "description": "Pusat Teknologi Industri Permesinan",
+    "link": "http://ptip.bppt.go.id/"
+  },
+  {
+    "name": "PTSPT BPPT",
+    "description": "Pusat Teknologi Sistem dan Prasarana Transportasi",
+    "link": "http://ptspt.bppt.go.id/"
+  },
+  {
+    "name": "BTIPDP BPPT",
+    "description": "Balai Teknologi Infrastruktur Pelabuhan dan Dinamika Pantai",
+    "link": "http://btipdp.bppt.go.id/"
+  },
+  {
+    "name": "B2TKS BPPT",
+    "description": "Balai Besar Teknologi Kekuatan Struktur",
+    "link": "http://b2tks.bppt.go.id/"
+  },
+  {
+    "name": "BTH BPPT",
+    "description": "Balai Teknologi Hidrodinamika",
+    "link": "http://bth.bppt.go.id/"
+  },
+  {
+    "name": "BT2MP BPPT",
+    "description": "Balai Teknologi Termodinamika Motor dan Propulsi",
+    "link": "http://bt2mp.bppt.go.id/"
+  },
+  {
+    "name": "MEPPO",
+    "description": "Balai Teknologi Mesin Perkakas, Produksi & Otomasi",
+    "link": "http://meppo.bppt.go.id/"
+  }
+]
