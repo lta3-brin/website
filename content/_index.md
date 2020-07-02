@@ -9,3 +9,5 @@ date: 2020-07-01T08:41:32+07:00
 draft: false
 author: "bbta3"
 ---
+
+Apabila perlu informasi atau pertanyaan, hubungi kami melalui chat 💬
