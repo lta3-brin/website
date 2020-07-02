@@ -1,23 +1,13 @@
-{{  define "main" }}
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-9">
-        <h1 class="text-danger">{{ .Title }}</h1>
+{{ define "article" }}
+  <h1 class="text-danger">{{ .Title }}</h1>
 
-        <article class="section">
-          {{ .Content }}
-        </article>
+  <article class="section">
+      {{ .Content }}
+  </article>
 
-        <ul class="contents">
-            {{ range .Paginator.Pages }}
-              <li>{{.Name}}</li>
-            {{ end }}
-        </ul>
-      </div>
-
-      <div class="col-lg-3">
-
-      </div>
-    </div>
-  </div>
+  <ul class="contents">
+      {{ range .Paginator.Pages }}
+        <li>{{.Name}}</li>
+      {{ end }}
+  </ul>
 {{ end }}

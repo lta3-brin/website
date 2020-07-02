@@ -1,31 +1,21 @@
-{{  define "main" }}
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-9">
-        <h1 class="text-danger">{{ .Title }}</h1>
+{{ define "article" }}
+  <h1 class="text-danger">{{ .Title }}</h1>
 
-        <article class="section">
-            {{ .Content }}
-        </article>
+  <article class="section">
+    {{ .Content }}
+  </article>
 
-        <div class="row row-cols-1 row-cols-md-2 g-3">
-          {{ range .Site.Data.navbar.produk }}
-          <div class="col">
-            <div class="card text-white bg-darker h-100">
-              <div class="card-body">
-                <h5 class="card-title">{{ .name }}</h5>
-                <p class="card-text">{{ .description }}</p>
-                <a href="{{ .link }}" class="btn btn-primary btn-sm text-uppercase" target="_blank">Selengkapnya</a>
-              </div>
-            </div>
+  <div class="row row-cols-1 row-cols-md-2 g-3">
+    {{ range .Site.Data.navbar.produk }}
+      <div class="col">
+        <div class="card text-white bg-darker h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{ .name }}</h5>
+            <p class="card-text">{{ .description }}</p>
+            <a href="{{ .link }}" class="btn btn-primary btn-sm text-uppercase" target="_blank">Selengkapnya</a>
           </div>
-          {{ end }}
         </div>
       </div>
-
-      <div class="col-lg-3">
-
-      </div>
-    </div>
+    {{ end }}
   </div>
 {{ end }}
