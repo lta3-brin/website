@@ -1,3 +1,48 @@
 {{  define "main" }}
-    <h1>{{ .Site.Title }}</h1>
+    <div class="hero"
+         style="background-image: url('{{ .Params.image }}')">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col">
+                    <div class="card text-white bg-darker theBox p-3 p-xl-5">
+                        <div class="card-body">
+                            <h1 class="card-title">{{ .Params.judulInformasi }}</h1>
+                            <p class="card-text">
+                                {{ .Params.isiInformasi }} -
+                                Balai Besar Teknologi
+                                <span id="anim" class="text-warning h4"></span>
+                            </p>
+                            <div id="keahlian">
+                                <p>Aerodinamika.</p>
+                                <p>Aeroelastika.</p>
+                                <p>Aeroakustika.</p>
+                                <p>Aeromekanika.</p>
+                                <p>Aerotronika.</p>
+                            </div>
+
+                            {{ if .Params.tautanInformasi}}
+                            <hr>
+                            <a href="{{ .Params.tautanInformasi }}" class="btn btn-outline-light text-uppercase">Kunjungi</a>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{ end }}
+
+{{ define "addon" }}
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script>
+    const options = {
+        stringsElement: 'div#keahlian',
+        typeSpeed: 80,
+        backSpeed: 60,
+        loop: true,
+        smartBackspace: false
+    };
+
+    const typed = new Typed('span#anim', options);
+</script>
 {{ end }}
