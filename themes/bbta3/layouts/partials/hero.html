@@ -1,0 +1,31 @@
+<div class="hero"
+     style="background-image: url('{{ .image }}')">
+  <div class="container h-100">
+    <div class="row align-items-center h-100">
+      <div class="col">
+        <div class="card text-white bg-darker theBox p-3 p-xl-5">
+          <div class="card-body">
+            <h1 class="card-title">{{ .judulInformasi }}</h1>
+            <p class="card-text">
+                {{ .isiInformasi }}
+              Balai Besar Teknologi
+              <span id="anim" class="text-warning h4" style="letter-spacing: 5px;"></span>
+            </p>
+            <div id="keahlian">
+              <p>Aerodinamika.</p>
+              <p>Aeroelastika.</p>
+              <p>Aeroakustika.</p>
+              <p>Aeromekanika.</p>
+              <p>Aerotronika.</p>
+            </div>
+
+              {{ if .tautanInformasi}}
+                <hr>
+                <a href="{{ .tautanInformasi }}" class="btn btn-outline-light text-uppercase">Kunjungi</a>
+              {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
