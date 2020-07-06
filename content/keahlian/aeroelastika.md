@@ -1,6 +1,6 @@
 ---
 title: "Aeroelastika"
-description: "Pengukuran pada pengujian aeroelastika benda uji dalam terowongan angin"
+description: "Pengukuran pada pengujian aeroelastika dalam terowongan angin"
 image: "https://i.pinimg.com/originals/10/77/73/1077735953c1aa8b4e867147f01fa15d.jpg"
 date: 2020-07-01T12:59:04+07:00
 draft: false

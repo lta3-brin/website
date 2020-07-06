@@ -1,6 +1,6 @@
 ---
 title: "Aerodinamika"
-description: "Pengukuran pada pengujian aerodinamika pesawat dalam terowongan angin"
+description: "Pengukuran pada pengujian aerodinamika dalam terowongan angin"
 image: "https://i.pinimg.com/originals/fb/01/7a/fb017af2e927556a8d35b6537218ae92.jpg"
 date: 2020-07-01T12:58:55+07:00
 draft: false
