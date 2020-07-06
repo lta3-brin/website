@@ -1,0 +1,26 @@
+[
+  {
+    "icon": "fab fa-youtube",
+    "link": "http://bit.ly/YoutubeBBTA3"
+  },
+  {
+    "icon": "fab fa-twitter",
+    "link": "http://bit.ly/TwitterBBTA3"
+  },
+  {
+    "icon": "fab fa-instagram",
+    "link": "http://bit.ly/InstagramBBTA3"
+  },
+  {
+    "icon": "fab fa-facebook",
+    "link": "http://bit.ly/FacebookBBTA3"
+  },
+  {
+    "icon": "fab fa-google-play",
+    "link": "http://bit.ly/BetaTesterBBTA3"
+  },
+  {
+    "icon": "fab fa-discord",
+    "link": "http://bit.ly/DiscordBBTA3"
+  }
+]
