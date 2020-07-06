@@ -1,0 +1,34 @@
+{{  define "main" }}
+    <div class="d-flex justify-content-center" style="height: 180px; background-position: center 48%; background-image: url('{{ .Params.image }}')">
+        <h1 class="align-self-center text-uppercase">Keahlian {{ .Title }}</h1>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <article id="keahlian" class="col-lg-9">
+                {{ .Content }}
+            </article>
+
+            <aside class="col-lg-3">
+                <div class="card bg-darker growing">
+                    <div class="card-header h4 text-uppercase">
+                        Kepala Kelompok
+                    </div>
+                    <img src="{{ .Params.avatar }}" class="card-img-top rounded-0" alt="{{ .Params.peran }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ .Params.author }}</h5>
+                        <h6 class="card-subtitle mb-3 text-muted">📧 {{ .Params.email }}</h6>
+                        <p class="card-text">
+                            {{ .Params.peran }} di BBTA3 BPPT
+                        </p>
+                        <a href="http://bit.ly/DiscordBBTA3"
+                           class="btn btn-warning btn-block text-uppercase font-weight-bold"
+                           target="_blank">Mulai Obrolan</a>
+                    </div>
+                </div>
+
+                {{ partial "sidebars.html" . }}
+            </aside>
+        </div>
+    </div>
+{{ end }}
