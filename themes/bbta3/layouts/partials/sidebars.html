@@ -6,7 +6,7 @@
     {{ $currentPage := . }}
     {{ range (where .Site.RegularPages.ByPublishDate "Section" "keahlian") }}
     <li class="list-group-item bg-darker {{ if in $currentPage (lower .Title)}}active{{ end }}">
-      <a href="{{ .Permalink }}" class="text-decoration-none text-white">{{ lower .Title }}</a>
+      <a href="{{ .Permalink }}" class="text-decoration-none text-white">{{ .Title }}</a>
     </li>
     {{ end }}
   </ul>
