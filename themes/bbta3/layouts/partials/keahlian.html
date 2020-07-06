@@ -9,18 +9,20 @@
 </div>
 
 <div class="container-fluid mt-3">
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-2">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-3 justify-content-center">
     {{ range (where .Site.RegularPages.ByPublishDate "Section" "keahlian") }}
     <div class="col">
-      <div class="card bg-darker">
-        <div style="height: 380px; background-image: url('{{ .Params.image }}'); background-repeat: no-repeat; background-size: cover; background-position: 25% center;"></div>
-        <div class="card-img-overlay">{{ .Title }}</div>
-        <div class="card-body">
-          <p class="card-text">
-              {{ .Params.description }}
-          </p>
+      <a href="{{ .Permalink }}" class="text-decoration-none link-light">
+        <div class="card bg-darker growing">
+          <div class="card-avatar" style="background-image: url('{{ .Params.image }}');"></div>
+          <div class="card-img-overlay">{{ .Title }}</div>
+          <div class="card-body">
+            <p class="card-text">
+                {{ .Params.description }}
+            </p>
+          </div>
         </div>
-      </div>
+      </a>
     </div>
     {{ end }}
   </div>
