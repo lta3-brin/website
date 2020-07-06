@@ -5,3 +5,11 @@ body {
 article.section {
     font-size: larger;
 }
+
+article #cakupan-kegiatan {
+    color: #dc3545;
+}
+
+article#keahlian p {
+    font-size: larger;
+}
