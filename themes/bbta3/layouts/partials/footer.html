@@ -3,7 +3,7 @@
     <div class="row gx-3">
       <div class="col-lg-3 py-5">
         <div class="text-left">
-          {{ range .Site.Data.footer.medsos }}
+          {{ range .Site.Data.medsos }}
           <a href="{{ .link }}" class="btn btn-outline-light dimmed btn-lg border-0" target="_blank">
             <i class="{{ .icon }}"></i>
           </a>
@@ -27,7 +27,7 @@
       <div class="col-lg-3 py-5">
         <h4 class="text-uppercase">Video BBTA3</h4>
 
-        {{ range .Site.Data.footer.video }}
+        {{ range .Site.Data.video }}
         <a href="{{ .link }}" class="text-decoration-none link-light" target="_blank">
           <div class="card mb-3 bg-darker">
             <div class="row g-0 align-items-center">
@@ -50,7 +50,7 @@
       <div class="col-lg-3 py-5">
         <h4 class="text-uppercase">Kabar BBTA3</h4>
 
-        {{ range where .Site.Data.footer.twitter "kategori" "bbta3" }}
+        {{ range where .Site.Data.twitter "kategori" "bbta3" }}
         <a href="{{ .link }}" class="text-decoration-none link-light" target="_blank">
           <div class="card mb-3 bg-darker">
             <div class="row g-0 align-items-center">
@@ -77,7 +77,7 @@
       <div class="col-lg-3 py-5">
         <h4 class="text-uppercase">Kabar BPPT</h4>
 
-        {{ range where .Site.Data.footer.twitter "kategori" "bppt" }}
+        {{ range where .Site.Data.twitter "kategori" "bppt" }}
         <a href="{{ .link }}" class="text-decoration-none link-light" target="_blank">
           <div class="card mb-3 bg-darker">
             <div class="row g-0 align-items-center">
