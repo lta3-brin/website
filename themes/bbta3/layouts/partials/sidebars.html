@@ -1,0 +1,32 @@
+<div class="card bg-darker mt-3">
+  <div class="card-header h4 text-uppercase">
+    Keahlian BBTA3
+  </div>
+  <ul class="list-group list-group-flush">
+    {{ $currentPage := . }}
+    {{ range (where .Site.RegularPages.ByPublishDate "Section" "keahlian") }}
+    <li class="list-group-item bg-darker {{ if in $currentPage (lower .Title)}}active{{ end }}">
+      <a href="{{ .Permalink }}" class="text-decoration-none text-white">{{ lower .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+
+<div class="card mt-3 bg-darker growing">
+  <a href="http://bit.ly/YoutubeBBTA3" class="text-decoration-none text-white" target="_blank">
+    <img src="/images/work.jpg" class="card-img-top rounded-0" alt="bbta3 bppt berkreasi untuk bangsa">
+  </a>
+</div>
+
+<div class="card bg-darker mt-3">
+  <div class="card-header h4 text-uppercase">
+    Kategori Video
+  </div>
+  <ul class="list-group list-group-flush">
+      {{ range .Site.Data.category }}
+        <li class="list-group-item bg-darker">
+          <a href="{{ .link }}" class="text-decoration-none text-white">{{ .title }}</a>
+        </li>
+      {{ end }}
+  </ul>
+</div>
