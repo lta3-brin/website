@@ -14,7 +14,9 @@
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
                 <li class="nav-item mr-1">
-                    <a class="text-uppercase nav-link {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+                    {{ $checkMenu := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+                    {{ $checkSubMenu := in (trim $currentPage.RelPermalink "/") (lower .Name) }}
+                    <a class="text-uppercase nav-link {{if $checkMenu }}active{{else if $checkSubMenu}}active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
                 </li>
                 {{ end }}
             </ul>
