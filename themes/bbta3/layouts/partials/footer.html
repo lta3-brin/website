@@ -1,4 +1,47 @@
-<!-- Optional JavaScript -->
+<footer class="bg-primary">
+  <div class="container-fluid overflow-hidden">
+    <div class="row gx-5">
+      <div class="col-md-3 py-5">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          {{ range .Site.Data.footer.medsos }}
+          <a href="{{ .link }}" class="btn btn-outline-light dimmed btn-lg mb-3 border-0" target="_blank">
+            <i class="{{ .icon }}"></i>
+          </a>
+          {{ end }}
+        </div>
+
+        <p>
+          BBTA3 (Balai Besar Teknologi Aerodinamika, Aeroelastika dan Aeroakustika) merupakan transformasi dari unit
+          kerja lama UPT LAGG dengan konsep baru dengan cakupan keahlian yang lebih luas.
+        </p>
+        <p>
+          Kawasan PUSPIPTEK, Gd. 240, Setu, Tangerang Selatan – Banten (15314)
+        </p>
+      </div>
+
+      <div class="col-md-3 py-5">
+        <h4 class="text-uppercase">Video BBTA3</h4>
+      </div>
+
+      <div class="col-md-3 py-5">
+        <h4 class="text-uppercase">Kabar BBTA3</h4>
+      </div>
+
+      <div class="col-3 py-5">
+        <h4 class="text-uppercase">Kabar BPPT</h4>
+      </div>
+
+      <hr>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <p>©️ {{ now.Format "2006"}} ❤ TRIE - v2.0.0</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 <!-- Popper.js first, then Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
