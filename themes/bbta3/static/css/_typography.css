@@ -6,10 +6,14 @@ article.section {
     font-size: larger;
 }
 
-article #cakupan-kegiatan {
+article#cerita h3 {
     color: #dc3545;
 }
 
-article#keahlian p {
+article#cerita p {
     font-size: larger;
+}
+
+article#cerita img {
+    max-width: 100%;
 }
