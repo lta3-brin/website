@@ -1,0 +1,11 @@
+{{  define "article" }}
+    <article id="cerita">
+        <h3 class="text-uppercase">{{ .Title }} - {{ .Params.subtitle }}</h3>
+
+        {{ .Content }}
+    </article>
+{{ end }}
+
+{{ define "widget" }}
+    {{ partial "sidebars.html" . }}
+{{ end }}
