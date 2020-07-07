@@ -1,0 +1,29 @@
+{{ define "article" }}
+  <h1 class="text-danger">{{ .Title }}</h1>
+
+  <article class="section">
+      {{ .Content }}
+  </article>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 justify-content-start overflow-hidden mt-2">
+    {{ range .Paginator.Pages.ByPublishDate }}
+      <div class="col">
+        <a href="{{ .Permalink }}" class="text-decoration-none link-light">
+          <div class="card bg-darker growing">
+            <div class="card-avatar" style="background-image: url('{{ .Params.image }}');"></div>
+            <div class="card-img-overlay text-uppercase h4 text-truncate">{{ .Title }}</div>
+            <div class="card-body">
+              <p class="card-text">
+                  {{ .Params.description }}
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}
+
+{{ define "widget" }}
+    {{ partial "sidebars.html" . }}
+{{ end }}
