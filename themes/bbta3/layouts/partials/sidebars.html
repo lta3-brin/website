@@ -3,12 +3,26 @@
     Keahlian BBTA3
   </div>
   <ul class="list-group list-group-flush">
-    {{ $currentPage := . }}
+    {{ $currentPageKeahlian := . }}
     {{ range (where .Site.RegularPages.ByPublishDate "Section" "keahlian") }}
-    <li class="list-group-item bg-darker {{ if in $currentPage (lower .Title)}}active{{ end }}">
+    <li class="list-group-item bg-darker {{ if in $currentPageKeahlian (lower .Title)}}active{{ end }}">
       <a href="{{ .Permalink }}" class="text-decoration-none text-white">{{ .Title }}</a>
     </li>
     {{ end }}
+  </ul>
+</div>
+
+<div class="card bg-darkest mt-3">
+  <div class="card-header h4 text-uppercase">
+    Fasilitas BBTA3
+  </div>
+  <ul class="list-group list-group-flush">
+      {{ $currentPageFasilitas := . }}
+      {{ range (where .Site.RegularPages.ByPublishDate "Section" "fasilitas") }}
+        <li class="list-group-item bg-darker {{ if in $currentPageFasilitas (lower .Title)}}active{{ end }}">
+          <a href="{{ .Permalink }}" class="text-decoration-none text-white text-uppercase">{{ .Title }}</a>
+        </li>
+      {{ end }}
   </ul>
 </div>
 
