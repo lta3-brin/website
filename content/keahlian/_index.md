@@ -9,3 +9,6 @@ menu:
     name: "Keahlian"
     weight: 10
 ---
+
+Dalam mewujudkan pelayanan teknologi **AERO** yang bersifat _Solid Smart Speed_, BBTA3 BPPT dibekali dengan beberapa 
+keahlian yaitu:
