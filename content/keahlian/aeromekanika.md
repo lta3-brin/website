@@ -13,3 +13,13 @@ menu:
     parent: 'main'
     weight: 40
 ---
+
+### Cakupan Kegiatan
+
+Keahlian Aeromekanika meliputi beberapa kegiatan diantaranya:
+
+- Membuat desain model aerodinamika
+- Melakukan proses manufaktur model aerodinamika
+- Membuat Desain dan Fabrikasi Peralatan/Tools Pendukung Pengujian Aerodinamika
+- Melakukan kegiatan Desain, Fabrikasi, Perbaikan dan Perawatan Peralatan Mekanis Pendukung kegiatan Pengujian 
+Aerodinamika

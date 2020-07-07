@@ -13,3 +13,12 @@ menu:
     parent: 'main'
     weight: 30
 ---
+
+### Cakupan Kegiatan
+
+Keahlian Aeroakustika meliputi beberapa kegiatan diantaranya:
+
+- Melakukan pengukuran model uji di _Hemi Anechoic Chamber_
+- Melakukan pengukuran akustik bangunan
+- Melakukan kajian komputasi aeroakustika
+- Membimbing kerja praktek dan tugas akhir mahasiswa
