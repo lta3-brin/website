@@ -1,6 +1,7 @@
 ---
 title: "Fasilitas BBTA3 BPPT"
-description: "BBTA3 BPPT memiliki fasilitas pendukung dalam melayani teknologi Aerodinamika, Aeroelastika, Aeroakustika, Aeromekanika dan Aerotronika di Indonesia."
+description: "BBTA3 BPPT memiliki fasilitas pendukung pengujian dalam melayani teknologi Aerodinamika, Aeroelastika, Aeroakustika, Aeromekanika dan Aerotronika di Indonesia."
+image: "https://i.pinimg.com/originals/33/e4/46/33e4468c11a9296a857947f703026649.jpg"
 date: 2020-07-01T12:58:39+07:00
 draft: false
 author: "bbta3"
@@ -10,3 +11,5 @@ menu:
     weight: 20
 ---
 
+Dalam mewujudkan pelayanan teknologi **AERO** yang bersifat _Solid Smart Speed_, BBTA3 BPPT dibekali dengan beberapa 
+fasilitas pengujian diantaranya:
