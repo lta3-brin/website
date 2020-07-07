@@ -10,3 +10,6 @@ menu:
     weight: 30
     name: "Tentang Kami"
 ---
+
+Dapatkan juga informasi tambahan berkaitan dengan kami BBTA3 BPPT dalam menjalankan peran sebagai pelayanan teknologi 
+**AERO**.
