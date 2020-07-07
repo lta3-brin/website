@@ -8,7 +8,7 @@ author: "bbta3"
 menu:
   main:
     weight: 30
-    name: "Tentang Kami"
+    name: "Tentang"
 ---
 
 Dapatkan juga informasi tambahan berkaitan dengan kami BBTA3 BPPT dalam menjalankan peran sebagai pelayanan teknologi 
