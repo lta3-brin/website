@@ -14,6 +14,10 @@ article#cerita p {
     font-size: larger;
 }
 
+article#cerita ul li {
+    font-size: larger;
+}
+
 article#cerita img {
     max-width: 100%;
 }
