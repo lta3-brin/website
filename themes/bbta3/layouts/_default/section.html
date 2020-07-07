@@ -4,12 +4,6 @@
   <article class="section">
       {{ .Content }}
   </article>
-
-  <ul class="contents">
-      {{ range .Paginator.Pages }}
-        <li>{{.Name}}</li>
-      {{ end }}
-  </ul>
 {{ end }}
 
 {{ define "widget" }}
