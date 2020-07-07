@@ -14,6 +14,8 @@ menu:
     weight: 50
 ---
 
+### Cakupan Kegiatan
+
 Keahlian Aeromekanika meliputi beberapa kegiatan diantaranya:
 
 - Menerapkan Metode dan Analisis Dalam Layanan Pengujian yang menyangkut bidang Aerotronika: yaitu Informatika, 
