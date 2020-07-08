@@ -1,0 +1,30 @@
+name: Build & Deploy BBTA3 Website
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update_project:
+    runs-on: self-hosted
+    defaults:
+      run:
+        shell: bash
+        working-directory: /var/www/bbta3/v4/
+    steps:
+      - name: Pull the repository
+        run: |
+          git version
+          git pull
+
+  compile_project:
+    runs-on: self-hosted
+    defaults:
+      run:
+        shell: bash
+        working-directory: /var/www/bbta3/v4/
+    steps:
+      - name: Compile website
+        run: |
+          hugo -v
