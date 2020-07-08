@@ -20,6 +20,7 @@ jobs:
 
   compile_project:
     runs-on: self-hosted
+    needs: update_project
     defaults:
       run:
         shell: bash
