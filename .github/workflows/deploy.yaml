@@ -16,7 +16,7 @@ jobs:
       - name: Pull the repository
         run: |
           git version
-          git pull
+          git pull https://github.com/bbta3-bppt/website.git
 
   compile_project:
     runs-on: self-hosted
