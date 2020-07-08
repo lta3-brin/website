@@ -6,7 +6,7 @@ googleAnalytics="UA-139880417-1"
 enableGitInfo=true
 theme="bbta3"
 [params]
-  version = "v2.0.0"
+  version = "v2.0.1"
 
 [menu]
   [[menu.main]]
