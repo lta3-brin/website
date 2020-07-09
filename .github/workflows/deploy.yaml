@@ -42,14 +42,14 @@ jobs:
           git version
           git pull https://github.com/bbta3-bppt/website.git
 
-    compile_project_server4:
-      runs-on: server4
-      needs: update_project_server4
-      defaults:
-        run:
-          shell: bash
-          working-directory: /var/www/bbta3/v4/
-      steps:
-        - name: Compile website
-          run: |
-            hugo -v
+  compile_project_server4:
+    runs-on: server4
+    needs: update_project_server4
+    defaults:
+      run:
+        shell: bash
+        working-directory: /var/www/bbta3/v4/
+    steps:
+      - name: Compile website
+        run: |
+          hugo -v
