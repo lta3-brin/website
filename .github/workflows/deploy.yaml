@@ -7,7 +7,7 @@ on:
 
 jobs:
   update_project:
-    runs-on: [server1, server4]
+    runs-on: server4
     defaults:
       run:
         shell: bash
@@ -19,7 +19,7 @@ jobs:
           git pull https://github.com/bbta3-bppt/website.git
 
   compile_project:
-    runs-on: [server1, server4]
+    runs-on: server4
     needs: update_project
     defaults:
       run:
