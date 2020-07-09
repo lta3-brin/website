@@ -10,6 +10,10 @@ article#cerita h3 {
     color: #dc3545;
 }
 
+article#cerita h4 {
+    margin-top: 35px;
+}
+
 article#cerita p {
     font-size: larger;
 }
