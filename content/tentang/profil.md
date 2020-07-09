@@ -24,7 +24,7 @@ Fungsi BBTA3 yaitu:
 
 Berikut ini adalah struktur organisasi BBTA3 dalam bentuk diagram:
 
-![StrukturOrganisasi BBTA3](/images/struktur_organisasi.svg)
+![StrukturOrganisasi BBTA3](/images/OrganisasiBBTA3.png)
 
 #### Pejabat Struktural
 
