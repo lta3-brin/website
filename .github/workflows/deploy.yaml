@@ -19,8 +19,8 @@ jobs:
           git version
           git pull https://github.com/bbta3-bppt/website.git
       - name: Kompilasi website
-          run: |
-            hugo -v
+        run: |
+          hugo -v
 
   processing_server4:
     name: Melakukan Kompilasi Website Server4
@@ -35,5 +35,5 @@ jobs:
           git version
           git pull https://github.com/bbta3-bppt/website.git
       - name: Kompilasi website
-          run: |
-            hugo -v
+        run: |
+          hugo -v
