@@ -37,3 +37,10 @@ jobs:
       - name: Kompilasi website
         run: |
           hugo -v
+
+  update_release_draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: release-drafter/release-drafter@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
