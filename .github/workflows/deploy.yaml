@@ -7,7 +7,7 @@ on:
 
 jobs:
   processing_server1:
-    name: Melakukan Kompilasi Website Server1
+    name: Proses Website Server1
     runs-on: server1
     defaults:
       run:
@@ -23,7 +23,7 @@ jobs:
           hugo -v
 
   processing_server4:
-    name: Melakukan Kompilasi Website Server4
+    name: Proses Website Server4
     runs-on: server4
     defaults:
       run:
