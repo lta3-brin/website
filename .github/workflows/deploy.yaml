@@ -6,50 +6,34 @@ on:
       - master
 
 jobs:
-  update_project_server1:
+  processing_server1:
+    name: Melakukan Kompilasi Website Server1
     runs-on: server1
     defaults:
       run:
         shell: bash
         working-directory: /var/www/bbta3/v4/
     steps:
-      - name: Pull the repository
+      - name: Ambil repositori terbaru
         run: |
           git version
           git pull https://github.com/bbta3-bppt/website.git
+      - name: Kompilasi website
+          run: |
+            hugo -v
 
-  compile_project_server1:
-    runs-on: server1
-    needs: update_project_server1
-    defaults:
-      run:
-        shell: bash
-        working-directory: /var/www/bbta3/v4/
-    steps:
-      - name: Compile website
-        run: |
-          hugo -v
-
-  update_project_server4:
+  processing_server4:
+    name: Melakukan Kompilasi Website Server4
     runs-on: server4
     defaults:
       run:
         shell: bash
         working-directory: /var/www/bbta3/v4/
     steps:
-      - name: Pull the repository
+      - name: Ambil repositori terbaru
         run: |
           git version
           git pull https://github.com/bbta3-bppt/website.git
-
-  compile_project_server4:
-    runs-on: server4
-    needs: update_project_server4
-    defaults:
-      run:
-        shell: bash
-        working-directory: /var/www/bbta3/v4/
-    steps:
-      - name: Compile website
-        run: |
-          hugo -v
+      - name: Kompilasi website
+          run: |
+            hugo -v
