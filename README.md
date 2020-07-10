@@ -24,4 +24,5 @@ $ hugo server -D
 
 ## Informasi Lanjut
 
-Apabila ada informasi lebih lanjut, hubungi melalui layanan chat [BBTA3 BPPT](https://discord.gg/uwJ2NT3).
+Apabila ada informasi lebih lanjut atau berminat bergabung dengan _Open Project_ BBTA3 BPPT, 
+hubungi melalui layanan chat [BBTA3 BPPT](https://discord.gg/uwJ2NT3).
