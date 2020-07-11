@@ -95,5 +95,5 @@ sw.*
 
 # Others
 cred.json
-twitter.json
-video.json
+/themes/bbta3/data/twitter.json
+/themes/bbta3/data/video.json
