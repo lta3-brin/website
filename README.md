@@ -6,6 +6,17 @@ repository ini merupakan tempat pengembangan website BBTA3 BPPT yang dilakukan m
 *Static Site Generator* melalui teknologi yang ditawarkan dari [HUGO](https://gohugo.io/). Sehingga ini menyebabkan 
 terjadinya perombakan pengembangan dari semula.
 
+## Latar Belakang
+Sehubungan dengan keterbatasan sumber daya yang kami miliki, kelola website dengan **CMS** (_Content Management System_)
+semisal _Wordpress_ membuat kami kesulitan dalam melakukan pembaruan dan penyesuaian kompatibilitas masing-masing _plugin_
+dan _theme_. Disamping itu, proses _backup_ website yang kami alami kurang fleksibel serta untuk melakukan _Horizontal 
+Scaling_ sulit dilakukan dengan keterbatasan yang ada.
+
+Kami memahami **CMS** merupakan terbosan yang luar biasa dan kami sudah menggunakannya dalam beberapa tahun saat penulisan
+dokumen ini kami lakukan. Untuk saat ini, kami beralih ke teknologi dasar *Static Site Generator* yang kami rasa lebih 
+"murah" untuk dikerjakan serta lebih mudah melakukan _deploy_ dan _Horizontal Scaling_ website BBTA3 BPPT. Tentu, kami 
+masih terbuka dengan masukan komunitas sobat **AERO** agar website ini lebih baik lagi.
+
 ## Cara Memulai
 
 ```bash
