@@ -76,7 +76,7 @@
                 <div class="card-body">
                   <h5 class="card-title text-truncate"><i class="fab fa-twitter"></i></h5>
                   <p class="card-text">{{ .deskripsi | truncate 50 }}</p>
-                  <p class="card-text"><small class="text-muted">{{ .tanggal }}</small></p>
+                  <p class="card-text"><small class="text-muted">{{ dateFormat "Monday, 2 January 2006" .tanggal }}</small></p>
                 </div>
               </div>
             </div>
@@ -103,7 +103,7 @@
                 <div class="card-body">
                   <h5 class="card-title text-truncate"><i class="fab fa-twitter"></i></h5>
                   <p class="card-text">{{ .deskripsi | truncate 50 }}</p>
-                  <p class="card-text"><small class="text-muted">{{ .tanggal }}</small></p>
+                  <p class="card-text"><small class="text-muted">{{ dateFormat "Monday, 2 January 2006" .tanggal }}</small></p>
                 </div>
               </div>
             </div>
