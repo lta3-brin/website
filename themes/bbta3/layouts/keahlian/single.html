@@ -1,16 +1,18 @@
 {{  define "main" }}
-    <div class="d-flex justify-content-center" style="height: 180px; background-position: center 48%; background-image: url('{{ .Params.image }}')">
-        <h1 class="align-self-center text-uppercase">Keahlian {{ .Title }}</h1>
+    <div class="d-flex justify-content-center"
+         style="height: 180px; background-position: center 48%; background-image: url('{{ .Params.image }}')">
+        <h1 class="align-self-center text-uppercase text-center">Keahlian {{ .Title }}</h1>
     </div>
 
     <div class="container mt-5">
         <div class="row">
             <article id="cerita" class="col-lg-9">
+                {{ partial "breadcrumb.html" . }}
                 {{ .Content }}
             </article>
 
             <aside class="col-lg-3">
-                <div class="card bg-darker growing">
+                <div class="card bg-darker growing mt-3">
                     <div class="card-header h4 text-uppercase">
                         Kepala Kelompok
                     </div>
