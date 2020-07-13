@@ -38,17 +38,17 @@
       <div class="col-lg-3 py-5">
         <h4 class="text-uppercase">Video BBTA3</h4>
 
-        {{ range .Site.Data.video }}
-        <a href="{{ .link }}" class="text-decoration-none link-light" target="_blank" rel="noreferrer">
+        {{ range where .Site.Data.media "kategori" "VIDEO" }}
+        <a href="https://www.youtube.com/watch?v={{ .id }}" class="text-decoration-none link-light" target="_blank" rel="noreferrer">
           <div class="card mb-3 bg-darker">
             <div class="row g-0 align-items-center">
               <div class="col-sm-5 col-md-6 col-lg-4">
-                <div class="mx-auto card-avatar-horizontal" style="background-image: url('{{ .thumbnail }}')"></div>
+                <div class="mx-auto card-avatar-horizontal" style="background-image: url('{{ .thumbnail }}');"></div>
               </div>
               <div class="col-sm-7 col-md-6 col-lg-8">
                 <div class="card-body">
-                  <h5 class="card-title text-truncate">{{ .judul }}</h5>
-                  <p class="card-text">{{ .deskripsi | truncate 45 }}</p>
+                  <h5 class="card-title text-truncate"><i class="fab fa-youtube"></i></h5>
+                  <p class="card-text">{{ .deskripsi | truncate 60 }}</p>
                   <p class="card-text"><small class="text-muted">{{ .tanggal }}</small></p>
                 </div>
               </div>
@@ -76,7 +76,7 @@
                 <div class="card-body">
                   <h5 class="card-title text-truncate"><i class="fab fa-twitter"></i></h5>
                   <p class="card-text">{{ .deskripsi | truncate 50 }}</p>
-                  <p class="card-text"><small class="text-muted">{{ dateFormat "Monday, 2 January 2006" .tanggal }}</small></p>
+                  <p class="card-text"><small class="text-muted">{{ .tanggal }}</small></p>
                 </div>
               </div>
             </div>
@@ -103,7 +103,7 @@
                 <div class="card-body">
                   <h5 class="card-title text-truncate"><i class="fab fa-twitter"></i></h5>
                   <p class="card-text">{{ .deskripsi | truncate 50 }}</p>
-                  <p class="card-text"><small class="text-muted">{{ dateFormat "Monday, 2 January 2006" .tanggal }}</small></p>
+                  <p class="card-text"><small class="text-muted">{{ .tanggal }}</small></p>
                 </div>
               </div>
             </div>
