@@ -1,7 +1,5 @@
 .hero {
-    /*background-image: url("https://i.pinimg.com/originals/92/58/f0/9258f03b22fbf1c96b0b8519d4bf90d4.png");*/
     height: 500px;
-    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
