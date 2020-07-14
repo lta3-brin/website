@@ -13,4 +13,4 @@ menu:
 
 Apabila menemukan keluhan atau umpan balik untuk kemajuan BBTA3 BPPT, silahkan Chat melalui tautan Discord BBTA3 BPPT.
 
-{{< primarybutton href="http://bit.ly/DiscordBBTA3" text="Langsung Sampaikan" >}}
+{{< primarybutton href="https://bit.ly/ChatBBTA3" text="Langsung Sampaikan" >}}
