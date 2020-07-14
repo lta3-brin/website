@@ -6,17 +6,24 @@
         <div class="card text-white bg-darker theBox p-3 p-xl-5">
           <div class="card-body">
             <h1 class="card-title">{{ .judulInformasi }}</h1>
-            <p class="card-text">
-                {{ .isiInformasi }}
-              Balai Besar Teknologi
-              <span id="anim" class="text-warning h4" style="letter-spacing: 5px;"></span>
-            </p>
+            <figure class="mt-4">
+              <blockquote class="blockquote">
+                <p>
+                    {{ .isiInformasi }}
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer text-white">
+                Balai Besar Teknologi
+                <span id="anim" class="text-warning h4" style="letter-spacing: 5px;"></span>
+              </figcaption>
+            </figure>
+
             <div id="keahlian">
-              <p>Aerodinamika.</p>
-              <p>Aeroelastika.</p>
-              <p>Aeroakustika.</p>
-              <p>Aeromekanika.</p>
-              <p>Aerotronika.</p>
+              <p>Aerodinamika</p>
+              <p>Aeroelastika</p>
+              <p>Aeroakustika</p>
+              <p>Aeromekanika</p>
+              <p>Aerotronika</p>
             </div>
 
               {{ if .tautanInformasi}}
