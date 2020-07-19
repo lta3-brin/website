@@ -1,9 +1,9 @@
 ---
 title: "Selamat Datang"
 description: "BBTA3 (Balai Besar Teknologi Aerodinamika, Aeroelastika dan Aeroakustika) merupakan satuan kerja dari BPPT yang melayani teknologi aero di Indonesia."
-image: "https://i.pinimg.com/originals/d9/89/43/d989431ec5a5dcfb6d4a5f803b5680c3.png"
-judulInformasi: "Alhamdulillah acara Rapat Kerja Kedeputian TIRBR Berjalan Baik Selama Dua Hari"
-isiInformasi: "Rapat kerja TIRBR dilaksanakan dengan baik dan mengikuti protokol kesehatan COVID-19"
+image: "https://i.pinimg.com/originals/92/58/f0/9258f03b22fbf1c96b0b8519d4bf90d4.png"
+judulInformasi: "BBTA3 BPPT Mempersiapkan Pelaksanaan Pengujian Riset Floater N219A"
+isiInformasi: "Umumnya floater pesawat amphibi memberikan gaya hambat 30% dari gaya hambat total pesawat"
 tautanInformasi: ""
 date: 2020-07-01T08:41:32+07:00
 draft: false
