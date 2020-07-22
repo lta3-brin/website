@@ -5,8 +5,6 @@ enableRobotsTXT=true
 googleAnalytics="UA-139880417-1"
 enableGitInfo=true
 theme="bbta3"
-[params]
-  version = "v2.1.7"
 
 [menu]
   [[menu.main]]
