@@ -33,6 +33,36 @@ $ hugo version
 $ hugo server -D
 ```
 
+Disamping itu perlu menambahkan data `media.json` kedalam direktori `./themes/bbta3/data/` sehingga proses kompilasi 
+website dapat dilakukan. Isi `media.json` berupa informasi berita dan video terkait BBTA3 BPPT seperti yang dicontohkan 
+dibawah ini:
+
+```json
+[
+  {
+    "id": "597876542321",
+    "deskripsi": "Hai Sobat Aero... Walaupun sebaran wabah virus COVID-19 masih terjadi, Semoga kita tetap sehat selalu",
+    "thumbnail": "https://pbs.twimg.com/ext_tw_video_thumb/1278938445126066177/pu/img/FtSP1xl8pt0Qjbdf.jpg",
+    "tanggal": "Jum'at, 03 Juli 2020",
+    "kategori": "BBTA3_BPPT"
+  },
+  {
+    "id": "223126548974",
+    "deskripsi": "Menteri @KemenkopUKM Teten Masduki menyatakan apresiasinya terhadap inovasi alkes buatan dalam negeri",
+    "thumbnail": "https://pbs.twimg.com/media/Ec8vcJvUYAEENt9.jpg",
+    "tanggal": "Rabu, 15 Juli 2020",
+    "kategori": "BPPT_RI"
+  },
+  {
+    "id": "u5grTIrbr_xm",
+    "deskripsi": "Hai Sobat Aero... Walaupun sebaran wabah virus COVID-19 masih terjadi, Semoga kita tetap sehat selalu",
+    "thumbnail": "https://i.ytimg.com/vi/u5grTIrZ_xM/default.jpg",
+    "tanggal": "Jum'at, 03 Mei 2020",
+    "kategori": "VIDEO"
+  }
+]
+```
+
 ## Informasi Lanjut
 
 Apabila ada informasi lebih lanjut atau berminat bergabung dengan _Open Project_ BBTA3 BPPT, 
