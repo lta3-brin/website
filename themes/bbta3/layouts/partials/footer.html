@@ -119,10 +119,10 @@
           {{ with $gitTagsUrl := getJSON "https://api.github.com/repos/bbta3-bppt/website/tags" }}
             {{ range first 1 $gitTagsUrl }}
               - <a
-                      href="https://github.com/bbta3-bppt/website/releases/tag/{{ .name }}"
-                      class="link-warning text-decoration-underline font-italic"
-                      rel="nofollow"
-                      target="_blank">
+                  href="https://github.com/bbta3-bppt/website/releases/tag/{{ .name }}"
+                  class="link-warning text-decoration-underline font-italic"
+                  rel="nofollow"
+                  target="_blank">
                   {{ .name }}
               </a>
             {{ end }}
