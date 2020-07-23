@@ -18,3 +18,7 @@ theme="bbta3"
     name = "e-PPID"
     url = "https://e-ppid.bppt.go.id/"
     weight = 60
+
+[caches]
+  [caches.getjson]
+    maxAge = "24h"
