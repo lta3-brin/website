@@ -1,9 +1,132 @@
-@import "_base.css";
-@import "_hero.css";
-@import "_banner.css";
-@import "_button.css";
-@import "_navbar.css";
-@import "_breadcrumb.css";
-@import "_typography.css";
-@import "_footer.css";
-@import "_keahlian.css";
+/* BASE STYLE */
+body {
+    color: #e9ecef;
+    padding-top: 56px;
+    background-color: #343a40;
+}
+
+.bg-darker {
+    background-color: #212529;
+}
+
+.bg-darkest {
+    background-color: #121517;
+}
+
+/* HERO STYLE */
+.hero {
+    height: 500px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.hero .theBox {
+    background-color: rgba(33, 37, 41, 0.5);
+}
+
+.hero .typed-cursor {
+    color: #ffc107;
+    font-size: 24px;
+}
+
+/* BANNER STYLE */
+.alert.banner {
+    background: #FF416C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4776E6, #8E54E9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4776E6, #8E54E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* BUTTON STYLE */
+.dimmed.btn-outline-light:hover {
+    background-color: transparent;
+}
+
+/* NAVBAR STYLE */
+.navbar-dark .navbar-toggler {
+    color: white;
+    border-color: transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #007bff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ced4da;
+}
+
+.navbar-toggler-icon {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+/* BREADCRUMB STYLE */
+ol.breadcrumb.ribbon {
+    border-left: 4px solid #ffc107;
+}
+
+/* TYPOGRAPHY STYLE */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+article.section {
+    font-size: larger;
+}
+
+article#cerita h3 {
+    color: #dc3545;
+}
+
+article#cerita h4 {
+    margin-top: 35px;
+}
+
+article#cerita p {
+    font-size: larger;
+}
+
+article#cerita ul li {
+    font-size: larger;
+}
+
+article#cerita img {
+    max-width: 100%;
+}
+
+/*FOOTER STYLE*/
+.card-avatar-horizontal {
+    height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* KEAHLIAN STYLE */
+.card-avatar {
+    height: 380px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 25% center;
+}
+
+.growing .card-avatar {
+    transition: all .2s ease-in-out;
+    clip-path: inset(0 0 0 0);
+}
+
+.growing:hover .card-avatar {
+    transform: scale(1.1);
+    clip-path: inset(4.5% 4.5% 4.5% 4.5%);
+}
+
+.growing .card-img-top {
+    transition: all .2s ease-in-out;
+    clip-path: inset(0 0 0 0);
+}
+
+.growing:hover .card-img-top {
+    transform: scale(1.1);
+    clip-path: inset(4.5% 4.5% 4.5% 4.5%);
+}
