@@ -18,6 +18,6 @@ Berikut ini merupakan contoh pengukuran bidang aliran pada Blok Gedung
 Berikut ini merupakan contoh pengukuran menggunakan PIV pada airfoil 2D
 ![Fasilitas PIV BBTA3 Airfoil](https://i.pinimg.com/originals/36/13/cf/3613cf2ff97b54740b163bd96ecda66c.jpg)
 
-Berikut ini merupakan contoh investigasi wake pada jarak 60% dari trailing edge
+Berikut ini merupakan contoh investigasi wake pada jarak 60% _chord_ dari trailing edge
 ![Investigasi wake melalui PIV](https://i.pinimg.com/originals/b7/79/8b/b7798bf41900dd86e6202dde7901ba94.jpg)
 
