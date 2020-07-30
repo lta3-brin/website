@@ -87,6 +87,10 @@ article#cerita p {
     font-size: larger;
 }
 
+article#cerita p img {
+    margin-top: 11px;
+}
+
 article#cerita ul li {
     font-size: larger;
 }
