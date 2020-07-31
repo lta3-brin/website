@@ -1,9 +1,9 @@
 ---
 title: "Selamat Datang"
 description: "BBTA3 (Balai Besar Teknologi Aerodinamika, Aeroelastika dan Aeroakustika) merupakan satuan kerja dari BPPT yang melayani teknologi aero di Indonesia."
-image: "https://i.pinimg.com/originals/92/58/f0/9258f03b22fbf1c96b0b8519d4bf90d4.png"
-judulInformasi: "BBTA3 BPPT Mempersiapkan Pelaksanaan Pengujian Riset Floater N219A"
-isiInformasi: "Umumnya floater pesawat amphibi memberikan gaya hambat 30% dari gaya hambat total pesawat"
+image: "https://i.pinimg.com/originals/59/5c/03/595c03285ab61a967d28ab85a3e28104.png"
+judulInformasi: "Selamat Hari Raya Idul Adha 1441 H. Taqabbalallahu Minna wa Minkum"
+isiInformasi: "Takbir Idul Adha sudah datang, Ampunan serta barokah mudah-mudahan kita peroleh"
 tautanInformasi: ""
 date: 2020-07-01T08:41:32+07:00
 draft: false
