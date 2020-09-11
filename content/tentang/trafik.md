@@ -1,14 +1,15 @@
 ---
 title: "Trafik Website"
 description: "Laporan berkaitan dengan informasi statistik trafik website BBTA3 BPPT"
-image: "https://i.pinimg.com/originals/62/7b/61/627b61e99dda61fd93658efb2a9c35ec.png"
+image: ""
 date: 2020-07-22T13:23:32+07:00
 draft: false
 author: "BBTA3 BPPT"
 menu:
   tentang:
     parent: 'main'
-    weight: 10
+    name: "Trafik Website"
+    weight: 60
 ---
 
 Selama tahun 2019, data trafik kunjungan pengguna unik dan aktif per hari rata-rata sebanyak 6 pengguna. Hal ini dapat 

@@ -3,7 +3,7 @@ title: "Kepuasan Pelanggan"
 description: "Hasil survei kepuasan pelanggan yang dilakukan oleh BBTA3 BPPT"
 date: 2020-07-01T15:47:23+07:00
 draft: false
-author: ""
+author: "BBTA3 BPPT"
 menu:
   tentang:
     parent: 'main'
