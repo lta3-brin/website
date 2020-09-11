@@ -1,7 +1,7 @@
 ---
 title: "Profil"
 description: "Kenali kami lebih dekat melalui profil BBTA3 BPPT"
-image: "https://i.pinimg.com/originals/62/7b/61/627b61e99dda61fd93658efb2a9c35ec.png"
+image: ""
 date: 2020-07-01T15:42:19+07:00
 draft: false
 author: "BBTA3 BPPT"
