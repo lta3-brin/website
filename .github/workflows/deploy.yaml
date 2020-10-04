@@ -3,6 +3,7 @@ name: Build & Deploy BBTA3 Website
 on:
   push:
     branches:
+      - main
       - master
 
 jobs:
