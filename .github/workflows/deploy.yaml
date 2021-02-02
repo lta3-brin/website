@@ -8,12 +8,12 @@ on:
 
 jobs:
   processing_server1:
-    name: Proses Website Server1
-    runs-on: server1
+    name: Proses Website Server17
+    runs-on: server17
     defaults:
       run:
         shell: bash
-        working-directory: /var/www/bbta3/v4/
+        working-directory: /var/www/bbta3/
     steps:
       - name: Ambil repositori terbaru
         run: |
