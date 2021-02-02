@@ -13,7 +13,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: /var/www/bbta3/dist/
+        working-directory: /home/server17/www/bbta3/dist
     steps:
       - name: Ambil repositori terbaru
         run: |
