@@ -7,7 +7,7 @@ on:
       - master
 
 jobs:
-  processing_server1:
+  processing_server15:
     name: Proses Website Server15
     runs-on: server15
     defaults:
@@ -23,13 +23,13 @@ jobs:
         run: |
           hugo -v
 
-  processing_server4:
-    name: Proses Website Server4
-    runs-on: server4
+  processing_server18:
+    name: Proses Website Server18
+    runs-on: server18
     defaults:
       run:
         shell: bash
-        working-directory: /var/www/bbta3/v4/
+        working-directory: /home/server18/www/bbta3/dist
     steps:
       - name: Ambil repositori terbaru
         run: |
