@@ -1,10 +1,9 @@
 name: Build & Deploy BBTA3 Website
 
 on:
-  push:
-    branches:
-      - main
-      - master
+  schedule:
+    - cron: '0 1,5,9 * * *'
+  workflow_dispatch:
 
 jobs:
   processing_server17:
@@ -24,12 +23,12 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.80.0'
-          
+
       - name: Setup Rust
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-          
+
       - name: Kompilasi Data Website
         env:
           FETCH_BBTA3_URL: ${{ secrets.FETCH_BBTA3_URL }}
@@ -44,11 +43,3 @@ jobs:
 
       - name: Kompilasi Website
         run: hugo -v --minify
-
-  update_release_draft:
-    name: Draft The Release
-    runs-on: ubuntu-latest
-    steps:
-      - uses: release-drafter/release-drafter@v5
-        env:
-          GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
