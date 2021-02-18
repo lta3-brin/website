@@ -44,7 +44,7 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: run
-          args: --manifest-path=worker/Cargo.toml --release --all-features
+          args: --manifest-path=worker/Cargo.toml --release
 
       - name: Kompilasi Website
         run: hugo -v --minify
