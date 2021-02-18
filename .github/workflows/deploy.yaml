@@ -15,8 +15,14 @@ jobs:
     name: Proses Website Server17
     runs-on: server17
     steps:
-      - name: Checkout Latest Version
+      - name: Checkout Website
         uses: actions/checkout@v2
+
+      - name: Checkout Website Worker
+        uses: actions/checkout@v2
+        with:
+          repository: bbta3-bppt/website-worker
+          path: worker
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
