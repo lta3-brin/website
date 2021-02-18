@@ -6,17 +6,26 @@ on:
       - main
       - master
 
+  schedule:
+    - cron: '0 1,5,9 * * *'
+    workflow_dispatch:
+
 jobs:
-  processing_server18:
+  processing_server17:
     name: Proses Website Server17
     runs-on: server17
     steps:
       - name: Checkout Latest Version
         uses: actions/checkout@v2
 
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.80.0'
+
       - name: Kompilasi website
         run: |
-          pwd
+          run: hugo -v --minify
 
   update_release_draft:
     runs-on: ubuntu-latest
