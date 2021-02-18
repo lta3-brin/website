@@ -7,37 +7,16 @@ on:
       - master
 
 jobs:
-  processing_server15:
-    name: Proses Website Server15
-    runs-on: server15
-    defaults:
-      run:
-        shell: bash
-        working-directory: /home/server15/www/bbta3/dist
-    steps:
-      - name: Ambil repositori terbaru
-        run: |
-          git version
-          git pull https://github.com/bbta3-bppt/website.git
-      - name: Kompilasi website
-        run: |
-          hugo -v
-
   processing_server18:
-    name: Proses Website Server18
-    runs-on: server18
-    defaults:
-      run:
-        shell: bash
-        working-directory: /home/server18/www/bbta3/dist
+    name: Proses Website Server17
+    runs-on: server17
     steps:
-      - name: Ambil repositori terbaru
-        run: |
-          git version
-          git pull https://github.com/bbta3-bppt/website.git
+      - name: Checkout Latest Version
+        uses: actions/checkout@v2
+
       - name: Kompilasi website
         run: |
-          hugo -v
+          pwd
 
   update_release_draft:
     runs-on: ubuntu-latest
