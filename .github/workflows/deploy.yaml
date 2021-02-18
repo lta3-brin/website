@@ -6,10 +6,6 @@ on:
       - main
       - master
 
-  schedule:
-    - cron: '0 1,5,9 * * *'
-  workflow_dispatch:
-
 jobs:
   processing_server17:
     name: Deploy Website
@@ -50,6 +46,7 @@ jobs:
         run: hugo -v --minify
 
   update_release_draft:
+    name: Draft The Release
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@v5
