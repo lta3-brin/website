@@ -25,7 +25,7 @@ jobs:
 
       - name: Kompilasi website
         run: |
-          run: hugo -v --minify
+          hugo -v --minify
 
   update_release_draft:
     runs-on: ubuntu-latest
