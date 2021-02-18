@@ -12,7 +12,7 @@ on:
 
 jobs:
   processing_server17:
-    name: Proses Website Server17
+    name: Deploy Website
     runs-on: server17
     steps:
       - name: Checkout Website
@@ -27,10 +27,34 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.80.0'
-
-      - name: Kompilasi website
+          hugo-version: 'latest'
+          
+      - name: Setup Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          
+      - name: Change Dir Worker
         run: |
+          pwd
+          cd ${{ GITHUB_WORKSPACE }}/worker
+          
+      - name: Kompilasi Data Website
+        env:
+          FETCH_BBTA3_URL: ${{ secrets.FETCH_BBTA3_URL }}
+          FETCH_BPPT_URL: ${{ secrets.FETCH_BPPT_URL }}
+          FETCH_VIDEO_URL: ${{ secrets.FETCH_VIDEO_URL }}
+          NEWS_API: ${{ secrets.NEWS_API }}
+          SAVE_PATH: ${{ secrets.SAVE_PATH }}
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: --release --all-features
+
+      - name: Kompilasi Website
+        run: |
+          pwd
+          cd ${{ GITHUB_WORKSPACE }}
           hugo -v --minify
 
   update_release_draft:
