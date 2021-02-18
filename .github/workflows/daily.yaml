@@ -1,0 +1,45 @@
+name: Build & Deploy BBTA3 Website
+
+on:
+  schedule:
+    - cron: '0 1,5,9 * * *'
+  workflow_dispatch:
+
+jobs:
+  processing_server17:
+    name: Deploy Website
+    runs-on: server17
+    steps:
+      - name: Checkout Website
+        uses: actions/checkout@v2
+
+      - name: Checkout Website Worker
+        uses: actions/checkout@v2
+        with:
+          repository: bbta3-bppt/website-worker
+          path: worker
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.80.0'
+
+      - name: Setup Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: Kompilasi Data Website
+        env:
+          FETCH_BBTA3_URL: ${{ secrets.FETCH_BBTA3_URL }}
+          FETCH_BPPT_URL: ${{ secrets.FETCH_BPPT_URL }}
+          FETCH_VIDEO_URL: ${{ secrets.FETCH_VIDEO_URL }}
+          NEWS_API: ${{ secrets.NEWS_API }}
+          SAVE_PATH: ${{ secrets.SAVE_PATH }}
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: --manifest-path=worker/Cargo.toml --release
+
+      - name: Kompilasi Website
+        run: hugo -v --minify
