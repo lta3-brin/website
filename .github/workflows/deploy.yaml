@@ -34,11 +34,6 @@ jobs:
         with:
           toolchain: stable
           
-      - name: Change Dir Worker
-        run: |
-          pwd
-          cd ${{ GITHUB_WORKSPACE }}/worker
-          
       - name: Kompilasi Data Website
         env:
           FETCH_BBTA3_URL: ${{ secrets.FETCH_BBTA3_URL }}
@@ -49,13 +44,10 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: run
-          args: --release --all-features
+          args: --manifest-path=worker/Cargo.toml --release --all-features
 
       - name: Kompilasi Website
-        run: |
-          pwd
-          cd ${{ GITHUB_WORKSPACE }}
-          hugo -v --minify
+        run: hugo -v --minify
 
   update_release_draft:
     runs-on: ubuntu-latest
