@@ -22,4 +22,4 @@ theme="bbta3"
 
 [caches]
   [caches.getjson]
-    maxAge = "12h"
+    maxAge = "1h"
