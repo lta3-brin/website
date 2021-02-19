@@ -31,7 +31,8 @@ jobs:
           SAVE_PATH: ${{ secrets.SAVE_PATH }}
         run: |
           cd worker
-          cargo run --release
+          whereis cargo
+          #cargo run --release
       - name: Kompilasi Website
         run: |
           cd main
