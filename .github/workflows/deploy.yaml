@@ -29,10 +29,10 @@ jobs:
           FETCH_VIDEO_URL: ${{ secrets.FETCH_VIDEO_URL }}
           NEWS_API: ${{ secrets.NEWS_API }}
           SAVE_PATH: ${{ secrets.SAVE_PATH }}
-        run: |
-          cd worker
-          whereis cargo
-          #cargo run --release
+        uses: actions-rs/cargo@v1
+        with:	
+          command: run
+          args: --manifest-path=worker/Cargo.toml --release
       - name: Kompilasi Website
         run: |
           cd main
