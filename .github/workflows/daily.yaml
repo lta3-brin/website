@@ -12,22 +12,14 @@ jobs:
     steps:
       - name: Checkout Website
         uses: actions/checkout@v2
+        with:
+          path: main
 
       - name: Checkout Website Worker
         uses: actions/checkout@v2
         with:
           repository: bbta3-bppt/website-worker
           path: worker
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.80.0'
-
-      - name: Setup Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
 
       - name: Kompilasi Data Website
         env:
@@ -36,10 +28,9 @@ jobs:
           FETCH_VIDEO_URL: ${{ secrets.FETCH_VIDEO_URL }}
           NEWS_API: ${{ secrets.NEWS_API }}
           SAVE_PATH: ${{ secrets.SAVE_PATH }}
-        uses: actions-rs/cargo@v1
-        with:
-          command: run
-          args: --manifest-path=worker/Cargo.toml --release
+        run: cargo run --manifest-path=worker/Cargo.toml --release
 
       - name: Kompilasi Website
-        run: hugo -v --minify
+        run: |
+          cd main
+          hugo -v --minify
