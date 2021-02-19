@@ -4,6 +4,7 @@ title = "Website Resmi BBTA3 BPPT"
 enableRobotsTXT=true
 googleAnalytics="UA-139880417-1"
 enableGitInfo=true
+publishDir="../public"
 theme="bbta3"
 
 [menu]
@@ -21,4 +22,4 @@ theme="bbta3"
 
 [caches]
   [caches.getjson]
-    maxAge = "24h"
+    maxAge = "12h"
