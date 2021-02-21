@@ -34,3 +34,7 @@ jobs:
         run: |
           cd main
           hugo -v --minify
+
+      - name: Pembersihan
+        run: |
+          rm -rf main/ target/
