@@ -1,4 +1,4 @@
-# Pengembangan Webite BBTA3 BPPT
+# Pengembangan Website BBTA3 BPPT
 
 ![Build & Deploy BBTA3 Website](https://github.com/bbta3-bppt/website/workflows/Build%20&%20Deploy%20BBTA3%20Website/badge.svg)
 
