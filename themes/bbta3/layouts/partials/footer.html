@@ -88,10 +88,10 @@
           <div class="card mb-3 bg-darker">
             <div class="row g-0 align-items-center">
               <div class="col-sm-5 col-md-6 col-lg-4">
-                {{ if .thumbnail }}
-                <div class="mx-auto card-avatar-horizontal" style="background-image: url('{{ .thumbnail }}')"></div>
-                {{ else }}
+                {{ if eq .thumbnail "NULL" }}
                 <div class="mx-auto card-avatar-horizontal" style="background-image: url('/images/blank.png')"></div>
+                {{ else }}
+                <div class="mx-auto card-avatar-horizontal" style="background-image: url('{{ .thumbnail }}')"></div>
                 {{ end }}
               </div>
               <div class="col-sm-7 col-md-6 col-lg-8">
