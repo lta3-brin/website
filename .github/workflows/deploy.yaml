@@ -36,6 +36,10 @@ jobs:
           cd main
           hugo -v --minify
 
+      - name: Pembersihan
+        run: |
+          rm -rf main/ target/
+
   update_release_draft:
     name: Draft The Release
     runs-on: ubuntu-latest
