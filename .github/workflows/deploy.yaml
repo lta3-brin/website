@@ -29,6 +29,7 @@ jobs:
           FETCH_VIDEO_URL=${{ secrets.FETCH_VIDEO_URL }}
           SAVE_PATH=${{ secrets.SAVE_PATH }}
           ENDOFFILE
+          ls -a
           ./website-worker
 
       - name: Kompilasi Website
