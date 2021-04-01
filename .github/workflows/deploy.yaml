@@ -22,6 +22,7 @@ jobs:
           tar -xvf website-worker.tgz
           rm website-worker.tgz
           cd target/release
+          echo "$USER"
           ./website-worker
 
       - name: Kompilasi Website
