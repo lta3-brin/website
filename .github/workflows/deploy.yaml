@@ -18,7 +18,7 @@ jobs:
 
       - name: Download & Run Website Worker
         run: |
-          wget --no-check-certificate https://github.com/bbta3-bppt/website-worker/releases/download/v1.0.6/website-worker.tgz
+          wget --no-check-certificate https://github.com/bbta3-bppt/website-worker/releases/download/v1.0.7/website-worker.tgz
           tar -xvf website-worker.tgz
           rm website-worker.tgz
           cd target/release
