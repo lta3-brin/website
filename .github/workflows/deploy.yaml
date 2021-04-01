@@ -30,6 +30,7 @@ jobs:
           SAVE_PATH=${{ secrets.SAVE_PATH }}
           ENDOFFILE
           ls -a
+          more .env
           ./website-worker
 
       - name: Kompilasi Website
