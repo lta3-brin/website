@@ -17,6 +17,12 @@ jobs:
           path: main
 
       - name: Download & Run Website Worker
+        env:
+          NEWS_API:${{ secrets.NEWS_API }}
+          FETCH_BBTA3_URL:${{ secrets.FETCH_BBTA3_URL }}
+          FETCH_BPPT_URL:${{ secrets.FETCH_BPPT_URL }}
+          FETCH_VIDEO_URL:${{ secrets.FETCH_VIDEO_URL }}
+          SAVE_PATH:${{ secrets.SAVE_PATH }}
         run: |
           wget --no-check-certificate https://github.com/bbta3-bppt/website-worker/releases/download/v1.0.7/website-worker.tgz
           tar -xvf website-worker.tgz
