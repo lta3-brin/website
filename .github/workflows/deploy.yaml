@@ -22,18 +22,7 @@ jobs:
           tar -xvf website-worker.tgz
           rm website-worker.tgz
           cd target/release
-          #cat > ./.env << ENDOFFILE
-          #NEWS_API=${{ secrets.NEWS_API }}
-          #FETCH_BBTA3_URL=${{ secrets.FETCH_BBTA3_URL }}
-          #FETCH_BPPT_URL=${{ secrets.FETCH_BPPT_URL }}
-          #FETCH_VIDEO_URL=${{ secrets.FETCH_VIDEO_URL }}
-          #SAVE_PATH=${{ secrets.SAVE_PATH }}
-          #ENDOFFILE
-          echo "::set-env name={NEWS_API}::{${{ secrets.NEWS_API }}}"
-          echo "::set-env name={FETCH_BBTA3_URL}::{${{ secrets.FETCH_BBTA3_URL }}}"
-          echo "::set-env name={FETCH_BPPT_URL}::{${{ secrets.FETCH_BPPT_URL }}}"
-          echo "::set-env name={FETCH_VIDEO_URL}::{${{ secrets.FETCH_VIDEO_URL }}}"
-          echo "::set-env name={SAVE_PATH}::{${{ secrets.SAVE_PATH }}}"
+          source /etc/profile
           ./website-worker
 
       - name: Kompilasi Website
