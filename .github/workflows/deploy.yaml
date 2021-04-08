@@ -16,26 +16,23 @@ jobs:
         with:
           path: main
 
-      - name: Checkout Website Worker
-        uses: actions/checkout@v2
-        with:
-          repository: bbta3-bppt/website-worker
-          path: worker
-
-      - name: Kompilasi Media
-        env:
-          FETCH_BBTA3_URL: ${{ secrets.FETCH_BBTA3_URL }}
-          FETCH_BPPT_URL: ${{ secrets.FETCH_BPPT_URL }}
-          FETCH_VIDEO_URL: ${{ secrets.FETCH_VIDEO_URL }}
-          NEWS_API: ${{ secrets.NEWS_API }}
-          SAVE_PATH: ${{ secrets.SAVE_PATH }}
+      - name: Download & Run Website Worker
         run: |
-          cd worker
-          cargo run --release
+          wget --no-check-certificate https://github.com/bbta3-bppt/website-worker/releases/download/v1.0.7/website-worker.tgz
+          tar -xvf website-worker.tgz
+          rm website-worker.tgz
+          cd target/release
+          source /etc/profile
+          ./website-worker
+
       - name: Kompilasi Website
         run: |
           cd main
           hugo -v --minify
+
+      - name: Pembersihan
+        run: |
+          rm -rf main/ target/
 
   update_release_draft:
     name: Draft The Release

@@ -13,3 +13,5 @@ menu:
 
 Dalam mewujudkan pelayanan teknologi **AERO** yang bersifat _Solid Smart Speed_, BBTA3 BPPT dibekali dengan beberapa 
 fasilitas pengujian diantaranya:
+
+![Fasilitas Pengujian BBTA3](https://i.pinimg.com/originals/e2/88/98/e288983fd08b90db2cba8fe050424482.png)
