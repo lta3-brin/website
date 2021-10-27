@@ -1,11 +1,11 @@
 ---
 title: "Ilst"
 subtitle: "Indonesian Low Speed Tunnel"
-description: "Fasilitas ILST (Indonesian Low Speed Tunnel) BBTA3 BPPT merupakan terowongan angin untuk pengujian aerodinamika"
+description: "Fasilitas ILST (Indonesian Low Speed Tunnel) BBTA3 BRIN merupakan terowongan angin untuk pengujian aerodinamika"
 image: "https://i.pinimg.com/originals/eb/55/d4/eb55d47c916f6b69354b97f7a86f4457.png"
 date: 2020-07-01T14:14:07+07:00
 draft: false
-author: "BBTA3 BPPT"
+author: "BBTA3"
 ---
 
 Terowongan angin ini mempunyai 4 buah seksi uji (External balance, Sting support, Industrial dan Empty box) yang bisa 
