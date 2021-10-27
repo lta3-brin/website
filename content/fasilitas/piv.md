@@ -4,7 +4,7 @@ subtitle: "Particle Image Velocimetry"
 description: "Fasilitas pengujian visualisasi aliran dengan particle image velocimetry"
 date: 2020-07-29T08:28:40+07:00
 draft: false
-author: "BBTA3 BPPT"
+author: "BBTA3"
 ---
 
 _Particle Image Velocimetry (PIV)_ merupakan metode pengukuran dinamika fluida menggunakan teknik laser imaging untuk 

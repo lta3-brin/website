@@ -1,10 +1,10 @@
 ---
 title: "Trafik Website"
-description: "Laporan berkaitan dengan informasi statistik trafik website BBTA3 BPPT"
+description: "Laporan berkaitan dengan informasi statistik trafik website BBTA3 BRIN"
 image: ""
 date: 2020-07-22T13:23:32+07:00
 draft: false
-author: "BBTA3 BPPT"
+author: "BBTA3"
 menu:
   tentang:
     parent: 'main'
