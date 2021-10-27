@@ -1,10 +1,10 @@
 ---
 title: "Profil"
-description: "Kenali kami lebih dekat melalui profil BBTA3 BPPT"
+description: "Kenali kami lebih dekat melalui profil BBTA3 BRIN"
 image: ""
 date: 2020-07-01T15:42:19+07:00
 draft: false
-author: "BBTA3 BPPT"
+author: "BBTA3"
 menu:
   tentang:
     parent: 'main'

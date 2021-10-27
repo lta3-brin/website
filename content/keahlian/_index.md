@@ -1,5 +1,5 @@
 ---
-title: "Keahlian BBTA3 BPPT"
+title: "Keahlian BBTA3 BRIN"
 description: "BBTA3 BPPT memiliki keahlian dalam melayani teknologi Aerodinamika, Aeroelastika, Aeroakustika, Aeromekanika dan Aerotronika di Indonesia."
 image: "https://i.pinimg.com/originals/fb/01/7a/fb017af2e927556a8d35b6537218ae92.jpg"
 date: 2020-07-01T14:13:59+07:00

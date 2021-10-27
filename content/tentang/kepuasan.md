@@ -1,9 +1,9 @@
 ---
 title: "Kepuasan Pelanggan"
-description: "Hasil survei kepuasan pelanggan yang dilakukan oleh BBTA3 BPPT"
+description: "Hasil survei kepuasan pelanggan yang dilakukan oleh BBTA3 BRIN"
 date: 2020-07-01T15:47:23+07:00
 draft: false
-author: "BBTA3 BPPT"
+author: "BBTA3"
 menu:
   tentang:
     parent: 'main'
